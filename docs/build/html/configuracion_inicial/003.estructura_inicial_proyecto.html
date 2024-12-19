@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructura Generada &mdash; documentación de sphinx-documentation - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Instalación de dependencias del proyecto" href="002.instalacion_librerias.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinx-documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estructura Generada</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-build">1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-source">2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subcarpetas-importantes"><strong>Subcarpetas Importantes</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivos-importantes-en-source"><strong>Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#archivo-makefile">3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archivo-make-bat">4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estructura Generada</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/003.estructura_inicial_proyecto.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>Cuando creas un proyecto Sphinx utilizando <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, se generan varias carpetas y archivos para estructurar tu documentación. Si estás trabajando con <strong>MyST-Parser</strong> para usar Markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) en lugar de ReStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>), estas carpetas seguirán siendo útiles, pero la estructura se adapta ligeramente. A continuación hay descripción detallada del propósito de cada carpeta y archivo:</p>
+<hr class="docutils" />
+<section id="estructura-generada">
+<h1>Estructura Generada<a class="headerlink" href="#estructura-generada" title="Link to this heading"></a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`docs/
+├── build/
+├── source/
+│   ├── _static/
+│   ├── _templates/
+│   ├── conf.py
+│   ├── index.rst
+├── make.bat
+└── Makefile` 
+</pre></div>
+</div>
+<hr class="docutils" />
+<section id="carpeta-build">
+<h2>1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong><a class="headerlink" href="#carpeta-build" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Propósito</strong>: Contiene los archivos generados (HTML, LaTeX, ePub, etc.) al compilar la documentación.</p></li>
+<li><p><strong>Subcarpetas</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">html/</span></code>: Archivos HTML generados.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doctrees/</span></code>: Archivos intermedios que Sphinx usa para rastrear dependencias entre documentos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latex/</span></code>: Archivos LaTeX generados (si se habilita la salida PDF).</p></li>
+</ul>
+</li>
+<li><p><strong>Nota</strong>: Esta carpeta se regenera cada vez que se ejecutan comandos como <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="carpeta-source">
+<h2>2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#carpeta-source" title="Link to this heading"></a></h2>
+<p>Esta carpeta contiene los archivos fuente de la documentación.</p>
+<section id="subcarpetas-importantes">
+<h3><strong>Subcarpetas Importantes</strong><a class="headerlink" href="#subcarpetas-importantes" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/</span></code></strong>:</p>
+<ul>
+<li><p>Contiene archivos estáticos personalizados como CSS, imágenes, y JavaScript.</p></li>
+<li><p>Aquí irán el archivo <code class="docutils literal notranslate"><span class="pre">custom.css</span></code> y cualquier imagen que usemos en la documentación.</p></li>
+<li><p>Ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docs/source/_static/
+├── images/
+│   ├── imagen1.png
+└── custom.css 
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_templates/</span></code></strong>:</p>
+<ul class="simple">
+<li><p>Contiene plantillas personalizadas para personalizar el diseño de las páginas.</p></li>
+<li><p>Se pueden modificar las plantillas HTML que Sphinx usa (como el diseño de encabezados y pies de página).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivos-importantes-en-source">
+<h3><strong>Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#archivos-importantes-en-source" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong>:</p>
+<ul>
+<li><p>El archivo de configuración principal de Sphinx.</p></li>
+<li><p>Contiene ajustes para extensiones (como <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code>), rutas de búsqueda, tema visual (<code class="docutils literal notranslate"><span class="pre">html_theme</span></code>)…</p></li>
+<li><p>Al usar MyST-Parser, hay que asegurarse de incluir:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">index.rst</span></code></strong> (o <code class="docutils literal notranslate"><span class="pre">index.md</span></code> si usas MyST):</p>
+<ul>
+<li><p>El archivo raíz de la documentación.</p></li>
+<li><p>Define el índice inicial y vincula los archivos fuente usando la directiva <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p></li>
+<li><p>Al usar Markdown con MyST, el archivo se verá como:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Título Principal de la Documentación
+
+```{toctree}
+:maxdepth: 2
+:caption: Índice:
+
+archivo1
+carpeta/archivo2` 
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="archivo-makefile">
+<h2>3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong><a class="headerlink" href="#archivo-makefile" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Propósito</strong>: Contiene comandos para construir la documentación en diferentes formatos.</p></li>
+<li><p><strong>Uso</strong>:</p>
+<ul>
+<li><p>Se ejecuta <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> para construir documentación HTML.</p></li>
+<li><p>Otros comandos incluyen:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">latexpdf</span></code>: Genera un PDF si se tiene LaTeX configurado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">epub</span></code>: Genera un eBook.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivo-make-bat">
+<h2>4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong><a class="headerlink" href="#archivo-make-bat" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Propósito</strong>: Archivo equivalente al <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> para sistemas Windows.</p></li>
+<li><p><strong>Uso</strong>:</p>
+<ul>
+<li><p>Ejecuta comandos como <code class="docutils literal notranslate"><span class="pre">make.bat</span> <span class="pre">html</span></code> en el terminal de Windows.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="flujo-de-trabajo-con-myst-parser">
+<h1>Flujo de Trabajo con MyST-Parser<a class="headerlink" href="#flujo-de-trabajo-con-myst-parser" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p><strong>Configura MyST-Parser en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong>: Asegúrate de que <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> esté habilitado:</p>
+<p>python</p>
+<p>Copiar código</p>
+<p><code class="docutils literal notranslate"><span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">['myst_parser']</span> <span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">'.md':</span> <span class="pre">'markdown',</span> <span class="pre">}</span></code></p>
+</li>
+<li><p><strong>Estructura Markdown</strong>:</p>
+<ul>
+<li><p>Los archivos Markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) reemplazan los <code class="docutils literal notranslate"><span class="pre">.rst</span></code>. Escribe tus documentos con encabezados <code class="docutils literal notranslate"><span class="pre">#</span></code>, listas, bloques de código, etc.</p></li>
+<li><p>Usa MyST para integrar características de Sphinx en Markdown. Por ejemplo:</p>
+<p>markdown</p>
+<p>Copiar código</p>
+<p>`# Título del Documento</p>
+<div class="toctree-wrapper compound">
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Compila la documentación</strong>:</p>
+<ul>
+<li><p>Ejecuta:</p>
+<p>bash</p>
+<p>Copiar código</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p>
+</li>
+<li><p>Los archivos HTML generados estarán en <code class="docutils literal notranslate"><span class="pre">docs/build/html</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Personaliza</strong>:</p>
+<ul class="simple">
+<li><p>Añade CSS en <code class="docutils literal notranslate"><span class="pre">_static/</span></code> para personalizar el diseño.</p></li>
+<li><p>Usa <code class="docutils literal notranslate"><span class="pre">_templates/</span></code> para modificar las plantillas.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>Esta estructura te permite trabajar con Markdown fácilmente, aprovechando la potencia de Sphinx y MyST-Parser para generar documentación de alta calidad.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="002.instalacion_librerias.html" class="btn btn-neutral float-left" title="Instalación de dependencias del proyecto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, cristina.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

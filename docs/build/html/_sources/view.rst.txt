@@ -1,0 +1,21 @@
+view package
+============
+
+Submodules
+----------
+
+view.numpy\_docstring\_example module
+-------------------------------------
+
+.. automodule:: 
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: view
+   :members:
+   :undoc-members:
+   :show-inheritance:

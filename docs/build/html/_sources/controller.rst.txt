@@ -1,0 +1,21 @@
+controller package
+==================
+
+Submodules
+----------
+
+controller.numpy\_docstring\_example module
+-------------------------------------------
+
+.. automodule:: 
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: controller
+   :members:
+   :undoc-members:
+   :show-inheritance:

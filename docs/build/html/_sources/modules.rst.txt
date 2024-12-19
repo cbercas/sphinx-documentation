@@ -1,0 +1,8 @@
+===
+
+.. toctree::
+   :maxdepth: 4
+
+   configuracion_inicial/001.env.md   
+   configuracion_inicial/002.instalacion_librerias.md
+   configuracion_inicial/003.docker-compose.md

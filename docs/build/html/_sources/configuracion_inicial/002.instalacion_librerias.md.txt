@@ -1,0 +1,144 @@
+# Instalación de dependencias del proyecto
+
+Para ejecutar correctamente este proyecto de Python, es necesario instalar las dependencias especificadas en el archivo `requirements.txt`. A continuación, se detallan los pasos necesarios para realizar esta instalación de manera efectiva.
+
+## 1. Instalar las dependencias con el archivo `requirements.txt`
+
+Con el entorno virtual activado, instala las dependencias ejecutando:
+
+```bash
+pip install -r requirements.txt` 
+ ```
+
+Este comando utiliza `pip` para leer el archivo `requirements.txt` e instala todas las librerías listadas en él.
+
+## 2. Verificar la instalación
+
+Para asegurarte de que las dependencias se instalaron correctamente, puedes listar los paquetes instalados con:
+
+```bash
+pip list
+ ```
+
+Esto mostrará una lista de todas las librerías instaladas en tu entorno virtual.
+
+## 3. Desactivar el entorno virtual (opcional)
+
+Cuando hayas terminado de trabajar en el proyecto, puedes desactivar si quieres el entorno virtual con:
+
+```bash
+deactivate
+```
+
+### Archivo `requirements.txt`
+
+Nuestro archivo `requirements.txt` se vería tal que así:
+
+```bash
+Componentes_EQ05 @ file:./components/componentes_eq05-1.0.tar.gz
+psycopg==3.2.1
+psycopg-binary==3.2.1
+psycopg-pool==3.2.2
+psycopg2==2.9.10
+PySide6==6.7.2
+PySide6_Addons==6.7.2
+PySide6_Essentials==6.7.2
+setuptools==72.1.0
+shiboken6==6.7.2
+typing_extensions==4.12.2
+tzdata==2024.1
+wheel==0.44.0
+```
+
+### Detalles sobre cada una de las dependencias
+-   **Componentes_EQ05**
+    
+    -   **Descripción:**  
+        Esta es una dependencia local empaquetada en formato `.tar.gz`, ubicada en la ruta `./components/componentes_eq05-1.0.tar.gz`. Se utiliza el símbolo `@` para especificar la instalación desde una ubicación de archivo local.
+        
+    -   **Propósito:**  
+        Proporciona los componentes personalizados en nuestro proyecto.
+-   **psycopg==3.2.1**
+    
+    -   **Descripción:**  
+        `psycopg` es una librería moderna para interactuar con bases de datos **PostgreSQL** desde Python. Esta es la versión `3.2.1`.
+        
+    -   **Propósito:**  
+        Ofrece una API asíncrona y eficiente para trabajar con PostgreSQL, ideal para aplicaciones modernas y de alto rendimiento.
+-   **psycopg-binary==3.2.1**
+    
+    -   **Descripción:**  
+        `psycopg-binary` es una versión empaquetada de `psycopg` que incluye todos los binarios necesarios. Es fácil de instalar ya que no requiere compilación.
+        
+    -   **Propósito:**  
+        Facilita la instalación en sistemas donde la compilación de librerías puede ser compleja, proporcionando una solución lista para usar.
+-   **psycopg-pool==3.2.2**
+    
+    -   **Descripción:**  
+        Esta librería proporciona un mecanismo de **pool de conexiones** para `psycopg` versión `3.2.2`.
+        
+    -   **Propósito:**  
+        Mejora el rendimiento al reutilizar conexiones existentes en lugar de abrir nuevas conexiones a la base de datos repetidamente.
+-   **psycopg2==2.9.10**
+    
+    -   **Descripción:**  
+        `psycopg2` es la versión clásica y ampliamente usada de la librería para conectar con bases de datos **PostgreSQL**.
+        
+    -   **Propósito:**  
+        Es una alternativa más estable y compatible con versiones anteriores de proyectos que aún no migran a `psycopg 3`.
+-   **PySide6==6.7.2**
+    
+    -   **Descripción:**  
+        `PySide6` es un conjunto de bindings de **Qt6** para Python, versión `6.7.2`. Incluye módulos para crear interfaces gráficas.
+        
+    -   **Propósito:**  
+        Permite desarrollar aplicaciones de escritorio con una interfaz gráfica basada en **Qt6**.
+-   **PySide6_Addons==6.7.2**
+    
+    -   **Descripción:**  
+        Extensiones adicionales para `PySide6`, versión `6.7.2`. Proporciona módulos adicionales que no están en el núcleo principal.
+        
+    -   **Propósito:**  
+        Amplía las funcionalidades de `PySide6` para necesidades específicas de la interfaz gráfica.
+-   **PySide6_Essentials==6.7.2**
+    
+    -   **Descripción:**  
+        Conjunto de módulos esenciales de `PySide6`, versión `6.7.2`.
+        
+    -   **Propósito:**  
+        Incluye los módulos básicos necesarios para desarrollar interfaces gráficas con **Qt6** usando Python.
+-   **setuptools==72.1.0**
+    
+    -   **Descripción:**  
+        Herramienta estándar para empaquetar y distribuir proyectos de Python. Esta es la versión `72.1.0`.
+        
+    -   **Propósito:**  
+        Facilita la instalación, empaquetado y distribución de paquetes Python.
+-   **shiboken6==6.7.2**
+    
+    -   **Descripción:**  
+        `shiboken6` es una librería necesaria para `PySide6`, que ayuda a generar bindings de C++ a Python.
+        
+    -   **Propósito:**  
+        Permite que los módulos de `PySide6` interactúen con el código C++ subyacente de Qt.
+-   **typing_extensions==4.12.2**
+    
+    -   **Descripción:**  
+        Proporciona funcionalidades adicionales para **anotaciones de tipos** que no están disponibles en versiones anteriores de Python.
+        
+    -   **Propósito:**  
+        Útil para mantener compatibilidad con versiones más antiguas de Python o para usar características avanzadas de tipado estático.
+-   **tzdata==2024.1**
+    
+    -   **Descripción:**  
+        Base de datos de zonas horarias (timezone), versión `2024.1`.
+        
+    -   **Propósito:**  
+        Garantiza que las aplicaciones manejen correctamente fechas y horas en diferentes zonas horarias.
+-   **wheel==0.44.0**
+    
+    -   **Descripción:**  
+        `wheel` es una herramienta para construir y manejar paquetes en formato `.whl` (ruedas).
+        
+    -   **Propósito:**  
+        Facilita la instalación rápida de paquetes precompilados y es útil para distribuir tus propios paquetes.

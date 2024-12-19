@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docker y BBDD PostgreSQL &mdash; documentación de sphinx-documentation - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Instalación de dependencias del proyecto" href="002.instalacion_librerias.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinx-documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker y BBDD PostgreSQL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-docker-compose-y-para-que-se-utiliza">1.¿Qué es Docker Compose y para qué se utiliza?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modificacion-del-archivo-docker-compose-y-el-archivo-utils-db-py">2. Modificación del archivo Docker Compose y el archivo utils_db.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-docker-compose-yml">2.1.- Archivo docker-compose.yml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-utils-db-py">2.2.- Archivo utils_db.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constantes-de-configuracion">Constantes de Configuración:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumerados">Enumerados:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#levantar-el-contenedor">3.- Levantar el contenedor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docker-compose">3.1. <strong>docker-compose</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#up">3.2. <strong>up</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build">3.3. <strong>–build</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Docker y BBDD PostgreSQL</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/003.docker-compose.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="docker-y-bbdd-postgresql">
+<h1>Docker y BBDD PostgreSQL<a class="headerlink" href="#docker-y-bbdd-postgresql" title="Link to this heading"></a></h1>
+<p>Antes de explicar cómo montar la base de datos y demás, deberemos tener el servicio de Docker activo. Para ello, si estamos en <strong>Windows</strong>, simplemente abriremos la aplicación <strong>Docker Desktop</strong>.</p>
+<hr class="docutils" />
+<section id="que-es-docker-compose-y-para-que-se-utiliza">
+<h2>1.¿Qué es Docker Compose y para qué se utiliza?<a class="headerlink" href="#que-es-docker-compose-y-para-que-se-utiliza" title="Link to this heading"></a></h2>
+<p><strong>Docker Compose</strong> es una herramienta que se utiliza para definir y ejecutar aplicaciones que constan de múltiples contenedores. Con Docker Compose, puedes especificar la configuración de los contenedores, redes y volúmenes necesarios para tu aplicación en un archivo <strong>YAML</strong> (<code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>). Este archivo contiene todos los servicios que tu aplicación requiere, así como sus configuraciones, dependencias y cómo deben interactuar entre sí.</p>
+<p>Docker Compose se utiliza para simplificar la orquestación y gestión de aplicaciones compuestas por múltiples contenedores. Su principal ventaja es la <strong>facilidad de uso</strong>, ya que permite iniciar todos los servicios definidos en un archivo <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> con un solo comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>up
+</pre></div>
+</div>
+<p>Además, permite gestionar las dependencias entre contenedores, asegurando que se inicien en el <strong>orden correcto</strong>, lo que es esencial para aplicaciones que dependen de otros servicios, como bases de datos.</p>
+<p><strong>Referencias</strong>:</p>
+<ul class="simple">
+<li><p>Docker. (n.d.). <em>Docker documentation</em>. Docker. <a class="reference external" href="https://docs.docker.com/">https://docs.docker.com/</a></p></li>
+<li><p>Microsoft. (n.d.). <em>Receta de Docker Compose para servicios de IA en contenedores de Azure</em>. Microsoft Learn. <a class="reference external" href="https://learn.microsoft.com/es-es/azure/ai-services/containers/docker-compose-recipe">https://learn.microsoft.com/es-es/azure/ai-services/containers/docker-compose-recipe</a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="modificacion-del-archivo-docker-compose-y-el-archivo-utils-db-py">
+<h2>2. Modificación del archivo Docker Compose y el archivo utils_db.py<a class="headerlink" href="#modificacion-del-archivo-docker-compose-y-el-archivo-utils-db-py" title="Link to this heading"></a></h2>
+<section id="archivo-docker-compose-yml">
+<h3>2.1.- Archivo docker-compose.yml<a class="headerlink" href="#archivo-docker-compose-yml" title="Link to this heading"></a></h3>
+<p>El archivo <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> es crucial para la configuración y despliegue del servicio <strong>PostgreSQL</strong> en un entorno de contenedores. En nuestro caso, se realizaron las siguientes modificaciones:</p>
+<ul class="simple">
+<li><p><strong>Nombre del contenedor</strong> (<code class="docutils literal notranslate"><span class="pre">container_name</span></code>): Se cambió a <code class="docutils literal notranslate"><span class="pre">EQ05_TEORIA</span></code> para personalizar y distinguir el contenedor en un entorno donde pueden existir múltiples servicios.</p></li>
+<li><p><strong>Nombre de la base de datos</strong> (<code class="docutils literal notranslate"><span class="pre">POSTGRES_DB</span></code>): Modificado a <code class="docutils literal notranslate"><span class="pre">eq05_db</span></code>, especificando la base de datos que será creada y utilizada por el sistema.</p></li>
+<li><p><strong>Credenciales de conexión</strong>:</p>
+<ul>
+<li><p><strong>Usuario</strong> (<code class="docutils literal notranslate"><span class="pre">POSTGRES_USER</span></code>): Cambiado a <code class="docutils literal notranslate"><span class="pre">admin</span></code>.</p></li>
+<li><p><strong>Contraseña</strong> (<code class="docutils literal notranslate"><span class="pre">POSTGRES_PASSWORD</span></code>): Establecida como <code class="docutils literal notranslate"><span class="pre">&quot;0000&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Puertos</strong>: Se asignó el puerto <strong>54320</strong> en el host, redirigiéndolo al puerto <strong>5432</strong> del contenedor, para evitar conflictos con otras instancias de PostgreSQL.</p></li>
+<li><p><strong>Volúmenes</strong>: Se configuró un volumen local <code class="docutils literal notranslate"><span class="pre">postgres-data</span></code> que mapea a la ruta <code class="docutils literal notranslate"><span class="pre">/var/lib/postgresql/data/pgdata</span></code>, asegurando <strong>persistencia de datos</strong> entre reinicios.</p></li>
+<li><p><strong>Política de reinicio</strong> (<code class="docutils literal notranslate"><span class="pre">restart</span></code>): Configurado como <code class="docutils literal notranslate"><span class="pre">&quot;no&quot;</span></code> para evitar reinicios automáticos del contenedor.</p></li>
+</ul>
+<p>Estas modificaciones personalizan el entorno para el equipo y facilitan la integración con otros servicios del proyecto.</p>
+</section>
+<hr class="docutils" />
+<section id="archivo-utils-db-py">
+<h3>2.2.- Archivo utils_db.py<a class="headerlink" href="#archivo-utils-db-py" title="Link to this heading"></a></h3>
+<p>El archivo <code class="docutils literal notranslate"><span class="pre">utils_db.py</span></code> centraliza la configuración de conexión a la base de datos y define <strong>constantes y enumerados</strong> para facilitar el acceso y la gestión de datos en el sistema.</p>
+<section id="constantes-de-configuracion">
+<h4>Constantes de Configuración:<a class="headerlink" href="#constantes-de-configuracion" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Controlador de base de datos</strong> (<code class="docutils literal notranslate"><span class="pre">DRIVER_DB</span></code>): Configurado como <code class="docutils literal notranslate"><span class="pre">QPSQL</span></code> para indicar el uso de PostgreSQL.</p></li>
+<li><p><strong>Host y Puerto</strong> (<code class="docutils literal notranslate"><span class="pre">HOSTNAME_DB</span></code> y <code class="docutils literal notranslate"><span class="pre">PORT_DB</span></code>):</p>
+<ul>
+<li><p><strong>Host</strong>: Definido como <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+<li><p><strong>Puerto</strong>: Configurado como <strong>54320</strong>, en línea con los ajustes del archivo <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Credenciales</strong> (<code class="docutils literal notranslate"><span class="pre">USER_DB</span></code> y <code class="docutils literal notranslate"><span class="pre">PASS_DB</span></code>):</p>
+<ul>
+<li><p><strong>Usuario</strong>: <code class="docutils literal notranslate"><span class="pre">admin</span></code>.</p></li>
+<li><p><strong>Contraseña</strong>: <code class="docutils literal notranslate"><span class="pre">0000</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Nombre de la base de datos</strong> (<code class="docutils literal notranslate"><span class="pre">NAME_DB</span></code>): Especificado como <code class="docutils literal notranslate"><span class="pre">eq05_db</span></code> para enlazar con la base de datos creada en el contenedor.</p></li>
+<li><p><strong>Nombre de la conexión</strong> (<code class="docutils literal notranslate"><span class="pre">CONNECTION_NAME</span></code>): Utiliza el nombre de la base de datos para identificar claramente esta conexión en la aplicación.</p></li>
+</ul>
+</section>
+<section id="enumerados">
+<h4>Enumerados:<a class="headerlink" href="#enumerados" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>EnumTablasDB</strong>: Lista los nombres de las tablas usadas en la base de datos, como <code class="docutils literal notranslate"><span class="pre">roles</span></code>, <code class="docutils literal notranslate"><span class="pre">usuarios</span></code>, etc., facilitando referencias consistentes y evitando errores tipográficos.</p></li>
+<li><p><strong>EnumDataMode</strong> y <strong>EnumEjes</strong>: Útiles para manejar modos de visualización y estructuración de datos en gráficos.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="levantar-el-contenedor">
+<h2>3.- Levantar el contenedor<a class="headerlink" href="#levantar-el-contenedor" title="Link to this heading"></a></h2>
+<p>Una vez abierto <strong>Docker Desktop</strong>, procederemos a lanzar el siguiente comando en una terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">up</span> <span class="o">--</span><span class="n">build</span> 
+</pre></div>
+</div>
+<p>Explicación del comando:</p>
+<section id="docker-compose">
+<h3>3.1. <strong>docker-compose</strong><a class="headerlink" href="#docker-compose" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">docker-compose</span></code></strong>: Es el comando principal para usar <strong>Docker Compose</strong>.</p></li>
+</ul>
+</section>
+<section id="up">
+<h3>3.2. <strong>up</strong><a class="headerlink" href="#up" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">up</span></code></strong>: Esta es una subcomando de <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> que se utiliza para crear y ejecutar los contenedores definidos en el archivo <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>.</p>
+<ul>
+<li><p>Si no existen las imágenes necesarias, las construye.</p></li>
+<li><p>Si los contenedores están detenidos, los inicia.</p></li>
+<li><p>Si los contenedores ya están corriendo, no realiza ninguna acción.</p></li>
+</ul>
+</li>
+<li><p>Es una forma fácil de levantar (iniciar) todos los servicios definidos sin necesidad de gestionarlos uno por uno.</p></li>
+</ul>
+</section>
+<section id="build">
+<h3>3.3. <strong>–build</strong><a class="headerlink" href="#build" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">--build</span></code></strong>: Es una opción adicional que puedes usar con <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code>. Le dice a Docker Compose que <strong>reconstruya las imágenes de los servicios</strong> antes de iniciar los contenedores. Esto es útil si se han hecho cambios en los archivos de configuración o en el código de los servicios, si no se usa <code class="docutils literal notranslate"><span class="pre">--build</span></code>, <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> solo levantará los contenedores sin reconstruir las imágenes si ya existen.</p></li>
+</ul>
+<p>El comando recogerá todos los datos que hayamos introducido en el <strong><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code></strong> y nos creará un contenedor en Docker Desktop. Si lo hemos hecho correctamente, podemos ver que en la lista de contenedores de Docker aparecerá esto:</p>
+<hr class="docutils" />
+<p><img alt="Captura de pantalla de docker" src="../../images/Imagen1.png" /></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="002.instalacion_librerias.html" class="btn btn-neutral float-left" title="Instalación de dependencias del proyecto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, cristina.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

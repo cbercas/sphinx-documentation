@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalación de dependencias del proyecto &mdash; documentación de sphinx-documentation - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sphinx-documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Instalación de dependencias del proyecto</a><ul>
+<li><a class="reference internal" href="#instalar-las-dependencias-con-el-archivo-requirements-txt">1. Instalar las dependencias con el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li><a class="reference internal" href="#verificar-la-instalacion">2. Verificar la instalación</a></li>
+<li><a class="reference internal" href="#desactivar-el-entorno-virtual-opcional">3. Desactivar el entorno virtual (opcional)</a><ul>
+<li><a class="reference internal" href="#archivo-requirements-txt">Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li><a class="reference internal" href="#detalles-sobre-cada-una-de-las-dependencias">Detalles sobre cada una de las dependencias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx-documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Instalación de dependencias del proyecto</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/002.instalacion_librerias.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instalacion-de-dependencias-del-proyecto">
+<h1>Instalación de dependencias del proyecto<a class="headerlink" href="#instalacion-de-dependencias-del-proyecto" title="Link to this heading"></a></h1>
+<p>Para ejecutar correctamente este proyecto de Python, es necesario instalar las dependencias especificadas en el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>. A continuación, se detallan los pasos necesarios para realizar esta instalación de manera efectiva.</p>
+<section id="instalar-las-dependencias-con-el-archivo-requirements-txt">
+<h2>1. Instalar las dependencias con el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#instalar-las-dependencias-con-el-archivo-requirements-txt" title="Link to this heading"></a></h2>
+<p>Con el entorno virtual activado, instala las dependencias ejecutando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="sb">`</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>Este comando utiliza <code class="docutils literal notranslate"><span class="pre">pip</span></code> para leer el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> e instala todas las librerías listadas en él.</p>
+</section>
+<section id="verificar-la-instalacion">
+<h2>2. Verificar la instalación<a class="headerlink" href="#verificar-la-instalacion" title="Link to this heading"></a></h2>
+<p>Para asegurarte de que las dependencias se instalaron correctamente, puedes listar los paquetes instalados con:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>list
+</pre></div>
+</div>
+<p>Esto mostrará una lista de todas las librerías instaladas en tu entorno virtual.</p>
+</section>
+<section id="desactivar-el-entorno-virtual-opcional">
+<h2>3. Desactivar el entorno virtual (opcional)<a class="headerlink" href="#desactivar-el-entorno-virtual-opcional" title="Link to this heading"></a></h2>
+<p>Cuando hayas terminado de trabajar en el proyecto, puedes desactivar si quieres el entorno virtual con:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+<section id="archivo-requirements-txt">
+<h3>Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#archivo-requirements-txt" title="Link to this heading"></a></h3>
+<p>Nuestro archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> se vería tal que así:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Componentes_EQ05<span class="w"> </span>@<span class="w"> </span>file:./components/componentes_eq05-1.0.tar.gz
+<span class="nv">psycopg</span><span class="o">==</span><span class="m">3</span>.2.1
+psycopg-binary<span class="o">==</span><span class="m">3</span>.2.1
+psycopg-pool<span class="o">==</span><span class="m">3</span>.2.2
+<span class="nv">psycopg2</span><span class="o">==</span><span class="m">2</span>.9.10
+<span class="nv">PySide6</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">PySide6_Addons</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">PySide6_Essentials</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">setuptools</span><span class="o">==</span><span class="m">72</span>.1.0
+<span class="nv">shiboken6</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">typing_extensions</span><span class="o">==</span><span class="m">4</span>.12.2
+<span class="nv">tzdata</span><span class="o">==</span><span class="m">2024</span>.1
+<span class="nv">wheel</span><span class="o">==</span><span class="m">0</span>.44.0
+</pre></div>
+</div>
+</section>
+<section id="detalles-sobre-cada-una-de-las-dependencias">
+<h3>Detalles sobre cada una de las dependencias<a class="headerlink" href="#detalles-sobre-cada-una-de-las-dependencias" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Componentes_EQ05</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Esta es una dependencia local empaquetada en formato <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>, ubicada en la ruta <code class="docutils literal notranslate"><span class="pre">./components/componentes_eq05-1.0.tar.gz</span></code>. Se utiliza el símbolo <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> para especificar la instalación desde una ubicación de archivo local.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Proporciona los componentes personalizados en nuestro proyecto.</p></li>
+</ul>
+</li>
+<li><p><strong>psycopg==3.2.1</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">psycopg</span></code> es una librería moderna para interactuar con bases de datos <strong>PostgreSQL</strong> desde Python. Esta es la versión <code class="docutils literal notranslate"><span class="pre">3.2.1</span></code>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Ofrece una API asíncrona y eficiente para trabajar con PostgreSQL, ideal para aplicaciones modernas y de alto rendimiento.</p></li>
+</ul>
+</li>
+<li><p><strong>psycopg-binary==3.2.1</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">psycopg-binary</span></code> es una versión empaquetada de <code class="docutils literal notranslate"><span class="pre">psycopg</span></code> que incluye todos los binarios necesarios. Es fácil de instalar ya que no requiere compilación.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Facilita la instalación en sistemas donde la compilación de librerías puede ser compleja, proporcionando una solución lista para usar.</p></li>
+</ul>
+</li>
+<li><p><strong>psycopg-pool==3.2.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Esta librería proporciona un mecanismo de <strong>pool de conexiones</strong> para <code class="docutils literal notranslate"><span class="pre">psycopg</span></code> versión <code class="docutils literal notranslate"><span class="pre">3.2.2</span></code>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Mejora el rendimiento al reutilizar conexiones existentes en lugar de abrir nuevas conexiones a la base de datos repetidamente.</p></li>
+</ul>
+</li>
+<li><p><strong>psycopg2==2.9.10</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">psycopg2</span></code> es la versión clásica y ampliamente usada de la librería para conectar con bases de datos <strong>PostgreSQL</strong>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Es una alternativa más estable y compatible con versiones anteriores de proyectos que aún no migran a <code class="docutils literal notranslate"><span class="pre">psycopg</span> <span class="pre">3</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>PySide6==6.7.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">PySide6</span></code> es un conjunto de bindings de <strong>Qt6</strong> para Python, versión <code class="docutils literal notranslate"><span class="pre">6.7.2</span></code>. Incluye módulos para crear interfaces gráficas.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Permite desarrollar aplicaciones de escritorio con una interfaz gráfica basada en <strong>Qt6</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>PySide6_Addons==6.7.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Extensiones adicionales para <code class="docutils literal notranslate"><span class="pre">PySide6</span></code>, versión <code class="docutils literal notranslate"><span class="pre">6.7.2</span></code>. Proporciona módulos adicionales que no están en el núcleo principal.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Amplía las funcionalidades de <code class="docutils literal notranslate"><span class="pre">PySide6</span></code> para necesidades específicas de la interfaz gráfica.</p></li>
+</ul>
+</li>
+<li><p><strong>PySide6_Essentials==6.7.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Conjunto de módulos esenciales de <code class="docutils literal notranslate"><span class="pre">PySide6</span></code>, versión <code class="docutils literal notranslate"><span class="pre">6.7.2</span></code>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Incluye los módulos básicos necesarios para desarrollar interfaces gráficas con <strong>Qt6</strong> usando Python.</p></li>
+</ul>
+</li>
+<li><p><strong>setuptools==72.1.0</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Herramienta estándar para empaquetar y distribuir proyectos de Python. Esta es la versión <code class="docutils literal notranslate"><span class="pre">72.1.0</span></code>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Facilita la instalación, empaquetado y distribución de paquetes Python.</p></li>
+</ul>
+</li>
+<li><p><strong>shiboken6==6.7.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">shiboken6</span></code> es una librería necesaria para <code class="docutils literal notranslate"><span class="pre">PySide6</span></code>, que ayuda a generar bindings de C++ a Python.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Permite que los módulos de <code class="docutils literal notranslate"><span class="pre">PySide6</span></code> interactúen con el código C++ subyacente de Qt.</p></li>
+</ul>
+</li>
+<li><p><strong>typing_extensions==4.12.2</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Proporciona funcionalidades adicionales para <strong>anotaciones de tipos</strong> que no están disponibles en versiones anteriores de Python.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Útil para mantener compatibilidad con versiones más antiguas de Python o para usar características avanzadas de tipado estático.</p></li>
+</ul>
+</li>
+<li><p><strong>tzdata==2024.1</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+Base de datos de zonas horarias (timezone), versión <code class="docutils literal notranslate"><span class="pre">2024.1</span></code>.</p></li>
+<li><p><strong>Propósito:</strong><br />
+Garantiza que las aplicaciones manejen correctamente fechas y horas en diferentes zonas horarias.</p></li>
+</ul>
+</li>
+<li><p><strong>wheel==0.44.0</strong></p>
+<ul>
+<li><p><strong>Descripción:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">wheel</span></code> es una herramienta para construir y manejar paquetes en formato <code class="docutils literal notranslate"><span class="pre">.whl</span></code> (ruedas).</p></li>
+<li><p><strong>Propósito:</strong><br />
+Facilita la instalación rápida de paquetes precompilados y es útil para distribuir tus propios paquetes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, cristina.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
