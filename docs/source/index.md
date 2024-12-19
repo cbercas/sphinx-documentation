@@ -7,3 +7,4 @@
 :glob:
 
 configuracion_inicial/*
+comandos_mas_usados/*

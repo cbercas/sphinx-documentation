@@ -46,8 +46,9 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/001.env.html">Entorno Virtual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html">Estructura Generada</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html">Estructura inicial del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
 </ul>
 
         </div>
@@ -81,8 +82,8 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/001.env.html">Entorno Virtual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/001.env.html#como-crear-el-entorno-virtual-en-el-proyecto">1 - Cómo crear el entorno virtual en el proyecto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/001.env.html#como-activar-el-entorno-virtual">2 - Cómo activar el entorno virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/001.env.html#como-crear-el-entorno-virtual-en-el-proyecto">1. Cómo crear el entorno virtual en el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/001.env.html#como-activar-el-entorno-virtual">2. Cómo activar el entorno virtual</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/002.instalacion_librerias.html">Instalación de dependencias del proyecto</a><ul>
@@ -95,18 +96,64 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html">Estructura Generada</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#carpeta-build">1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#carpeta-source">2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#subcarpetas-importantes"><strong>Subcarpetas Importantes</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#archivos-importantes-en-source"><strong>Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#instalacion-de-sphinx-y-myst-parser">1. Instalación de Sphinx y MyST-Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#crear-un-proyecto-con-sphinx">2. Crear un Proyecto con Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#opciones-importantes-en-el-proceso">Opciones Importantes en el Proceso:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#archivo-makefile">3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#archivo-make-bat">4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#estructura-del-proyecto">3. Estructura del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#configuracion-para-usar-markdown-con-myst-parser">4. Configuración para Usar Markdown con MyST-Parser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#instalacion-de-myst-parser">4.1. Instalación de MyST-Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#modificacion-del-archivo-conf-py">4.2. Modificación del Archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#especificacion-de-las-extensiones-de-archivo-fuente">4.2.1 Especificación de las extensiones de archivo fuente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#configuracion-del-idioma">4.2.2 Configuración del idioma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#configuracion-para-archivos-estaticos-css-e-imagenes">4.2.3 Configuración para archivos estáticos (CSS e imágenes)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/003.estructura_inicial_proyecto.html#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#creacion-de-la-documentacion-en-markdown">5. Creación de la Documentación en Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#compilacion-de-la-documentacion">6. Compilación de la Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#personalizacion-adicional">7. Personalización Adicional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/003.Creacion_proyecto_Sphinx.html#estilo-del-codigo">7.1. Estilo del Código</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html">Estructura inicial del proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#estructura-generada">Estructura Generada</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#carpeta-build">1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#carpeta-source">2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#subcarpetas-importantes"><strong>2.1. Subcarpetas Importantes</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#archivos-importantes-en-source"><strong>2.2. Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#archivo-makefile">3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#archivo-make-bat">4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion_inicial/004.estructura_inicial_proyecto.html#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comandos_mas_usados/comandos.html#crear-un-entorno-virtual"><strong>1. Crear un entorno virtual</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos_mas_usados/comandos.html#activar-el-entorno-virtual"><strong>2. Activar el entorno virtual</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="comandos_mas_usados/comandos.html#configuracion-inicial-del-proyecto-sphinx"><strong>3. Configuración inicial del proyecto Sphinx</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#comando-para-iniciar-un-proyecto-sphinx"><strong>Comando para iniciar un proyecto Sphinx</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#comando-para-actualizar-la-version-de-sphinx"><strong>Comando para actualizar la versión de Sphinx</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="comandos_mas_usados/comandos.html#instalacion-de-dependencias-necesarias"><strong>2. Instalación de dependencias necesarias</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#instalar-sphinx"><strong>Instalar Sphinx</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#instalar-myst-parser"><strong>Instalar MyST-Parser</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#instalar-un-tema">**Instalar un tema **</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="comandos_mas_usados/comandos.html#generacion-de-documentacion"><strong>3. Generación de documentación</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#para-generar-documentacion-en-formato-html"><strong>Para generar documentación en formato HTML</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#para-limpiar-los-archivos-generados"><strong>Para limpiar los archivos generados</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="comandos_mas_usados/comandos.html#actualizar-dependencias"><strong>Actualizar dependencias</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
