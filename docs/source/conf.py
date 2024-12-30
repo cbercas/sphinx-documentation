@@ -13,9 +13,9 @@ import sphinx_rtd_theme
 # Configurar la ruta al directorio raíz del proyecto
 sys.path.insert(0, os.path.abspath('../../source'))
 
-project = 'sphinx-documentation'
-copyright = '2024, cristina'
-author = 'cristina'
+project = 'Proyecto Equipo 05 | Tema 05 '
+copyright = '2024, Equipo 05'
+author = 'Cristina Bermúdez Castro, Pedro Blanco Vargas, Noah Montaño Muñoz'
 release = '1'
 language = 'es'
 

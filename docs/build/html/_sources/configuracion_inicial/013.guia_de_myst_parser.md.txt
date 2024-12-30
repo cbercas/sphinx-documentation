@@ -1,0 +1,538 @@
+
+# Guía de uso MyST – Parser
+
+## Typography
+
+El soporte de tipografía en MyST-Parser permite a los usuarios crear contenido estilizado y bien formateado en documentos escritos en Markdown. MyST-Parser extiende Markdown estándar con características avanzadas que incluyen símbolos especiales, estilos de texto enriquecidos y más.
+
+### Características principales de la tipografía en MyST-Parser
+
+#### 1. **Énfasis de texto**
+MyST-Parser utiliza una sintaxis similar a Markdown para resaltar texto con *énfasis* (cursiva) y **fuerte énfasis** (negrita). 
+
+- **Cursiva:** Usa un solo asterisco (`*`) o guion bajo (`_`):
+  ```markdown
+  *Texto en cursiva* o _Texto en cursiva_
+  ```
+  Resultado: *Texto en cursiva*
+
+- **Negrita:** Usa dos asteriscos (`**`) o guiones bajos dobles (`__`):
+  ```markdown
+  **Texto en negrita** o __Texto en negrita__
+  ```
+  Resultado: **Texto en negrita**
+
+- **Combinación de estilos:** Puedes combinar cursiva y negrita:
+  ```markdown
+  **_Texto combinado_**
+  ```
+  Resultado: **_Texto combinado_**
+
+#### 2. **Texto tachado**
+Para tachar texto, usa dos tildes (`~~`):
+```markdown
+~~Texto tachado~~
+```
+Resultado: ~~Texto tachado~~
+
+#### 3. **Citas tipográficas**
+Puedes usar `>` para indicar una cita en bloque:
+```markdown
+> Este es un bloque de cita.
+```
+Resultado:
+> Este es un bloque de cita.
+
+#### 4. **Subíndice y superíndice**
+MyST-Parser incluye soporte para subíndices y superíndices utilizando notación inline.
+
+- **Subíndice:** Usa `~` para envolver el texto del subíndice:
+  ```markdown
+  H~2~O
+  ```
+  Resultado: H₂O
+
+- **Superíndice:** Usa `^` para envolver el texto del superíndice:
+  ```markdown
+  E = mc^2^
+  ```
+  Resultado: E = mc²
+
+#### 5. **Carácter de escape**
+Para incluir caracteres literales que podrían ser interpretados como sintaxis (por ejemplo, `*`, `_` o `~`), precede el carácter con una barra invertida (`\`):
+```markdown
+Este es un asterisco literal: \*
+```
+Resultado: Este es un asterisco literal: *
+
+#### 6. **Separadores horizontales**
+Crea líneas horizontales para dividir contenido con tres o más guiones (`---`), asteriscos (`***`) o guiones bajos (`___`):
+```markdown
+---
+```
+Resultado:
+
+---
+
+#### 7. **Letras y símbolos especiales**
+MyST-Parser soporta caracteres Unicode directamente en los archivos Markdown. Además, puedes utilizar entidades HTML si lo necesitas:
+```markdown
+Corazón: ❤️ o &#x2764;
+```
+Resultado: Corazón: ❤️ o ❤
+
+---------
+
+## Admonitions
+
+Las admonitions son bloques especiales utilizados para resaltar contenido importante o específico, como notas, advertencias o ejemplos. MyST-Parser permite crear una amplia variedad de admonitions mediante una sintaxis intuitiva que mejora la claridad y el formato de los documentos.
+
+### Características de las admonitions en MyST-Parser
+
+#### 1. **Sintaxis básica**
+Para crear una admonition, usa la siguiente sintaxis:
+
+```markdown
+    ```{admonition} Título opcional :class: type Contenido de la admonition. ```
+```
+
+Resultado:
+
+```{admonition} Título opcional
+Contenido de la admonition.
+```
+
+#### 2. **Tipos predefinidos de admonitions**
+MyST-Parser incluye varios tipos de admonitions predefinidas para diferentes propósitos. La sintaxis es similar a la básica, pero especificando el tipo de admonition.
+
+- **Nota (`note`)**:
+  ```markdown
+    ```{admonition} Nota :class: note Esta es una nota informativa.```
+  ```
+  - Así se vería:
+    ```{admonition} Nota
+    :class: note
+
+    Esta es una nota informativa.
+    ```
+
+- **Advertencia (`warning`)**:
+  ```markdown
+    ```{admonition} Advertencia :class: warning Ten cuidado con esta advertencia.```
+  ```
+    - Así se vería:
+      ```{admonition} Advertencia
+      :class: warning
+
+      Ten cuidado con esta advertencia.
+      ```
+
+- **Consejo (`tip`)**:
+  ```markdown
+    ```{admonition} Consejo :class: tip Aquí tienes un consejo útil. ```
+  ```
+    - Así se vería:
+      ```{admonition} Consejo
+      :class: tip
+
+      Aquí tienes un consejo útil.
+      ```
+
+- **Importante (`important`)**:
+  ```markdown
+    ```{admonition} Importante :class: important Esta información es crucial. ```
+  ```
+    - Así se vería:
+      ```{admonition} Importante
+      :class: important
+
+      Esta información es crucial.
+      ```
+
+- **Peligro (`danger`)**:
+  ```markdown
+    ```{admonition} Peligroso :class: danger ¡Atención! Esta acción puede ser peligrosa. ```
+  ```
+    - Así se vería:
+      ```{admonition} Peligroso
+      :class: danger
+
+      ¡Atención! Esta acción puede ser peligrosa.
+      ```
+
+- **Precaución (`caution`)**:
+  ```markdown
+    ```{admonition} Precaución :class: caution Ten cuidado al realizar esta acción, podría haber consecuencias inesperadas. ```
+  ```
+    - Así se vería:
+      ```{admonition} Precaución
+      :class: caution
+
+      Ten cuidado al realizar esta acción, podría haber consecuencias inesperadas.
+      ```
+
+- **Atención (`attention`)**:
+  ```markdown
+    ```{admonition} Atención :class: attetion Esta sección requiere tu atención inmediata para evitar errores críticos. ```
+  ```
+    - Así se vería:
+      ```{admonition} Atención
+      :class: attetion
+
+      Esta sección requiere tu atención inmediata para evitar errores críticos.
+      ```
+
+- **Pista (`hint`)**:
+  ```markdown
+    ```{admonition} Pista :class: hint Aquí hay una sugerencia útil para facilitar tu tarea. ```
+  ```
+    - Así se vería:
+      ```{admonition} Pista
+      :class: hint
+
+      Aquí hay una sugerencia útil para facilitar tu tarea.
+      ```
+
+- **Precaución (`seealso `)**:
+  ```markdown
+    ```{admonition} Véase también :class: seealso  Consulta la sección anterior para obtener más contexto sobre este tema. ```
+  ```
+    - Así se vería:
+      ```{admonition} Véase también
+      :class: seealso 
+
+      Consulta la sección anterior para obtener más contexto sobre este tema.
+      ```
+
+
+#### 3. **Admonitions con títulos personalizados**
+Puedes añadir un título personalizado a cualquier admonition especificando el título después del tipo:
+
+```markdown
+  ```{admonition} Título personalizado :class: tip Contenido con un título personalizado. ```
+```
+
+Resultado:
+
+```{admonition} Título personalizado 
+:class: tip 
+
+Contenido con un título personalizado. 
+```
+
+#### 4. **Admonitions anidadas**
+Puedes anidar admonitions dentro de otras para mayor claridad. Por ejemplo:
+
+```markdown
+    ```{admonition} Nota :class: note Esto es un ejemplo de nota. 
+      ```{admonition} Tip :class: tip Esto es un ejemplo de tip anidado. ```
+    ```
+```
+
+Resultado:
+
+ ```{admonition} Nota 
+ :class: note 
+
+ Esto es un ejemplo de nota. 
+    
+  ```{admonition} Tip 
+  :class: tip 
+
+  Esto es un ejemplo de tip anidado. ```
+```
+
+#### 5. **Admonitions con bloques de código**
+Puedes incluir bloques de código dentro de una admonition:
+
+```markdown
+    ```{admonition} Ejemplo de código
+    :class: tip
+
+    Aquí tienes un bloque de código:
+
+      ```python
+      print("Hola, mundo!")``` 
+    ```
+```
+
+Resultado:
+
+``` {admonition} Ejemplo de código
+:class: tip
+
+Aquí tienes un bloque de código:
+
+    ```python
+    print("Hola, mundo!")```
+```
+
+### 6. Personalización de admonitions
+
+#### **6.1. Entender la Estructura de Admonitions en Sphinx**
+En Sphinx, las admonitions son bloques especiales que resaltan contenido específico, como notas, advertencias o ejemplos. Estos bloques se generan en el HTML final con clases CSS específicas que permiten su personalización.
+
+Algunos tipos comunes explicados anteriormente son:
+
+-   `note`
+-   `warning`
+-   `important`
+-   `hint`
+-   `caution`
+-   `attention`
+-   `seealso`
+
+##### **6.1.1. Estructura HTML Generada por una Admonition**
+Al compilar la documentación, una admonition podría generarse como:
+
+```html
+<div class="admonition note">
+  <p class="admonition-title">Nota</p>
+  <p>Este es un contenido dentro de una admonition de tipo "note".</p>
+</div>
+```
+
+----------
+#### **6.2. Crear un Archivo de Estilos Personalizado en Sphinx**
+
+##### **6.2.1. Estructura del Proyecto**
+
+Asegúrate de tener la siguiente estructura en tu proyecto Sphinx:
+
+```bash
+docs/
+├── _static/
+│   ├── custom.css  # Archivo CSS personalizado
+├── conf.py
+├── index.rst
+└── ...
+```
+
+##### **6.2.2. Editar el Archivo `custom.css`**
+
+Abre (o crea) el archivo `_static/custom.css` y agrega estilos personalizados para las admonitions:
+
+```css
+/* === Estilos Generales para todas las Admonitions === */
+.admonition {
+    border-left: 5px solid #444;
+    border-radius: 5px;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #f9f9f9;
+}
+
+/* === Título de las Admonitions === */
+.admonition .admonition-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+/* === Personalización por Tipo de Admonition === */
+
+/* NOTE */
+.admonition.note {
+    border-left-color: #2196F3;
+    background-color: #E3F2FD;
+}
+.admonition.note .admonition-title {
+    color: #0D47A1;
+}
+
+/* WARNING */
+.admonition.warning {
+    border-left-color: #FF9800;
+    background-color: #FFF3E0;
+}
+.admonition.warning .admonition-title {
+    color: #E65100;
+}
+
+/* IMPORTANT */
+.admonition.important {
+    border-left-color: #4CAF50;
+    background-color: #E8F5E9;
+}
+.admonition.important .admonition-title {
+    color: #1B5E20;
+}
+
+/* HINT */
+.admonition.hint {
+    border-left-color: #9C27B0;
+    background-color: #F3E5F5;
+}
+.admonition.hint .admonition-title {
+    color: #6A1B9A;
+}
+```
+
+##### **6.2.3. Explicación de los Estilos:**
+
+1.  **`.admonition`**: Define un estilo base para todas las admonitions.
+2.  **`.admonition-title`**: Estiliza los títulos dentro de las admonitions.
+3.  **`.admonition.note`, `.admonition.warning`, etc.**: Estiliza cada tipo de admonition con colores específicos para los bordes y el fondo.
+
+----------
+
+#### **6.3. Configurar `conf.py` para Incluir CSS Personalizado**
+
+Abre tu archivo `conf.py` y verifica que la configuración sea correcta:
+
+```python
+# Habilitar myst_parser para soporte Markdown
+extensions = [
+    'myst_parser',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx_rtd_theme',
+]
+
+# Añadir estilos CSS personalizados
+html_static_path = ['_static']
+html_css_files = [
+    'custom.css',  # Asegúrate de que custom.css esté en la carpeta _static
+]
+```
+#### **6.4. Configurar el tema (opcional)**
+html_theme = 'sphinx_rtd_theme'` 
+
+-   `html_static_path`: Especifica dónde buscar archivos estáticos.
+-   `html_css_files`: Carga el archivo `custom.css` en la salida HTML.
+
+## Images and Figures
+
+El manejo de **imágenes** y **figuras** en MyST-Parser permite enriquecer la documentación con contenido visual, facilitando la comprensión de conceptos complejos y mejorando la presentación general de tus documentos.
+
+En esta guía, aprenderás:
+
+1.  Cómo insertar imágenes básicas.
+2.  Cómo usar figuras con títulos y referencias.
+3.  Configurar opciones avanzadas para imágenes.
+4.  Personalizar estilos de imágenes y figuras.
+
+
+### **1. Imágenes Básicas en MyST-Parser**
+
+#### **1.1. Sintaxis Básica para Insertar una Imagen**
+
+En Markdown estándar, puedes insertar imágenes usando la siguiente sintaxis:
+```markdown
+![Texto alternativo](ruta/a/la/imagen.png)
+```
+
+-   **Texto alternativo:** Describe la imagen para accesibilidad y en caso de que no se cargue correctamente.
+-   **Ruta de la imagen:** Puede ser una ruta relativa o absoluta.
+
+##### **Ejemplo:**
+
+
+```markdown
+![Logo de MyST](../_static/images/logo.png)
+```
+
+**Resultado:**  
+
+![Logo de MyST](../_static/images/logo.png)
+
+----------
+
+### **2. Figuras con Título y Referencia**
+
+#### **2.1. Insertar una Figura con Título**
+
+Una **figura** es una imagen con un título opcional y, en algunos casos, con referencias cruzadas para enlazarla desde otras partes del documento.
+```markdown
+  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :width: 200px
+  :align: center
+
+  Este es el logo oficial de MyST-Parser.```
+```
+
+**Resultado:** 
+
+```{figure} ../_static/images/logo.png
+:alt: Logo de MyST
+:width: 200px
+:align: center
+:name: fig-logo
+
+Este es el logo oficial de MyST-Parser.
+```
+
+##### **Explicación:**
+
+-   `:alt:` Proporciona texto alternativo para la imagen.
+-   `:width:` Ajusta el ancho de la imagen (en píxeles o porcentaje).
+-   `:align:` Alinea la imagen (`center`, `left`, `right`).
+-   El contenido debajo de la directiva actúa como el **título de la figura**.
+
+#### **2.2. Referencia Cruzada a una Figura**
+
+Para referenciar la figura en otro punto del documento, añade la etiqueta `:name: Referencia`:
+
+```markdown
+  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :width: 200px
+  :align: center
+
+  Este es el logo oficial de MyST-Parser.```
+```
+
+Puedes consultar el logo en la [Figura 1](#fig-logo).` 
+
+**Resultado:**
+
+![Logo de MyST](../_static/images/logo.png)  
+
+**Figura 1:** Este es el logo oficial de MyST-Parser.
+
+----------
+
+### **3. Opciones Avanzadas para Imágenes y Figuras**
+
+MyST-Parser ofrece más opciones para controlar el comportamiento de imágenes y figuras.
+
+#### **3.1. Escalar Imágenes**
+```markdown
+  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :scale: 50%
+
+  Logo escalado al 50% de su tamaño original.```
+```
+
+-   **`:scale:`** Ajusta el tamaño de la imagen como un porcentaje de su tamaño original.
+
+----------
+
+#### **3.2. Alinear Imágenes**
+```markdown
+  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :align: right
+
+  Imagen alineada a la derecha.```
+```
+
+-   `:align: center` (centro)
+-   `:align: left` (izquierda)
+-   `:align: right` (derecha)
+
+----------
+
+#### **3.3. Enlazar Imágenes**
+
+Puedes hacer que una imagen sea un enlace:
+```markdown
+[![Logo de MyST](../_static/images/logo.png)](https://myst-parser.readthedocs.io)
+```
+
+**Resultado:**  
+
+[![Logo de MyST](../_static/images/logo.png)](https://myst-parser.readthedocs.io)
