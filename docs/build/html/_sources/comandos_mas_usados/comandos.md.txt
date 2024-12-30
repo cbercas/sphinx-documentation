@@ -29,7 +29,7 @@ pip install -U sphinx
 1.  **`pip install`**: Instala un paquete de Python (en este caso, `sphinx`) desde el repositorio de PyPI (Python Package Index).
 2.  **`-U` o `--upgrade`**: Actualiza el paquete a la versión más reciente disponible en PyPI.
 
-### **2. Instalación de dependencias necesarias**
+### **4. Instalación de dependencias necesarias**
 
 #### **Instalar Sphinx**
 
@@ -45,7 +45,7 @@ pip install myst-parser
 
 -   Habilita el soporte para archivos Markdown en Sphinx.
 
-#### **Instalar un tema **
+#### **Instalar un tema**
 
 ```
 pip install sphinx_rtd_theme
@@ -55,7 +55,7 @@ pip install sphinx_rtd_theme
 
 ----------
 
-### **3. Generación de documentación**
+### **4. Generación de documentación**
 
 #### **Para generar documentación en formato HTML**
 

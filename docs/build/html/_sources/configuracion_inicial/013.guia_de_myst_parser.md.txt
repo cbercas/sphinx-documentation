@@ -246,14 +246,14 @@ Resultado:
 Puedes incluir bloques de código dentro de una admonition:
 
 ```markdown
-    ```{admonition} Ejemplo de código
-    :class: tip
+```{admonition} Ejemplo de código
+:class: tip
 
-    Aquí tienes un bloque de código:
+Aquí tienes un bloque de código:
 
-      ```python
-      print("Hola, mundo!")``` 
-    ```
+```python
+print("Hola, mundo!")``` 
+```
 ```
 
 Resultado:
@@ -536,3 +536,323 @@ Puedes hacer que una imagen sea un enlace:
 **Resultado:**  
 
 [![Logo de MyST](../_static/images/logo.png)](https://myst-parser.readthedocs.io)
+
+
+## Tables
+Las **tablas** son una herramienta esencial en la documentación técnica, ya que permiten organizar y presentar datos de forma clara y estructurada. **MyST-Parser** extiende la funcionalidad de Markdown para ofrecer opciones avanzadas de creación y personalización de tablas en **Sphinx**.
+
+----------
+
+### **1. Tablas Básicas en MyST-Parser**
+
+#### **1.1. Sintaxis Básica de Tablas Markdown**
+
+Puedes crear tablas simples utilizando la sintaxis básica de Markdown:
+
+```markdown
+| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+|--------------|--------------|--------------|
+| Celda 1     | Celda 2     | Celda 3     |
+| Celda 4     | Celda 5     | Celda 6     |
+``` 
+
+##### 🛠️ **Explicación:**
+
+-   Las tuberías (`|`) delimitan columnas.
+-   La segunda línea (`---`) define los encabezados.
+-   Cada fila se define en una nueva línea.
+
+**Resultado:**
+| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+|--------------|--------------|--------------|
+| Celda 1     | Celda 2     | Celda 3     |
+| Celda 4     | Celda 5     | Celda 6     |
+
+----------
+
+### **2. Tablas con Alineación**
+
+#### 📌 **2.1. Alinear el Contenido de las Columnas**
+
+Puedes controlar la alineación del texto dentro de las columnas usando los símbolos `:`:
+```markdown
+| Izquierda   | Centro     | Derecha   |
+|:----------- |:---------: |---------: |
+| Celda 1     | Celda 2    | Celda 3   |
+| Celda 4     | Celda 5    | Celda 6   |
+```
+
+##### 🛠️ **Explicación:**
+
+-   `:---` → Alineación a la izquierda.
+-   `:---:` → Alineación centrada.
+-   `---:` → Alineación a la derecha.
+
+**Resultado:**
+
+| Izquierda   | Centro     | Derecha   |
+|:----------- |:---------: |---------: |
+| Celda 1     | Celda 2    | Celda 3   |
+| Celda 4     | Celda 5    | Celda 6   |
+
+----------
+
+### **3. Tablas Complejas con Formato Avanzado**
+
+#### 📌 **3.1. Crear Tablas con MyST Directivas**
+
+MyST-Parser admite el uso de directivas para crear tablas más avanzadas con opciones adicionales:
+
+```markdown
+  ```{list-table} Título de la Tabla
+  :header-rows: 1
+  :widths: 20 40 40
+
+*   - Treat
+    - Quantity
+    - Description
+*   - Albatross
+    - 2.99
+    - On a stick!
+*   - Crunchy Frog
+    - 1.49
+    - If we took the bones out, it wouldn't be
+ crunchy, now would it?
+*   - Gannet Ripple
+    - 1.99
+    - On a stick! ```
+```
+
+##### **Explicación:**
+
+-   `:header-rows:` → Define cuántas filas son para encabezados (en este caso, 1).
+-   `:widths:` → Define el ancho de cada columna (en porcentaje).
+-   Cada fila de la tabla se define con `* -`.
+
+**Resultado:**
+
+```{list-table} Título de la Tabla
+:widths: 20 40 40
+:header-rows: 1
+
+*   - Treat
+    - Quantity
+    - Description
+*   - Albatross
+    - 2.99
+    - On a stick!
+*   - Crunchy Frog
+    - 1.49
+    - If we took the bones out, it wouldn't be
+ crunchy, now would it?
+*   - Gannet Ripple
+    - 1.99
+    - On a stick!
+```
+
+----------
+
+### **4. Tablas con Referencias y Nombres**
+
+#### **4.1. Agregar una Etiqueta a una Tabla**
+
+Puedes etiquetar una tabla para referenciarla más adelante:
+
+```markdown
+```{list-table} Título de la Tabla
+:header-rows: 1
+:name: tabla-ejemplo
+
+* - Encabezado A
+ - Encabezado B
+* - Valor 1
+ - Valor 2```
+```
+
+##### **Explicación:**
+
+-   `:name:` Asigna un identificador único a la tabla.
+-   Puedes referenciar la tabla utilizando `#nombre-de-la-tabla`.
+
+## Source code and APIs
+
+El uso de código fuente y APIs en la documentación técnica es esencial para proporcionar ejemplos prácticos, fragmentos reutilizables y una referencia clara para desarrolladores. MyST-Parser, combinado con Sphinx, ofrece herramientas avanzadas para formatear, resaltar y documentar código fuente y APIs de forma clara y organizada.
+
+
+###  **1. Mostrar Código Fuente en Markdown**
+
+#### **1.1. Bloques de Código (Code Blocks)**
+
+Para mostrar bloques de código en MyST-Parser, puedes usar la sintaxis estándar de Markdown con tres acentos graves (  ):
+``` markdown
+	```python
+	def hola_mundo():
+	    print("¡Hola, mundo!")```
+```
+
+**Resultado:**
+
+```python
+def hola_mundo():
+    print("¡Hola, mundo!")
+```
+
+-   Puedes usar otros lenguajes como `javascript`, `html`, `css`, etc.
+
+----------
+
+### **2. Incrustar Código en Línea**
+
+Puedes incrustar fragmentos de código dentro de una línea de texto utilizando acentos graves simples (`):
+
+```markdown
+El comando `print("Hola")` muestra un mensaje en la consola.
+```
+
+**Resultado:**  
+El comando `print("Hola")` muestra un mensaje en la consola.
+
+----------
+
+### **3. Resaltar Fragmentos de Código (Highlighting)**
+
+Puedes resaltar partes específicas de un bloque de código utilizando la directiva **`{code-block}`** de MyST-Parser:
+
+```markdown
+	```{code-block} python
+	:emphasize-lines: 2
+
+	def suma(a, b):
+	 resultado = a + b  # Esta línea está resaltada
+	 return resultado```
+```
+
+**Resultado:**
+
+```{code-block} python  
+:emphasize-lines: 2
+
+def suma(a, b):  
+resultado = a + b # Esta línea está resaltada  
+return resultado  
+```
+
+#### **Explicación:**
+
+-   `:emphasize-lines:` → Resalta líneas específicas dentro del bloque.
+-   Puedes especificar varias líneas con `1,3` o rangos con `1-3`.
+
+----------
+
+### **4. Mostrar Archivos de Código Completo**
+
+Si quieres incluir un archivo de código fuente completo en tu documentación, puedes usar la directiva **`literalinclude`**:
+
+```markdown
+```{literalinclude} ../_static/ejemplo.py
+:language: python
+:linenos:
+:emphasize-lines: 2```
+```
+
+#### **Parámetros:**
+
+-   `:language:` → Define el lenguaje para el resaltado de sintaxis.
+-   `:linenos:` → Muestra números de línea.
+-   `:emphasize-lines:` → Resalta líneas específicas.
+
+**Estructura del Proyecto:**
+
+
+```bash
+docs/
+├── source/
+│   ├── conf.py
+│   ├── codigo/
+│   │   ├── ejemplo.py
+```
+
+**ejemplo.py:**
+
+```python
+def saludo():
+    print("¡Hola desde un archivo externo!")
+```
+
+**Resultado en la documentación:**
+
+```{literalinclude} ../_static/ejemplo.py  
+:language: python  
+:linenos:  
+:emphasize-lines: 2  
+```
+
+----------
+
+### **5. Documentación de APIs**
+
+#### **5.1. Autogenerar Documentación de APIs**
+
+**Sphinx** puede autogenerar documentación de APIs usando la extensión `sphinx.ext.autodoc`.
+
+1.  **Asegúrate de tener habilitada la extensión en `conf.py`:**
+
+```python
+extensions = [
+    "sphinx.ext.autodoc",
+    "myst_parser"
+]
+```
+
+2.  **Crea un archivo `.rst` o `.md` para tu módulo:**
+
+```markdown
+# Documentación de API
+
+## Módulo `mi_modulo`
+
+```{autofunction} mi_modulo.saludo```
+```
+
+3.  **Estructura del Proyecto:**
+
+```bash
+docs/
+├── source/
+│   ├── conf.py
+│   ├── mi_modulo.py
+```
+
+**mi_modulo.py:**
+
+```python
+def saludo():
+    """Esta función imprime un saludo."""
+    print("¡Hola desde la API!")
+```
+
+4.  **Compila la Documentación:**
+
+```bash
+make html
+```
+
+### **6. Mostrar Salida de Código (Doctest)**
+
+Puedes mostrar la salida esperada de un bloque de código con la directiva `doctest`:
+
+```markdown
+```{doctest}
+>>> 2 + 2
+4
+>>> print("¡Hola, mundo!")
+¡Hola, mundo!```
+
+```
+
+**Resultado:**
+```{doctest}
+>>> 2 + 2
+4
+>>> print("¡Hola, mundo!")
+¡Hola, mundo!```

@@ -27,6 +27,7 @@ extensions = [
     'sphinx.ext.napoleon', # Interpreta docstring en formatos google y nunpy
     'sphinx.ext.viewcode', # Agrega enlaces al código fuente desde la documentación
     'sphinx_rtd_theme', # Tema visual basado en read the docs
+    'sphinx.ext.doctest',
     'myst_parser', # Habilita soporte para archivos Markdown
 ]
 

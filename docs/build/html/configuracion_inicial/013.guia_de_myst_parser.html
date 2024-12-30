@@ -21,7 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="prev" title="Estructura Generada" href="004.estructura_inicial_proyecto.html" /> 
+    <link rel="next" title="Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx" href="../comandos_mas_usados/comandos.html" />
+    <link rel="prev" title="Creación Inicial del Proyecto con Sphinx" href="003.Creacion_proyecto_Sphinx.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,8 +47,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html">Estructura Generada</a></li>
-<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Guía de uso MyST – Parser</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#typography">Typography</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#caracteristicas-principales-de-la-tipografia-en-myst-parser">Características principales de la tipografía en MyST-Parser</a><ul>
@@ -98,8 +98,49 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-basicas-en-myst-parser"><strong>1. Tablas Básicas en MyST-Parser</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica-de-tablas-markdown"><strong>1.1. Sintaxis Básica de Tablas Markdown</strong></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-con-alineacion"><strong>2. Tablas con Alineación</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alinear-el-contenido-de-las-columnas">📌 <strong>2.1. Alinear el Contenido de las Columnas</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-complejas-con-formato-avanzado"><strong>3. Tablas Complejas con Formato Avanzado</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crear-tablas-con-myst-directivas">📌 <strong>3.1. Crear Tablas con MyST Directivas</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-con-referencias-y-nombres"><strong>4. Tablas con Referencias y Nombres</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agregar-una-etiqueta-a-una-tabla"><strong>4.1. Agregar una Etiqueta a una Tabla</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code-and-apis">Source code and APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-codigo-fuente-en-markdown"><strong>1. Mostrar Código Fuente en Markdown</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bloques-de-codigo-code-blocks"><strong>1.1. Bloques de Código (Code Blocks)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#incrustar-codigo-en-linea"><strong>2. Incrustar Código en Línea</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resaltar-fragmentos-de-codigo-highlighting"><strong>3. Resaltar Fragmentos de Código (Highlighting)</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><strong>Explicación:</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-archivos-de-codigo-completo"><strong>4. Mostrar Archivos de Código Completo</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parametros"><strong>Parámetros:</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#documentacion-de-apis"><strong>5. Documentación de APIs</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autogenerar-documentacion-de-apis"><strong>5.1. Autogenerar Documentación de APIs</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-salida-de-codigo-doctest"><strong>6. Mostrar Salida de Código (Doctest)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
 </ul>
 
         </div>
@@ -395,24 +436,26 @@
 <section id="admonitions-con-bloques-de-codigo">
 <h4>5. <strong>Admonitions con bloques de código</strong><a class="headerlink" href="#admonitions-con-bloques-de-codigo" title="Link to this heading"></a></h4>
 <p>Puedes incluir bloques de código dentro de una admonition:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>    ```{admonition} Ejemplo de código
-    :class: tip
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{admonition} Ejemplo de código
+:class: tip
 
-    Aquí tienes un bloque de código:
+Aquí tienes un bloque de código:
 
-<span class="sb">      ```python</span>
-      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">)</span><span class="err">```</span> 
-<span class="sb">    ```</span>
+```python
+print(&quot;Hola, mundo!&quot;)``` 
 </pre></div>
 </div>
-<p>Resultado:</p>
-<div class="tip admonition">
-<p class="admonition-title">Ejemplo de código</p>
-<p>Aquí tienes un bloque de código:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
-print(&quot;Hola, mundo!&quot;)```
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Resultado:
+
+``` {admonition} Ejemplo de código
+:class: tip
+
+Aquí tienes un bloque de código:
+
+    ```python
+    print(&quot;Hola, mundo!&quot;)```
 </pre></div>
-</div>
 </div>
 </section>
 </section>
@@ -682,13 +725,353 @@ print(&quot;Hola, mundo!&quot;)```
 </section>
 </section>
 </section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
+<p>Las <strong>tablas</strong> son una herramienta esencial en la documentación técnica, ya que permiten organizar y presentar datos de forma clara y estructurada. <strong>MyST-Parser</strong> extiende la funcionalidad de Markdown para ofrecer opciones avanzadas de creación y personalización de tablas en <strong>Sphinx</strong>.</p>
+<hr class="docutils" />
+<section id="tablas-basicas-en-myst-parser">
+<h3><strong>1. Tablas Básicas en MyST-Parser</strong><a class="headerlink" href="#tablas-basicas-en-myst-parser" title="Link to this heading"></a></h3>
+<section id="sintaxis-basica-de-tablas-markdown">
+<h4><strong>1.1. Sintaxis Básica de Tablas Markdown</strong><a class="headerlink" href="#sintaxis-basica-de-tablas-markdown" title="Link to this heading"></a></h4>
+<p>Puedes crear tablas simples utilizando la sintaxis básica de Markdown:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+|--------------|--------------|--------------|
+| Celda 1     | Celda 2     | Celda 3     |
+| Celda 4     | Celda 5     | Celda 6     |
+</pre></div>
+</div>
+<section id="id1">
+<h5>🛠️ <strong>Explicación:</strong><a class="headerlink" href="#id1" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p>Las tuberías (<code class="docutils literal notranslate"><span class="pre">|</span></code>) delimitan columnas.</p></li>
+<li><p>La segunda línea (<code class="docutils literal notranslate"><span class="pre">---</span></code>) define los encabezados.</p></li>
+<li><p>Cada fila se define en una nueva línea.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Encabezado 1</p></th>
+<th class="head"><p>Encabezado 2</p></th>
+<th class="head"><p>Encabezado 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Celda 1</p></td>
+<td><p>Celda 2</p></td>
+<td><p>Celda 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Celda 4</p></td>
+<td><p>Celda 5</p></td>
+<td><p>Celda 6</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-con-alineacion">
+<h3><strong>2. Tablas con Alineación</strong><a class="headerlink" href="#tablas-con-alineacion" title="Link to this heading"></a></h3>
+<section id="alinear-el-contenido-de-las-columnas">
+<h4>📌 <strong>2.1. Alinear el Contenido de las Columnas</strong><a class="headerlink" href="#alinear-el-contenido-de-las-columnas" title="Link to this heading"></a></h4>
+<p>Puedes controlar la alineación del texto dentro de las columnas usando los símbolos <code class="docutils literal notranslate"><span class="pre">:</span></code>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| Izquierda   | Centro     | Derecha   |
+|:----------- |:---------: |---------: |
+| Celda 1     | Celda 2    | Celda 3   |
+| Celda 4     | Celda 5    | Celda 6   |
+</pre></div>
+</div>
+<section id="id2">
+<h5>🛠️ <strong>Explicación:</strong><a class="headerlink" href="#id2" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:---</span></code> → Alineación a la izquierda.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:---:</span></code> → Alineación centrada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">---:</span></code> → Alineación a la derecha.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Izquierda</p></th>
+<th class="head text-center"><p>Centro</p></th>
+<th class="head text-right"><p>Derecha</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Celda 1</p></td>
+<td class="text-center"><p>Celda 2</p></td>
+<td class="text-right"><p>Celda 3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Celda 4</p></td>
+<td class="text-center"><p>Celda 5</p></td>
+<td class="text-right"><p>Celda 6</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-complejas-con-formato-avanzado">
+<h3><strong>3. Tablas Complejas con Formato Avanzado</strong><a class="headerlink" href="#tablas-complejas-con-formato-avanzado" title="Link to this heading"></a></h3>
+<section id="crear-tablas-con-myst-directivas">
+<h4>📌 <strong>3.1. Crear Tablas con MyST Directivas</strong><a class="headerlink" href="#crear-tablas-con-myst-directivas" title="Link to this heading"></a></h4>
+<p>MyST-Parser admite el uso de directivas para crear tablas más avanzadas con opciones adicionales:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{list-table} Título de la Tabla
+  :header-rows: 1
+  :widths: 20 40 40
+
+<span class="k">*</span><span class="w"> </span>  - Treat
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Quantity
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Description
+<span class="k">*</span><span class="w"> </span>  - Albatross
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>2.99
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>On a stick!
+<span class="k">*</span><span class="w"> </span>  - Crunchy Frog
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>1.49
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>If we took the bones out, it wouldn&#39;t be
+ crunchy, now would it?
+<span class="k">*</span><span class="w"> </span>  - Gannet Ripple
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>1.99
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>On a stick! ```
+</pre></div>
+</div>
+<section id="id3">
+<h5><strong>Explicación:</strong><a class="headerlink" href="#id3" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> → Define cuántas filas son para encabezados (en este caso, 1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:widths:</span></code> → Define el ancho de cada columna (en porcentaje).</p></li>
+<li><p>Cada fila de la tabla se define con <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">-</span></code>.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Título de la Tabla</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Treat</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albatross</p></td>
+<td><p>2.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crunchy Frog</p></td>
+<td><p>1.49</p></td>
+<td><p>If we took the bones out, it wouldn’t be
+crunchy, now would it?</p></td>
+</tr>
+<tr class="row-even"><td><p>Gannet Ripple</p></td>
+<td><p>1.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-con-referencias-y-nombres">
+<h3><strong>4. Tablas con Referencias y Nombres</strong><a class="headerlink" href="#tablas-con-referencias-y-nombres" title="Link to this heading"></a></h3>
+<section id="agregar-una-etiqueta-a-una-tabla">
+<h4><strong>4.1. Agregar una Etiqueta a una Tabla</strong><a class="headerlink" href="#agregar-una-etiqueta-a-una-tabla" title="Link to this heading"></a></h4>
+<p>Puedes etiquetar una tabla para referenciarla más adelante:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{list-table} Título de la Tabla
+:header-rows: 1
+:name: tabla-ejemplo
+
+<span class="k">*</span><span class="w"> </span>- Encabezado A
+<span class="w"> </span><span class="k">-</span><span class="w"> </span>Encabezado B
+<span class="k">*</span><span class="w"> </span>- Valor 1
+<span class="w"> </span><span class="k">-</span><span class="w"> </span>Valor 2```
+</pre></div>
+</div>
+<section id="id4">
+<h5><strong>Explicación:</strong><a class="headerlink" href="#id4" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span></code> Asigna un identificador único a la tabla.</p></li>
+<li><p>Puedes referenciar la tabla utilizando <code class="docutils literal notranslate"><span class="pre">#nombre-de-la-tabla</span></code>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="source-code-and-apis">
+<h2>Source code and APIs<a class="headerlink" href="#source-code-and-apis" title="Link to this heading"></a></h2>
+<p>El uso de código fuente y APIs en la documentación técnica es esencial para proporcionar ejemplos prácticos, fragmentos reutilizables y una referencia clara para desarrolladores. MyST-Parser, combinado con Sphinx, ofrece herramientas avanzadas para formatear, resaltar y documentar código fuente y APIs de forma clara y organizada.</p>
+<section id="mostrar-codigo-fuente-en-markdown">
+<h3><strong>1. Mostrar Código Fuente en Markdown</strong><a class="headerlink" href="#mostrar-codigo-fuente-en-markdown" title="Link to this heading"></a></h3>
+<section id="bloques-de-codigo-code-blocks">
+<h4><strong>1.1. Bloques de Código (Code Blocks)</strong><a class="headerlink" href="#bloques-de-codigo-code-blocks" title="Link to this heading"></a></h4>
+<p>Para mostrar bloques de código en MyST-Parser, puedes usar la sintaxis estándar de Markdown con tres acentos graves (  ):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>	```python
+	def hola_mundo():
+	    print(&quot;¡Hola, mundo!&quot;)```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hola_mundo</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Puedes usar otros lenguajes como <code class="docutils literal notranslate"><span class="pre">javascript</span></code>, <code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">css</span></code>, etc.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="incrustar-codigo-en-linea">
+<h3><strong>2. Incrustar Código en Línea</strong><a class="headerlink" href="#incrustar-codigo-en-linea" title="Link to this heading"></a></h3>
+<p>Puedes incrustar fragmentos de código dentro de una línea de texto utilizando acentos graves simples (`):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>El comando <span class="sb">`print(&quot;Hola&quot;)`</span> muestra un mensaje en la consola.
+</pre></div>
+</div>
+<p><strong>Resultado:</strong><br />
+El comando <code class="docutils literal notranslate"><span class="pre">print(&quot;Hola&quot;)</span></code> muestra un mensaje en la consola.</p>
+</section>
+<hr class="docutils" />
+<section id="resaltar-fragmentos-de-codigo-highlighting">
+<h3><strong>3. Resaltar Fragmentos de Código (Highlighting)</strong><a class="headerlink" href="#resaltar-fragmentos-de-codigo-highlighting" title="Link to this heading"></a></h3>
+<p>Puedes resaltar partes específicas de un bloque de código utilizando la directiva <strong><code class="docutils literal notranslate"><span class="pre">{code-block}</span></code></strong> de MyST-Parser:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>	```{code-block} python
+	:emphasize-lines: 2
+
+	def suma(a, b):
+	 resultado = a + b  # Esta línea está resaltada
+	 return resultado```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  
+<span class="hll"><span class="n">resultado</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="c1"># Esta línea está resaltada  </span>
+</span><span class="k">return</span> <span class="n">resultado</span>  
+</pre></div>
+</div>
+<section id="id5">
+<h4><strong>Explicación:</strong><a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span></code> → Resalta líneas específicas dentro del bloque.</p></li>
+<li><p>Puedes especificar varias líneas con <code class="docutils literal notranslate"><span class="pre">1,3</span></code> o rangos con <code class="docutils literal notranslate"><span class="pre">1-3</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mostrar-archivos-de-codigo-completo">
+<h3><strong>4. Mostrar Archivos de Código Completo</strong><a class="headerlink" href="#mostrar-archivos-de-codigo-completo" title="Link to this heading"></a></h3>
+<p>Si quieres incluir un archivo de código fuente completo en tu documentación, puedes usar la directiva <strong><code class="docutils literal notranslate"><span class="pre">literalinclude</span></code></strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{literalinclude} ../_static/ejemplo.py
+:language: python
+:linenos:
+:emphasize-lines: 2```
+</pre></div>
+</div>
+<section id="parametros">
+<h4><strong>Parámetros:</strong><a class="headerlink" href="#parametros" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:language:</span></code> → Define el lenguaje para el resaltado de sintaxis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> → Muestra números de línea.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span></code> → Resalta líneas específicas.</p></li>
+</ul>
+<p><strong>Estructura del Proyecto:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>source/
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+│<span class="w">   </span>├──<span class="w"> </span>codigo/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ejemplo.py
+</pre></div>
+</div>
+<p><strong>ejemplo.py:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde un archivo externo!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Resultado en la documentación:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+<span class="hll"><span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde un archivo externo!&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="documentacion-de-apis">
+<h3><strong>5. Documentación de APIs</strong><a class="headerlink" href="#documentacion-de-apis" title="Link to this heading"></a></h3>
+<section id="autogenerar-documentacion-de-apis">
+<h4><strong>5.1. Autogenerar Documentación de APIs</strong><a class="headerlink" href="#autogenerar-documentacion-de-apis" title="Link to this heading"></a></h4>
+<p><strong>Sphinx</strong> puede autogenerar documentación de APIs usando la extensión <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>.</p>
+<ol class="arabic simple">
+<li><p><strong>Asegúrate de tener habilitada la extensión en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</strong></p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;myst_parser&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Crea un archivo <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">.md</span></code> para tu módulo:</strong></p></li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Documentación de API</span>
+
+<span class="gu">## Módulo `mi_modulo`</span>
+
+```{autofunction} mi_modulo.saludo```
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Estructura del Proyecto:</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>source/
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+│<span class="w">   </span>├──<span class="w"> </span>mi_modulo.py
+</pre></div>
+</div>
+<p><strong>mi_modulo.py:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta función imprime un saludo.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde la API!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Compila la Documentación:</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</section>
+</section>
+<section id="mostrar-salida-de-codigo-doctest">
+<h3><strong>6. Mostrar Salida de Código (Doctest)</strong><a class="headerlink" href="#mostrar-salida-de-codigo-doctest" title="Link to this heading"></a></h3>
+<p>Puedes mostrar la salida esperada de un bloque de código con la directiva <code class="docutils literal notranslate"><span class="pre">doctest</span></code>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{doctest}
+&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; print(&quot;¡Hola, mundo!&quot;)
+¡Hola, mundo!```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">)</span>
+<span class="go">¡Hola, mundo!```</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="004.estructura_inicial_proyecto.html" class="btn btn-neutral float-left" title="Estructura Generada" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="003.Creacion_proyecto_Sphinx.html" class="btn btn-neutral float-left" title="Creación Inicial del Proyecto con Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../comandos_mas_usados/comandos.html" class="btn btn-neutral float-right" title="Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
