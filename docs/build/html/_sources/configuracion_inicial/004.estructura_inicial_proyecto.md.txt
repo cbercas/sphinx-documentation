@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 Cuando creas un proyecto Sphinx utilizando `sphinx-quickstart`, se generan varias carpetas y archivos para estructurar tu documentación. Si estás trabajando con **MyST-Parser** para usar Markdown (`.md`) en lugar de ReStructuredText (`.rst`), estas carpetas seguirán siendo útiles, pero la estructura se adapta ligeramente. A continuación hay descripción detallada del propósito de cada carpeta y archivo:
+=======
+# Estructura inicial del proyecto
+
+Cuando creas un proyecto Sphinx utilizando `sphinx-quickstart`, se generan varias carpetas y archivos para estructurar tu documentación. Si se trabajan con **MyST-Parser** para usar Markdown (`.md`) en lugar de ReStructuredText (`.rst`), estas carpetas seguirán siendo útiles, pero la estructura se adaptara ligeramente. A continuación se muestra una descripción detallada del propósito de cada carpeta y archivo:
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 
 ----------
 
@@ -25,15 +31,27 @@ docs/
     -   `html/`: Archivos HTML generados.
     -   `doctrees/`: Archivos intermedios que Sphinx usa para rastrear dependencias entre documentos.
     -   `latex/`: Archivos LaTeX generados (si se habilita la salida PDF).
+<<<<<<< HEAD
 -   **Nota**: Esta carpeta se regenera cada vez que se ejecutan comandos como `make html`.
 
+=======
+```{admonition} Nota
+:class: tip
+
+Esta carpeta se regenera cada vez que se ejecuta el comando `make html`.
+```
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 ----------
 
 ### 2. **Carpeta `source/`**
 
 Esta carpeta contiene los archivos fuente de la documentación.
 
+<<<<<<< HEAD
 #### **Subcarpetas Importantes**
+=======
+#### **2.1. Subcarpetas Importantes**
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 
 -   **`_static/`**:
     
@@ -53,12 +71,20 @@ Esta carpeta contiene los archivos fuente de la documentación.
 
 ----------
 
+<<<<<<< HEAD
 #### **Archivos Importantes en `source/`**
+=======
+#### **2.2. Archivos Importantes en `source/`**
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 
 -   **`conf.py`**:
     
     -   El archivo de configuración principal de Sphinx.
+<<<<<<< HEAD
     -   Contiene ajustes para extensiones (como `myst-parser`), rutas de búsqueda, tema visual (`html_theme`)...
+=======
+    -   Contiene ajustes para extensiones (como `myst-parser`), rutas de búsqueda, tema visual (`html_theme`) etc.
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
     -   Al usar MyST-Parser, hay que asegurarse de incluir:
             
         ```
@@ -68,11 +94,19 @@ Esta carpeta contiene los archivos fuente de la documentación.
         }
         ``` 
         
+<<<<<<< HEAD
 -   **`index.rst`** (o `index.md` si usas MyST):
     
     -   El archivo raíz de la documentación.
     -   Define el índice inicial y vincula los archivos fuente usando la directiva `toctree`.
     -   Al usar Markdown con MyST, el archivo se verá como:
+=======
+-   **`index.md`**:
+    
+    -   El archivo raíz de la documentación.
+    -   Define el índice inicial y vincula los archivos fuente usando la directiva `toctree`.
+    -   Al usar Markdown con MyST, el archivo se ve como:
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
                 
         ``` 
         # Título Principal de la Documentación
@@ -85,6 +119,57 @@ Esta carpeta contiene los archivos fuente de la documentación.
         carpeta/archivo2
         ```
 
+<<<<<<< HEAD
+=======
+    -   `#`: Indica un **título de nivel 1** en Markdown. En este caso, es el título principal de la documentación.
+    -   `##`: Indica un **título de nivel 2**. Aquí es un subtítulo para la sección del índice.
+    - ### **Directiva `{toctree}`**
+
+        La directiva `{toctree}` es una característica especial de **MyST-Parser** y **Sphinx** que permite construir un índice o tabla de contenidos (ToC).
+
+    - ### **Propósito de `{toctree}`**:
+
+        -   Crea un árbol de navegación que incluye enlaces a otros documentos o secciones.
+        -   Sphinx utiliza este árbol para generar automáticamente la estructura de navegación en los archivos HTML generados.
+        - #### **Parámetros de `{toctree}`:**
+
+            1.  **`:maxdepth: 6`**
+                
+                -   Especifica el nivel de profundidad para los encabezados que se incluirán en la tabla de contenidos.
+                -   `6` es el máximo, lo que significa que Sphinx incluirá encabezados desde `#` (nivel 1) hasta `######` (nivel 6) de los documentos referenciados.
+                
+                Ejemplo:
+                
+                -   Si un archivo tiene:
+                    ```       
+                    # Título de Nivel 1
+                    ## Título de Nivel 2
+                    ### Título de Nivel 3` 
+                    ```
+                    Con `:maxdepth: 2`, solo se incluirían los niveles 1 y 2 en el índice.
+                    
+            2.  **`:glob:`**
+                
+                -   Habilita el uso de **comodines** para incluir varios archivos de forma automática.
+                -   Por ejemplo, `configuracion_inicial/*` seleccionará todos los archivos dentro de la carpeta `configuracion_inicial/`.
+            ```
+            configuracion_inicial/*
+            ```
+            Este patrón selecciona **todos los archivos** en la carpeta `configuracion_inicial/`.
+            Sphinx incluirá cada archivo de forma automática en el índice generado.
+
+            Ejemplo:
+
+            -   Si `configuracion_inicial/` contiene los siguientes archivos:
+                
+            ```
+            configuracion_inicial/001.env.md
+            configuracion_inicial/002.instalacion_librerias.md
+            configuracion_inicial/003.Creacion_proyecto_Sphinx
+            ```
+            Estos serán añadidos al índice y convertidos en enlaces en la navegación HTML generada.
+
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 ----------
 
 ### 3. **Archivo `Makefile`**
@@ -92,6 +177,11 @@ Esta carpeta contiene los archivos fuente de la documentación.
 -   **Propósito**: Contiene comandos para construir la documentación en diferentes formatos.
 -   **Uso**:
     -   Se ejecuta `make html` para construir documentación HTML.
+<<<<<<< HEAD
+=======
+    -   Se utiliza con el comando make desde una terminal.
+    -   Sistema Operativo: Es un archivo diseñado común en sistemas **Unix, Linux y macOS**.
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
     -   Otros comandos incluyen:
         -   `make latexpdf`: Genera un PDF si se tiene LaTeX configurado.
         -   `make epub`: Genera un eBook.
@@ -101,13 +191,20 @@ Esta carpeta contiene los archivos fuente de la documentación.
 ### 4. **Archivo `make.bat`**
 
 -   **Propósito**: Archivo equivalente al `Makefile` para sistemas Windows.
+<<<<<<< HEAD
 -   **Uso**:
     -   Ejecuta comandos como `make.bat html` en el terminal de Windows.
 
+=======
+-   **Uso**: 
+    -   Ejecuta comandos como `make.bat html` en el terminal de Windows, para construir documentación HTML.
+    -   Sistema operativo: Es un archivo diseñado para el sistema **Windows**.
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
 ----------
 
 ## Flujo de Trabajo con MyST-Parser
 
+<<<<<<< HEAD
 1.  **Configura MyST-Parser en `conf.py`**: Asegúrate de que `myst-parser` esté habilitado:
     
     python
@@ -118,12 +215,24 @@ Esta carpeta contiene los archivos fuente de la documentación.
     source_suffix = {
         '.md': 'markdown',
     }` 
+=======
+1.  **Configuración de MyST-Parser en `conf.py`**: Asegúrate de que `myst-parser` esté habilitado:
+    
+       
+    ```
+    extensions = ['myst_parser']
+    source_suffix = {
+        '.md': 'markdown',
+    }
+    ``` 
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
     
 2.  **Estructura Markdown**:
     
     -   Los archivos Markdown (`.md`) reemplazan los `.rst`. Escribe tus documentos con encabezados `#`, listas, bloques de código, etc.
     -   Usa MyST para integrar características de Sphinx en Markdown. Por ejemplo:
         
+<<<<<<< HEAD
         markdown
         
         Copiar código
@@ -150,6 +259,29 @@ Esta carpeta contiene los archivos fuente de la documentación.
         
     -   Los archivos HTML generados estarán en `docs/build/html`.
 4.  **Personaliza**:
+=======
+        ```
+        # Título del Documento
+        
+        {toctree}
+        :maxdepth: 2
+        
+        archivo1.md
+        carpeta/archivo2.md
+        ```
+        
+        
+        
+3.  **Compilación de la documentación**:
+    
+    -   Ejecuta:
+        
+              
+        `make html` 
+        
+    -   Los archivos HTML generados estarán en `docs/build/html`.
+4.  **Personalización**:
+>>>>>>> c2fca3cce36901d4db1309f4160d5359864d8e01
     
     -   Añade CSS en `_static/` para personalizar el diseño.
     -   Usa `_templates/` para modificar las plantillas.

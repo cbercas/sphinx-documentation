@@ -5,7 +5,7 @@ Cuando creas un proyecto Sphinx utilizando `sphinx-quickstart`, se generan varia
 ## Estructura Generada
 
 ```
-`docs/
+docs/
 ├── build/
 ├── source/
 │   ├── _static/
@@ -13,7 +13,7 @@ Cuando creas un proyecto Sphinx utilizando `sphinx-quickstart`, se generan varia
 │   ├── conf.py
 │   ├── index.rst
 ├── make.bat
-└── Makefile` 
+└── Makefile
 ```
 
 ----------
@@ -77,12 +77,12 @@ Esta carpeta contiene los archivos fuente de la documentación.
         ``` 
         # Título Principal de la Documentación
         
-        ```{toctree}
+        {toctree}
         :maxdepth: 2
         :caption: Índice:
         
         archivo1
-        carpeta/archivo2` 
+        carpeta/archivo2
         ```
 
 ----------
