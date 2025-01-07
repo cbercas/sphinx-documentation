@@ -3,7 +3,7 @@
 ## Indice:
 
 ```{toctree}
-:maxdepth: 6
+:maxdepth: 2
 :glob:
 
 configuracion_inicial/*

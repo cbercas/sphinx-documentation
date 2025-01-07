@@ -1,0 +1,1100 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía de uso MyST – Parser &mdash; documentación de Proyecto Equipo 05 | Tema 05  - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx" href="../comandos_mas_usados/comandos.html" />
+    <link rel="prev" title="Creación Inicial del Proyecto con Sphinx" href="003.Creacion_proyecto_Sphinx.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto Equipo 05 | Tema 05 
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guía de uso MyST – Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#typography">Typography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristicas-principales-de-la-tipografia-en-myst-parser">Características principales de la tipografía en MyST-Parser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enfasis-de-texto">1. <strong>Énfasis de texto</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#texto-tachado">2. <strong>Texto tachado</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#citas-tipograficas">3. <strong>Citas tipográficas</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subindice-y-superindice">4. <strong>Subíndice y superíndice</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#caracter-de-escape">5. <strong>Carácter de escape</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separadores-horizontales">6. <strong>Separadores horizontales</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#letras-y-simbolos-especiales">7. <strong>Letras y símbolos especiales</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#admonitions">Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristicas-de-las-admonitions-en-myst-parser">Características de las admonitions en MyST-Parser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica">1. <strong>Sintaxis básica</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tipos-predefinidos-de-admonitions">2. <strong>Tipos predefinidos de admonitions</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admonitions-con-titulos-personalizados">3. <strong>Admonitions con títulos personalizados</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admonitions-anidadas">4. <strong>Admonitions anidadas</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admonitions-con-bloques-de-codigo">5. <strong>Admonitions con bloques de código</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#personalizacion-de-admonitions">6. Personalización de admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entender-la-estructura-de-admonitions-en-sphinx"><strong>6.1. Entender la Estructura de Admonitions en Sphinx</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crear-un-archivo-de-estilos-personalizado-en-sphinx"><strong>6.2. Crear un Archivo de Estilos Personalizado en Sphinx</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configurar-conf-py-para-incluir-css-personalizado"><strong>6.3. Configurar <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> para Incluir CSS Personalizado</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configurar-el-tema-opcional"><strong>6.4. Configurar el tema (opcional)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#images-and-figures">Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#imagenes-basicas-en-myst-parser"><strong>1. Imágenes Básicas en MyST-Parser</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica-para-insertar-una-imagen"><strong>1.1. Sintaxis Básica para Insertar una Imagen</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#figuras-con-titulo-y-referencia"><strong>2. Figuras con Título y Referencia</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#insertar-una-figura-con-titulo"><strong>2.1. Insertar una Figura con Título</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#referencia-cruzada-a-una-figura"><strong>2.2. Referencia Cruzada a una Figura</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#opciones-avanzadas-para-imagenes-y-figuras"><strong>3. Opciones Avanzadas para Imágenes y Figuras</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#escalar-imagenes"><strong>3.1. Escalar Imágenes</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alinear-imagenes"><strong>3.2. Alinear Imágenes</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enlazar-imagenes"><strong>3.3. Enlazar Imágenes</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-basicas-en-myst-parser"><strong>1. Tablas Básicas en MyST-Parser</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica-de-tablas-markdown"><strong>1.1. Sintaxis Básica de Tablas Markdown</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-con-alineacion"><strong>2. Tablas con Alineación</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alinear-el-contenido-de-las-columnas">📌 <strong>2.1. Alinear el Contenido de las Columnas</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-complejas-con-formato-avanzado"><strong>3. Tablas Complejas con Formato Avanzado</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crear-tablas-con-myst-directivas">📌 <strong>3.1. Crear Tablas con MyST Directivas</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-con-referencias-y-nombres"><strong>4. Tablas con Referencias y Nombres</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agregar-una-etiqueta-a-una-tabla"><strong>4.1. Agregar una Etiqueta a una Tabla</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code-and-apis">Source code and APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-codigo-fuente-en-markdown"><strong>1. Mostrar Código Fuente en Markdown</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bloques-de-codigo-code-blocks"><strong>1.1. Bloques de Código (Code Blocks)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#incrustar-codigo-en-linea"><strong>2. Incrustar Código en Línea</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resaltar-fragmentos-de-codigo-highlighting"><strong>3. Resaltar Fragmentos de Código (Highlighting)</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><strong>Explicación:</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-archivos-de-codigo-completo"><strong>4. Mostrar Archivos de Código Completo</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parametros"><strong>Parámetros:</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#documentacion-de-apis"><strong>5. Documentación de APIs</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autogenerar-documentacion-de-apis"><strong>5.1. Autogenerar Documentación de APIs</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mostrar-salida-de-codigo-doctest"><strong>6. Mostrar Salida de Código (Doctest)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto Equipo 05 | Tema 05 </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Guía de uso MyST – Parser</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/013.guia_de_myst_parser.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guia-de-uso-myst-parser">
+<h1>Guía de uso MyST – Parser<a class="headerlink" href="#guia-de-uso-myst-parser" title="Link to this heading"></a></h1>
+<section id="typography">
+<h2>Typography<a class="headerlink" href="#typography" title="Link to this heading"></a></h2>
+<p>El soporte de tipografía en MyST-Parser permite a los usuarios crear contenido estilizado y bien formateado en documentos escritos en Markdown. MyST-Parser extiende Markdown estándar con características avanzadas que incluyen símbolos especiales, estilos de texto enriquecidos y más.</p>
+<section id="caracteristicas-principales-de-la-tipografia-en-myst-parser">
+<h3>Características principales de la tipografía en MyST-Parser<a class="headerlink" href="#caracteristicas-principales-de-la-tipografia-en-myst-parser" title="Link to this heading"></a></h3>
+<section id="enfasis-de-texto">
+<h4>1. <strong>Énfasis de texto</strong><a class="headerlink" href="#enfasis-de-texto" title="Link to this heading"></a></h4>
+<p>MyST-Parser utiliza una sintaxis similar a Markdown para resaltar texto con <em>énfasis</em> (cursiva) y <strong>fuerte énfasis</strong> (negrita).</p>
+<ul>
+<li><p><strong>Cursiva:</strong> Usa un solo asterisco (<code class="docutils literal notranslate"><span class="pre">*</span></code>) o guion bajo (<code class="docutils literal notranslate"><span class="pre">_</span></code>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="ge">*Texto en cursiva*</span> o <span class="ge">_Texto en cursiva_</span>
+</pre></div>
+</div>
+<p>Resultado: <em>Texto en cursiva</em></p>
+</li>
+<li><p><strong>Negrita:</strong> Usa dos asteriscos (<code class="docutils literal notranslate"><span class="pre">**</span></code>) o guiones bajos dobles (<code class="docutils literal notranslate"><span class="pre">__</span></code>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**Texto en negrita**</span> o <span class="gs">__Texto en negrita__</span>
+</pre></div>
+</div>
+<p>Resultado: <strong>Texto en negrita</strong></p>
+</li>
+<li><p><strong>Combinación de estilos:</strong> Puedes combinar cursiva y negrita:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**_Texto combinado_**</span>
+</pre></div>
+</div>
+<p>Resultado: <strong><em>Texto combinado</em></strong></p>
+</li>
+</ul>
+</section>
+<section id="texto-tachado">
+<h4>2. <strong>Texto tachado</strong><a class="headerlink" href="#texto-tachado" title="Link to this heading"></a></h4>
+<p>Para tachar texto, usa dos tildes (<code class="docutils literal notranslate"><span class="pre">~~</span></code>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gd">~~Texto tachado~~</span>
+</pre></div>
+</div>
+<p>Resultado: ~~Texto tachado~~</p>
+</section>
+<section id="citas-tipograficas">
+<h4>3. <strong>Citas tipográficas</strong><a class="headerlink" href="#citas-tipograficas" title="Link to this heading"></a></h4>
+<p>Puedes usar <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> para indicar una cita en bloque:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">Este es un bloque de cita.</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<blockquote>
+<div><p>Este es un bloque de cita.</p>
+</div></blockquote>
+</section>
+<section id="subindice-y-superindice">
+<h4>4. <strong>Subíndice y superíndice</strong><a class="headerlink" href="#subindice-y-superindice" title="Link to this heading"></a></h4>
+<p>MyST-Parser incluye soporte para subíndices y superíndices utilizando notación inline.</p>
+<ul>
+<li><p><strong>Subíndice:</strong> Usa <code class="docutils literal notranslate"><span class="pre">~</span></code> para envolver el texto del subíndice:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>H~2~O
+</pre></div>
+</div>
+<p>Resultado: H₂O</p>
+</li>
+<li><p><strong>Superíndice:</strong> Usa <code class="docutils literal notranslate"><span class="pre">^</span></code> para envolver el texto del superíndice:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>E = mc^2^
+</pre></div>
+</div>
+<p>Resultado: E = mc²</p>
+</li>
+</ul>
+</section>
+<section id="caracter-de-escape">
+<h4>5. <strong>Carácter de escape</strong><a class="headerlink" href="#caracter-de-escape" title="Link to this heading"></a></h4>
+<p>Para incluir caracteres literales que podrían ser interpretados como sintaxis (por ejemplo, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code> o <code class="docutils literal notranslate"><span class="pre">~</span></code>), precede el carácter con una barra invertida (<code class="docutils literal notranslate"><span class="pre">\</span></code>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Este es un asterisco literal: \*
+</pre></div>
+</div>
+<p>Resultado: Este es un asterisco literal: *</p>
+</section>
+<section id="separadores-horizontales">
+<h4>6. <strong>Separadores horizontales</strong><a class="headerlink" href="#separadores-horizontales" title="Link to this heading"></a></h4>
+<p>Crea líneas horizontales para dividir contenido con tres o más guiones (<code class="docutils literal notranslate"><span class="pre">---</span></code>), asteriscos (<code class="docutils literal notranslate"><span class="pre">***</span></code>) o guiones bajos (<code class="docutils literal notranslate"><span class="pre">___</span></code>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>---
+</pre></div>
+</div>
+<p>Resultado:</p>
+</section>
+<hr class="docutils" />
+<section id="letras-y-simbolos-especiales">
+<h4>7. <strong>Letras y símbolos especiales</strong><a class="headerlink" href="#letras-y-simbolos-especiales" title="Link to this heading"></a></h4>
+<p>MyST-Parser soporta caracteres Unicode directamente en los archivos Markdown. Además, puedes utilizar entidades HTML si lo necesitas:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Corazón: ❤️ o &amp;#x2764;
+</pre></div>
+</div>
+<p>Resultado: Corazón: ❤️ o ❤</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="admonitions">
+<h2>Admonitions<a class="headerlink" href="#admonitions" title="Link to this heading"></a></h2>
+<p>Las admonitions son bloques especiales utilizados para resaltar contenido importante o específico, como notas, advertencias o ejemplos. MyST-Parser permite crear una amplia variedad de admonitions mediante una sintaxis intuitiva que mejora la claridad y el formato de los documentos.</p>
+<section id="caracteristicas-de-las-admonitions-en-myst-parser">
+<h3>Características de las admonitions en MyST-Parser<a class="headerlink" href="#caracteristicas-de-las-admonitions-en-myst-parser" title="Link to this heading"></a></h3>
+<section id="sintaxis-basica">
+<h4>1. <strong>Sintaxis básica</strong><a class="headerlink" href="#sintaxis-basica" title="Link to this heading"></a></h4>
+<p>Para crear una admonition, usa la siguiente sintaxis:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>    ```{admonition} Título opcional :class: type Contenido de la admonition. ```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="admonition-titulo-opcional admonition">
+<p class="admonition-title">Título opcional</p>
+<p>Contenido de la admonition.</p>
+</div>
+</section>
+<section id="tipos-predefinidos-de-admonitions">
+<h4>2. <strong>Tipos predefinidos de admonitions</strong><a class="headerlink" href="#tipos-predefinidos-de-admonitions" title="Link to this heading"></a></h4>
+<p>MyST-Parser incluye varios tipos de admonitions predefinidas para diferentes propósitos. La sintaxis es similar a la básica, pero especificando el tipo de admonition.</p>
+<ul>
+<li><p><strong>Nota (<code class="docutils literal notranslate"><span class="pre">note</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Nota :class: note Esta es una nota informativa.```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Esta es una nota informativa.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Advertencia (<code class="docutils literal notranslate"><span class="pre">warning</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Advertencia :class: warning Ten cuidado con esta advertencia.```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="warning admonition">
+<p class="admonition-title">Advertencia</p>
+<p>Ten cuidado con esta advertencia.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Consejo (<code class="docutils literal notranslate"><span class="pre">tip</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Consejo :class: tip Aquí tienes un consejo útil. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="tip admonition">
+<p class="admonition-title">Consejo</p>
+<p>Aquí tienes un consejo útil.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Importante (<code class="docutils literal notranslate"><span class="pre">important</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Importante :class: important Esta información es crucial. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="important admonition">
+<p class="admonition-title">Importante</p>
+<p>Esta información es crucial.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Peligro (<code class="docutils literal notranslate"><span class="pre">danger</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Peligroso :class: danger ¡Atención! Esta acción puede ser peligrosa. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="danger admonition">
+<p class="admonition-title">Peligroso</p>
+<p>¡Atención! Esta acción puede ser peligrosa.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Precaución (<code class="docutils literal notranslate"><span class="pre">caution</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Precaución :class: caution Ten cuidado al realizar esta acción, podría haber consecuencias inesperadas. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="caution admonition">
+<p class="admonition-title">Precaución</p>
+<p>Ten cuidado al realizar esta acción, podría haber consecuencias inesperadas.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Atención (<code class="docutils literal notranslate"><span class="pre">attention</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Atención :class: attetion Esta sección requiere tu atención inmediata para evitar errores críticos. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="attetion admonition">
+<p class="admonition-title">Atención</p>
+<p>Esta sección requiere tu atención inmediata para evitar errores críticos.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Pista (<code class="docutils literal notranslate"><span class="pre">hint</span></code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Pista :class: hint Aquí hay una sugerencia útil para facilitar tu tarea. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="hint admonition">
+<p class="admonition-title">Pista</p>
+<p>Aquí hay una sugerencia útil para facilitar tu tarea.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Precaución (<code class="docutils literal notranslate"><span class="pre">seealso</span> </code>)</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Véase también :class: seealso  Consulta la sección anterior para obtener más contexto sobre este tema. ```
+</pre></div>
+</div>
+<ul>
+<li><p>Así se vería:</p>
+<div class="seealso admonition">
+<p class="admonition-title">Véase también</p>
+<p>Consulta la sección anterior para obtener más contexto sobre este tema.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="admonitions-con-titulos-personalizados">
+<h4>3. <strong>Admonitions con títulos personalizados</strong><a class="headerlink" href="#admonitions-con-titulos-personalizados" title="Link to this heading"></a></h4>
+<p>Puedes añadir un título personalizado a cualquier admonition especificando el título después del tipo:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{admonition} Título personalizado :class: tip Contenido con un título personalizado. ```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="tip admonition">
+<p class="admonition-title">Título personalizado</p>
+<p>Contenido con un título personalizado.</p>
+</div>
+</section>
+<section id="admonitions-anidadas">
+<h4>4. <strong>Admonitions anidadas</strong><a class="headerlink" href="#admonitions-anidadas" title="Link to this heading"></a></h4>
+<p>Puedes anidar admonitions dentro de otras para mayor claridad. Por ejemplo:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>    ```{admonition} Nota :class: note Esto es un ejemplo de nota. 
+      ```{admonition} Tip :class: tip Esto es un ejemplo de tip anidado. ```
+    ```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Esto es un ejemplo de nota.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Esto es un ejemplo de tip anidado. ```</p>
+</div>
+</div>
+</section>
+<section id="admonitions-con-bloques-de-codigo">
+<h4>5. <strong>Admonitions con bloques de código</strong><a class="headerlink" href="#admonitions-con-bloques-de-codigo" title="Link to this heading"></a></h4>
+<p>Puedes incluir bloques de código dentro de una admonition:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{admonition} Ejemplo de código
+:class: tip
+
+Aquí tienes un bloque de código:
+
+```python
+print(&quot;Hola, mundo!&quot;)``` 
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Resultado:
+
+``` {admonition} Ejemplo de código
+:class: tip
+
+Aquí tienes un bloque de código:
+
+    ```python
+    print(&quot;Hola, mundo!&quot;)```
+</pre></div>
+</div>
+</section>
+</section>
+<section id="personalizacion-de-admonitions">
+<h3>6. Personalización de admonitions<a class="headerlink" href="#personalizacion-de-admonitions" title="Link to this heading"></a></h3>
+<section id="entender-la-estructura-de-admonitions-en-sphinx">
+<h4><strong>6.1. Entender la Estructura de Admonitions en Sphinx</strong><a class="headerlink" href="#entender-la-estructura-de-admonitions-en-sphinx" title="Link to this heading"></a></h4>
+<p>En Sphinx, las admonitions son bloques especiales que resaltan contenido específico, como notas, advertencias o ejemplos. Estos bloques se generan en el HTML final con clases CSS específicas que permiten su personalización.</p>
+<p>Algunos tipos comunes explicados anteriormente son:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">warning</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">important</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caution</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attention</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seealso</span></code></p></li>
+</ul>
+<section id="estructura-html-generada-por-una-admonition">
+<h5><strong>6.1.1. Estructura HTML Generada por una Admonition</strong><a class="headerlink" href="#estructura-html-generada-por-una-admonition" title="Link to this heading"></a></h5>
+<p>Al compilar la documentación, una admonition podría generarse como:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition-title&quot;</span><span class="p">&gt;</span>Nota<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un contenido dentro de una admonition de tipo &quot;note&quot;.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="crear-un-archivo-de-estilos-personalizado-en-sphinx">
+<h4><strong>6.2. Crear un Archivo de Estilos Personalizado en Sphinx</strong><a class="headerlink" href="#crear-un-archivo-de-estilos-personalizado-en-sphinx" title="Link to this heading"></a></h4>
+<section id="estructura-del-proyecto">
+<h5><strong>6.2.1. Estructura del Proyecto</strong><a class="headerlink" href="#estructura-del-proyecto" title="Link to this heading"></a></h5>
+<p>Asegúrate de tener la siguiente estructura en tu proyecto Sphinx:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>_static/
+│<span class="w">   </span>├──<span class="w"> </span>custom.css<span class="w">  </span><span class="c1"># Archivo CSS personalizado</span>
+├──<span class="w"> </span>conf.py
+├──<span class="w"> </span>index.rst
+└──<span class="w"> </span>...
+</pre></div>
+</div>
+</section>
+<section id="editar-el-archivo-custom-css">
+<h5><strong>6.2.2. Editar el Archivo <code class="docutils literal notranslate"><span class="pre">custom.css</span></code></strong><a class="headerlink" href="#editar-el-archivo-custom-css" title="Link to this heading"></a></h5>
+<p>Abre (o crea) el archivo <code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code> y agrega estilos personalizados para las admonitions:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* === Estilos Generales para todas las Admonitions === */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-left</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#444</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f9f9f9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* === Título de las Admonitions === */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* === Personalización por Tipo de Admonition === */</span>
+
+<span class="c">/* NOTE */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">note</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2196F3</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E3F2FD</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">note</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0D47A1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* WARNING */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">warning</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FF9800</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFF3E0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">warning</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E65100</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* IMPORTANT */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">important</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E8F5E9</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">important</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1B5E20</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* HINT */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">hint</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#9C27B0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#F3E5F5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">hint</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#6A1B9A</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="explicacion-de-los-estilos">
+<h5><strong>6.2.3. Explicación de los Estilos:</strong><a class="headerlink" href="#explicacion-de-los-estilos" title="Link to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.admonition</span></code></strong>: Define un estilo base para todas las admonitions.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.admonition-title</span></code></strong>: Estiliza los títulos dentro de las admonitions.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.admonition.note</span></code>, <code class="docutils literal notranslate"><span class="pre">.admonition.warning</span></code>, etc.</strong>: Estiliza cada tipo de admonition con colores específicos para los bordes y el fondo.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="configurar-conf-py-para-incluir-css-personalizado">
+<h4><strong>6.3. Configurar <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> para Incluir CSS Personalizado</strong><a class="headerlink" href="#configurar-conf-py-para-incluir-css-personalizado" title="Link to this heading"></a></h4>
+<p>Abre tu archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> y verifica que la configuración sea correcta:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Habilitar myst_parser para soporte Markdown</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;myst_parser&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.napoleon&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx_rtd_theme&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Añadir estilos CSS personalizados</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;custom.css&#39;</span><span class="p">,</span>  <span class="c1"># Asegúrate de que custom.css esté en la carpeta _static</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="configurar-el-tema-opcional">
+<h4><strong>6.4. Configurar el tema (opcional)</strong><a class="headerlink" href="#configurar-el-tema-opcional" title="Link to this heading"></a></h4>
+<p>html_theme = “sphinx_rtd_theme”`</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code>: Especifica dónde buscar archivos estáticos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html_css_files</span></code>: Carga el archivo <code class="docutils literal notranslate"><span class="pre">custom.css</span></code> en la salida HTML.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="images-and-figures">
+<h2>Images and Figures<a class="headerlink" href="#images-and-figures" title="Link to this heading"></a></h2>
+<p>El manejo de <strong>imágenes</strong> y <strong>figuras</strong> en MyST-Parser permite enriquecer la documentación con contenido visual, facilitando la comprensión de conceptos complejos y mejorando la presentación general de tus documentos.</p>
+<p>En esta guía, aprenderás:</p>
+<ol class="arabic simple">
+<li><p>Cómo insertar imágenes básicas.</p></li>
+<li><p>Cómo usar figuras con títulos y referencias.</p></li>
+<li><p>Configurar opciones avanzadas para imágenes.</p></li>
+<li><p>Personalizar estilos de imágenes y figuras.</p></li>
+</ol>
+<section id="imagenes-basicas-en-myst-parser">
+<h3><strong>1. Imágenes Básicas en MyST-Parser</strong><a class="headerlink" href="#imagenes-basicas-en-myst-parser" title="Link to this heading"></a></h3>
+<section id="sintaxis-basica-para-insertar-una-imagen">
+<h4><strong>1.1. Sintaxis Básica para Insertar una Imagen</strong><a class="headerlink" href="#sintaxis-basica-para-insertar-una-imagen" title="Link to this heading"></a></h4>
+<p>En Markdown estándar, puedes insertar imágenes usando la siguiente sintaxis:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">Texto alternativo</span>](<span class="na">ruta/a/la/imagen.png</span>)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Texto alternativo:</strong> Describe la imagen para accesibilidad y en caso de que no se cargue correctamente.</p></li>
+<li><p><strong>Ruta de la imagen:</strong> Puede ser una ruta relativa o absoluta.</p></li>
+</ul>
+<section id="ejemplo">
+<h5><strong>Ejemplo:</strong><a class="headerlink" href="#ejemplo" title="Link to this heading"></a></h5>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">Logo de MyST</span>](<span class="na">../_static/images/logo.png</span>)
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<p><img alt="Logo de MyST" src="../_images/logo.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="figuras-con-titulo-y-referencia">
+<h3><strong>2. Figuras con Título y Referencia</strong><a class="headerlink" href="#figuras-con-titulo-y-referencia" title="Link to this heading"></a></h3>
+<section id="insertar-una-figura-con-titulo">
+<h4><strong>2.1. Insertar una Figura con Título</strong><a class="headerlink" href="#insertar-una-figura-con-titulo" title="Link to this heading"></a></h4>
+<p>Una <strong>figura</strong> es una imagen con un título opcional y, en algunos casos, con referencias cruzadas para enlazarla desde otras partes del documento.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :width: 200px
+  :align: center
+
+  Este es el logo oficial de MyST-Parser.```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<figure class="align-center" id="fig-logo">
+<a class="reference internal image-reference" href="../_images/logo.png"><img alt="Logo de MyST" src="../_images/logo.png" style="width: 200px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Este es el logo oficial de MyST-Parser.</span><a class="headerlink" href="#fig-logo" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="explicacion">
+<h5><strong>Explicación:</strong><a class="headerlink" href="#explicacion" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:alt:</span></code> Proporciona texto alternativo para la imagen.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:width:</span></code> Ajusta el ancho de la imagen (en píxeles o porcentaje).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span></code> Alinea la imagen (<code class="docutils literal notranslate"><span class="pre">center</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>).</p></li>
+<li><p>El contenido debajo de la directiva actúa como el <strong>título de la figura</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="referencia-cruzada-a-una-figura">
+<h4><strong>2.2. Referencia Cruzada a una Figura</strong><a class="headerlink" href="#referencia-cruzada-a-una-figura" title="Link to this heading"></a></h4>
+<p>Para referenciar la figura en otro punto del documento, añade la etiqueta <code class="docutils literal notranslate"><span class="pre">:name:</span> <span class="pre">Referencia</span></code>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :width: 200px
+  :align: center
+
+  Este es el logo oficial de MyST-Parser.```
+</pre></div>
+</div>
+<p>Puedes consultar el logo en la <a class="reference internal" href="#fig-logo">Figura 1</a>.`</p>
+<p><strong>Resultado:</strong></p>
+<p><img alt="Logo de MyST" src="../_images/logo.png" /></p>
+<p><strong>Figura 1:</strong> Este es el logo oficial de MyST-Parser.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="opciones-avanzadas-para-imagenes-y-figuras">
+<h3><strong>3. Opciones Avanzadas para Imágenes y Figuras</strong><a class="headerlink" href="#opciones-avanzadas-para-imagenes-y-figuras" title="Link to this heading"></a></h3>
+<p>MyST-Parser ofrece más opciones para controlar el comportamiento de imágenes y figuras.</p>
+<section id="escalar-imagenes">
+<h4><strong>3.1. Escalar Imágenes</strong><a class="headerlink" href="#escalar-imagenes" title="Link to this heading"></a></h4>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :scale: 50%
+
+  Logo escalado al 50% de su tamaño original.```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">:scale:</span></code></strong> Ajusta el tamaño de la imagen como un porcentaje de su tamaño original.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="alinear-imagenes">
+<h4><strong>3.2. Alinear Imágenes</strong><a class="headerlink" href="#alinear-imagenes" title="Link to this heading"></a></h4>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{figure} ../_static/images/logo.png
+  :alt: Logo de MyST
+  :align: right
+
+  Imagen alineada a la derecha.```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code> (centro)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> (izquierda)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">right</span></code> (derecha)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="enlazar-imagenes">
+<h4><strong>3.3. Enlazar Imágenes</strong><a class="headerlink" href="#enlazar-imagenes" title="Link to this heading"></a></h4>
+<p>Puedes hacer que una imagen sea un enlace:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">![Logo de MyST</span>](<span class="na">../_static/images/logo.png</span>)](https://myst-parser.readthedocs.io)
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io"><img alt="Logo de MyST" src="../_images/logo.png" /></a></p>
+</section>
+</section>
+</section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
+<p>Las <strong>tablas</strong> son una herramienta esencial en la documentación técnica, ya que permiten organizar y presentar datos de forma clara y estructurada. <strong>MyST-Parser</strong> extiende la funcionalidad de Markdown para ofrecer opciones avanzadas de creación y personalización de tablas en <strong>Sphinx</strong>.</p>
+<hr class="docutils" />
+<section id="tablas-basicas-en-myst-parser">
+<h3><strong>1. Tablas Básicas en MyST-Parser</strong><a class="headerlink" href="#tablas-basicas-en-myst-parser" title="Link to this heading"></a></h3>
+<section id="sintaxis-basica-de-tablas-markdown">
+<h4><strong>1.1. Sintaxis Básica de Tablas Markdown</strong><a class="headerlink" href="#sintaxis-basica-de-tablas-markdown" title="Link to this heading"></a></h4>
+<p>Puedes crear tablas simples utilizando la sintaxis básica de Markdown:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+|--------------|--------------|--------------|
+| Celda 1     | Celda 2     | Celda 3     |
+| Celda 4     | Celda 5     | Celda 6     |
+</pre></div>
+</div>
+<section id="id1">
+<h5>🛠️ <strong>Explicación:</strong><a class="headerlink" href="#id1" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p>Las tuberías (<code class="docutils literal notranslate"><span class="pre">|</span></code>) delimitan columnas.</p></li>
+<li><p>La segunda línea (<code class="docutils literal notranslate"><span class="pre">---</span></code>) define los encabezados.</p></li>
+<li><p>Cada fila se define en una nueva línea.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Encabezado 1</p></th>
+<th class="head"><p>Encabezado 2</p></th>
+<th class="head"><p>Encabezado 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Celda 1</p></td>
+<td><p>Celda 2</p></td>
+<td><p>Celda 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Celda 4</p></td>
+<td><p>Celda 5</p></td>
+<td><p>Celda 6</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-con-alineacion">
+<h3><strong>2. Tablas con Alineación</strong><a class="headerlink" href="#tablas-con-alineacion" title="Link to this heading"></a></h3>
+<section id="alinear-el-contenido-de-las-columnas">
+<h4>📌 <strong>2.1. Alinear el Contenido de las Columnas</strong><a class="headerlink" href="#alinear-el-contenido-de-las-columnas" title="Link to this heading"></a></h4>
+<p>Puedes controlar la alineación del texto dentro de las columnas usando los símbolos <code class="docutils literal notranslate"><span class="pre">:</span></code>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| Izquierda   | Centro     | Derecha   |
+|:----------- |:---------: |---------: |
+| Celda 1     | Celda 2    | Celda 3   |
+| Celda 4     | Celda 5    | Celda 6   |
+</pre></div>
+</div>
+<section id="id2">
+<h5>🛠️ <strong>Explicación:</strong><a class="headerlink" href="#id2" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:---</span></code> → Alineación a la izquierda.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:---:</span></code> → Alineación centrada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">---:</span></code> → Alineación a la derecha.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Izquierda</p></th>
+<th class="head text-center"><p>Centro</p></th>
+<th class="head text-right"><p>Derecha</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Celda 1</p></td>
+<td class="text-center"><p>Celda 2</p></td>
+<td class="text-right"><p>Celda 3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Celda 4</p></td>
+<td class="text-center"><p>Celda 5</p></td>
+<td class="text-right"><p>Celda 6</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-complejas-con-formato-avanzado">
+<h3><strong>3. Tablas Complejas con Formato Avanzado</strong><a class="headerlink" href="#tablas-complejas-con-formato-avanzado" title="Link to this heading"></a></h3>
+<section id="crear-tablas-con-myst-directivas">
+<h4>📌 <strong>3.1. Crear Tablas con MyST Directivas</strong><a class="headerlink" href="#crear-tablas-con-myst-directivas" title="Link to this heading"></a></h4>
+<p>MyST-Parser admite el uso de directivas para crear tablas más avanzadas con opciones adicionales:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>  ```{list-table} Título de la Tabla
+  :header-rows: 1
+  :widths: 20 40 40
+
+<span class="k">*</span><span class="w"> </span>  - Treat
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Quantity
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Description
+<span class="k">*</span><span class="w"> </span>  - Albatross
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>2.99
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>On a stick!
+<span class="k">*</span><span class="w"> </span>  - Crunchy Frog
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>1.49
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>If we took the bones out, it wouldn&#39;t be
+ crunchy, now would it?
+<span class="k">*</span><span class="w"> </span>  - Gannet Ripple
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>1.99
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>On a stick! ```
+</pre></div>
+</div>
+<section id="id3">
+<h5><strong>Explicación:</strong><a class="headerlink" href="#id3" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> → Define cuántas filas son para encabezados (en este caso, 1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:widths:</span></code> → Define el ancho de cada columna (en porcentaje).</p></li>
+<li><p>Cada fila de la tabla se define con <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">-</span></code>.</p></li>
+</ul>
+<p><strong>Resultado:</strong></p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Título de la Tabla</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Treat</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albatross</p></td>
+<td><p>2.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crunchy Frog</p></td>
+<td><p>1.49</p></td>
+<td><p>If we took the bones out, it wouldn’t be
+crunchy, now would it?</p></td>
+</tr>
+<tr class="row-even"><td><p>Gannet Ripple</p></td>
+<td><p>1.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tablas-con-referencias-y-nombres">
+<h3><strong>4. Tablas con Referencias y Nombres</strong><a class="headerlink" href="#tablas-con-referencias-y-nombres" title="Link to this heading"></a></h3>
+<section id="agregar-una-etiqueta-a-una-tabla">
+<h4><strong>4.1. Agregar una Etiqueta a una Tabla</strong><a class="headerlink" href="#agregar-una-etiqueta-a-una-tabla" title="Link to this heading"></a></h4>
+<p>Puedes etiquetar una tabla para referenciarla más adelante:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{list-table} Título de la Tabla
+:header-rows: 1
+:name: tabla-ejemplo
+
+<span class="k">*</span><span class="w"> </span>- Encabezado A
+<span class="w"> </span><span class="k">-</span><span class="w"> </span>Encabezado B
+<span class="k">*</span><span class="w"> </span>- Valor 1
+<span class="w"> </span><span class="k">-</span><span class="w"> </span>Valor 2```
+</pre></div>
+</div>
+<section id="id4">
+<h5><strong>Explicación:</strong><a class="headerlink" href="#id4" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span></code> Asigna un identificador único a la tabla.</p></li>
+<li><p>Puedes referenciar la tabla utilizando <code class="docutils literal notranslate"><span class="pre">#nombre-de-la-tabla</span></code>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="source-code-and-apis">
+<h2>Source code and APIs<a class="headerlink" href="#source-code-and-apis" title="Link to this heading"></a></h2>
+<p>El uso de código fuente y APIs en la documentación técnica es esencial para proporcionar ejemplos prácticos, fragmentos reutilizables y una referencia clara para desarrolladores. MyST-Parser, combinado con Sphinx, ofrece herramientas avanzadas para formatear, resaltar y documentar código fuente y APIs de forma clara y organizada.</p>
+<section id="mostrar-codigo-fuente-en-markdown">
+<h3><strong>1. Mostrar Código Fuente en Markdown</strong><a class="headerlink" href="#mostrar-codigo-fuente-en-markdown" title="Link to this heading"></a></h3>
+<section id="bloques-de-codigo-code-blocks">
+<h4><strong>1.1. Bloques de Código (Code Blocks)</strong><a class="headerlink" href="#bloques-de-codigo-code-blocks" title="Link to this heading"></a></h4>
+<p>Para mostrar bloques de código en MyST-Parser, puedes usar la sintaxis estándar de Markdown con tres acentos graves (  ):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>	```python
+	def hola_mundo():
+	    print(&quot;¡Hola, mundo!&quot;)```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hola_mundo</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Puedes usar otros lenguajes como <code class="docutils literal notranslate"><span class="pre">javascript</span></code>, <code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">css</span></code>, etc.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="incrustar-codigo-en-linea">
+<h3><strong>2. Incrustar Código en Línea</strong><a class="headerlink" href="#incrustar-codigo-en-linea" title="Link to this heading"></a></h3>
+<p>Puedes incrustar fragmentos de código dentro de una línea de texto utilizando acentos graves simples (`):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>El comando <span class="sb">`print(&quot;Hola&quot;)`</span> muestra un mensaje en la consola.
+</pre></div>
+</div>
+<p><strong>Resultado:</strong><br />
+El comando <code class="docutils literal notranslate"><span class="pre">print(&quot;Hola&quot;)</span></code> muestra un mensaje en la consola.</p>
+</section>
+<hr class="docutils" />
+<section id="resaltar-fragmentos-de-codigo-highlighting">
+<h3><strong>3. Resaltar Fragmentos de Código (Highlighting)</strong><a class="headerlink" href="#resaltar-fragmentos-de-codigo-highlighting" title="Link to this heading"></a></h3>
+<p>Puedes resaltar partes específicas de un bloque de código utilizando la directiva <strong><code class="docutils literal notranslate"><span class="pre">{code-block}</span></code></strong> de MyST-Parser:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>	```{code-block} python
+	:emphasize-lines: 2
+
+	def suma(a, b):
+	 resultado = a + b  # Esta línea está resaltada
+	 return resultado```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  
+<span class="hll"><span class="n">resultado</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="c1"># Esta línea está resaltada  </span>
+</span><span class="k">return</span> <span class="n">resultado</span>  
+</pre></div>
+</div>
+<section id="id5">
+<h4><strong>Explicación:</strong><a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span></code> → Resalta líneas específicas dentro del bloque.</p></li>
+<li><p>Puedes especificar varias líneas con <code class="docutils literal notranslate"><span class="pre">1,3</span></code> o rangos con <code class="docutils literal notranslate"><span class="pre">1-3</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mostrar-archivos-de-codigo-completo">
+<h3><strong>4. Mostrar Archivos de Código Completo</strong><a class="headerlink" href="#mostrar-archivos-de-codigo-completo" title="Link to this heading"></a></h3>
+<p>Si quieres incluir un archivo de código fuente completo en tu documentación, puedes usar la directiva <strong><code class="docutils literal notranslate"><span class="pre">literalinclude</span></code></strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{literalinclude} ../_static/ejemplo.py
+:language: python
+:linenos:
+:emphasize-lines: 2```
+</pre></div>
+</div>
+<section id="parametros">
+<h4><strong>Parámetros:</strong><a class="headerlink" href="#parametros" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:language:</span></code> → Define el lenguaje para el resaltado de sintaxis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> → Muestra números de línea.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span></code> → Resalta líneas específicas.</p></li>
+</ul>
+<p><strong>Estructura del Proyecto:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>source/
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+│<span class="w">   </span>├──<span class="w"> </span>codigo/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ejemplo.py
+</pre></div>
+</div>
+<p><strong>ejemplo.py:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde un archivo externo!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Resultado en la documentación:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+<span class="hll"><span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde un archivo externo!&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="documentacion-de-apis">
+<h3><strong>5. Documentación de APIs</strong><a class="headerlink" href="#documentacion-de-apis" title="Link to this heading"></a></h3>
+<section id="autogenerar-documentacion-de-apis">
+<h4><strong>5.1. Autogenerar Documentación de APIs</strong><a class="headerlink" href="#autogenerar-documentacion-de-apis" title="Link to this heading"></a></h4>
+<p><strong>Sphinx</strong> puede autogenerar documentación de APIs usando la extensión <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>.</p>
+<ol class="arabic simple">
+<li><p><strong>Asegúrate de tener habilitada la extensión en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</strong></p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;myst_parser&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Crea un archivo <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">.md</span></code> para tu módulo:</strong></p></li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Documentación de API</span>
+
+<span class="gu">## Módulo `mi_modulo`</span>
+
+```{autofunction} mi_modulo.saludo```
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Estructura del Proyecto:</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>source/
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+│<span class="w">   </span>├──<span class="w"> </span>mi_modulo.py
+</pre></div>
+</div>
+<p><strong>mi_modulo.py:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta función imprime un saludo.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola desde la API!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Compila la Documentación:</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</section>
+</section>
+<section id="mostrar-salida-de-codigo-doctest">
+<h3><strong>6. Mostrar Salida de Código (Doctest)</strong><a class="headerlink" href="#mostrar-salida-de-codigo-doctest" title="Link to this heading"></a></h3>
+<p>Puedes mostrar la salida esperada de un bloque de código con la directiva <code class="docutils literal notranslate"><span class="pre">doctest</span></code>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{doctest}
+&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; print(&quot;¡Hola, mundo!&quot;)
+¡Hola, mundo!```
+</pre></div>
+</div>
+<p><strong>Resultado:</strong></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">)</span>
+<span class="go">¡Hola, mundo!```</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="003.Creacion_proyecto_Sphinx.html" class="btn btn-neutral float-left" title="Creación Inicial del Proyecto con Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../comandos_mas_usados/comandos.html" class="btn btn-neutral float-right" title="Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo 05.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -16,9 +16,9 @@ print("sys.path:", sys.path)
 sys.path.insert(0, os.path.abspath('../src'))
 print("sys.path:", sys.path)
 
-project = 'sphinx-documentation'
-copyright = '2024, cristina'
-author = 'cristina'
+project = 'Proyecto Equipo 05 | Tema 05 '
+copyright = '2024, Equipo 05'
+author = 'Cristina Bermúdez Castro, Pedro Blanco Vargas, Noah Montaño Muñoz'
 release = '1'
 language = 'es'
 
@@ -30,6 +30,7 @@ extensions = [
     'sphinx.ext.napoleon', # Interpreta docstring en formatos google y nunpy
     'sphinx.ext.viewcode', # Agrega enlaces al código fuente desde la documentación
     'sphinx_rtd_theme', # Tema visual basado en read the docs
+    'sphinx.ext.doctest',
     'myst_parser', # Habilita soporte para archivos Markdown
 ]
 
