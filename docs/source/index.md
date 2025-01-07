@@ -8,3 +8,5 @@
 
 configuracion_inicial/*
 comandos_mas_usados/*
+modules
+math_operations

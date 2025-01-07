@@ -12,6 +12,9 @@ import sphinx_rtd_theme
 
 # Configurar la ruta al directorio raíz del proyecto
 sys.path.insert(0, os.path.abspath('../../source'))
+print("sys.path:", sys.path)
+sys.path.insert(0, os.path.abspath('../src'))
+print("sys.path:", sys.path)
 
 project = 'sphinx-documentation'
 copyright = '2024, cristina'
