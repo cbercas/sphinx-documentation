@@ -49,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Guía de uso MyST – Parser</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#typography">Typography</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#typography">1. Typography</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#caracteristicas-principales-de-la-tipografia-en-myst-parser">Características principales de la tipografía en MyST-Parser</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#enfasis-de-texto">1. <strong>Énfasis de texto</strong></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#texto-tachado">2. <strong>Texto tachado</strong></a></li>
@@ -62,7 +62,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#admonitions">Admonitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#admonitions">2. Admonitions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#caracteristicas-de-las-admonitions-en-myst-parser">Características de las admonitions en MyST-Parser</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica">1. <strong>Sintaxis básica</strong></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tipos-predefinidos-de-admonitions">2. <strong>Tipos predefinidos de admonitions</strong></a></li>
@@ -80,7 +80,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#images-and-figures">Images and Figures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#images-and-figures">3. Images and Figures</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#imagenes-basicas-en-myst-parser"><strong>1. Imágenes Básicas en MyST-Parser</strong></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica-para-insertar-una-imagen"><strong>1.1. Sintaxis Básica para Insertar una Imagen</strong></a></li>
 </ul>
@@ -98,7 +98,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tables">4. Tables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tablas-basicas-en-myst-parser"><strong>1. Tablas Básicas en MyST-Parser</strong></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sintaxis-basica-de-tablas-markdown"><strong>1.1. Sintaxis Básica de Tablas Markdown</strong></a></li>
 </ul>
@@ -117,7 +117,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#source-code-and-apis">Source code and APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#source-code-and-apis">5. Source code and APIs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mostrar-codigo-fuente-en-markdown"><strong>1. Mostrar Código Fuente en Markdown</strong></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bloques-de-codigo-code-blocks"><strong>1.1. Bloques de Código (Code Blocks)</strong></a></li>
 </ul>
@@ -135,7 +135,22 @@
 <li class="toctree-l4"><a class="reference internal" href="#autogenerar-documentacion-de-apis"><strong>5.1. Autogenerar Documentación de APIs</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#mostrar-salida-de-codigo-doctest"><strong>6. Mostrar Salida de Código (Doctest)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cross-references">6. Cross-references</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-cruzadas-a-secciones"><strong>1. Referencias Cruzadas a Secciones</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><strong>1.1. Sintaxis Básica</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#referencia-desde-otro-archivo"><strong>1.2. Referencia desde otro archivo</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-cruzadas-a-archivos"><strong>2. Referencias Cruzadas a Archivos</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-a-funciones-clases-y-metodos-autodoc"><strong>3. Referencias a Funciones, Clases y Métodos (Autodoc)</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-a-figuras-e-imagenes"><strong>4. Referencias a Figuras e Imágenes</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-a-tablas"><strong>5. Referencias a Tablas</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-con-la-directiva-ref"><strong>6. Referencias con la Directiva <code class="docutils literal notranslate"><span class="pre">ref</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias-a-admonitions"><strong>7. Referencias a Admonitions</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#buenas-practicas-para-referencias-cruzadas"><strong>8. Buenas Prácticas para Referencias Cruzadas</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verificar-referencias-cruzadas"><strong>9. Verificar Referencias Cruzadas</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -170,7 +185,7 @@
   <section id="guia-de-uso-myst-parser">
 <h1>Guía de uso MyST – Parser<a class="headerlink" href="#guia-de-uso-myst-parser" title="Link to this heading"></a></h1>
 <section id="typography">
-<h2>Typography<a class="headerlink" href="#typography" title="Link to this heading"></a></h2>
+<h2>1. Typography<a class="headerlink" href="#typography" title="Link to this heading"></a></h2>
 <p>El soporte de tipografía en MyST-Parser permite a los usuarios crear contenido estilizado y bien formateado en documentos escritos en Markdown. MyST-Parser extiende Markdown estándar con características avanzadas que incluyen símbolos especiales, estilos de texto enriquecidos y más.</p>
 <section id="caracteristicas-principales-de-la-tipografia-en-myst-parser">
 <h3>Características principales de la tipografía en MyST-Parser<a class="headerlink" href="#caracteristicas-principales-de-la-tipografia-en-myst-parser" title="Link to this heading"></a></h3>
@@ -264,7 +279,7 @@
 </section>
 <hr class="docutils" />
 <section id="admonitions">
-<h2>Admonitions<a class="headerlink" href="#admonitions" title="Link to this heading"></a></h2>
+<h2>2. Admonitions<a class="headerlink" href="#admonitions" title="Link to this heading"></a></h2>
 <p>Las admonitions son bloques especiales utilizados para resaltar contenido importante o específico, como notas, advertencias o ejemplos. MyST-Parser permite crear una amplia variedad de admonitions mediante una sintaxis intuitiva que mejora la claridad y el formato de los documentos.</p>
 <section id="caracteristicas-de-las-admonitions-en-myst-parser">
 <h3>Características de las admonitions en MyST-Parser<a class="headerlink" href="#caracteristicas-de-las-admonitions-en-myst-parser" title="Link to this heading"></a></h3>
@@ -600,7 +615,7 @@ Aquí tienes un bloque de código:
 </section>
 </section>
 <section id="images-and-figures">
-<h2>Images and Figures<a class="headerlink" href="#images-and-figures" title="Link to this heading"></a></h2>
+<h2>3. Images and Figures<a class="headerlink" href="#images-and-figures" title="Link to this heading"></a></h2>
 <p>El manejo de <strong>imágenes</strong> y <strong>figuras</strong> en MyST-Parser permite enriquecer la documentación con contenido visual, facilitando la comprensión de conceptos complejos y mejorando la presentación general de tus documentos.</p>
 <p>En esta guía, aprenderás:</p>
 <ol class="arabic simple">
@@ -726,7 +741,7 @@ Aquí tienes un bloque de código:
 </section>
 </section>
 <section id="tables">
-<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
+<h2>4. Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
 <p>Las <strong>tablas</strong> son una herramienta esencial en la documentación técnica, ya que permiten organizar y presentar datos de forma clara y estructurada. <strong>MyST-Parser</strong> extiende la funcionalidad de Markdown para ofrecer opciones avanzadas de creación y personalización de tablas en <strong>Sphinx</strong>.</p>
 <hr class="docutils" />
 <section id="tablas-basicas-en-myst-parser">
@@ -843,8 +858,8 @@ Aquí tienes un bloque de código:
 <li><p>Cada fila de la tabla se define con <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">-</span></code>.</p></li>
 </ul>
 <p><strong>Resultado:</strong></p>
-<table class="docutils align-default" id="id6">
-<caption><span class="caption-text">Título de la Tabla</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Título de la Tabla</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 40.0%" />
@@ -902,7 +917,7 @@ crunchy, now would it?</p></td>
 </section>
 </section>
 <section id="source-code-and-apis">
-<h2>Source code and APIs<a class="headerlink" href="#source-code-and-apis" title="Link to this heading"></a></h2>
+<h2>5. Source code and APIs<a class="headerlink" href="#source-code-and-apis" title="Link to this heading"></a></h2>
 <p>El uso de código fuente y APIs en la documentación técnica es esencial para proporcionar ejemplos prácticos, fragmentos reutilizables y una referencia clara para desarrolladores. MyST-Parser, combinado con Sphinx, ofrece herramientas avanzadas para formatear, resaltar y documentar código fuente y APIs de forma clara y organizada.</p>
 <section id="mostrar-codigo-fuente-en-markdown">
 <h3><strong>1. Mostrar Código Fuente en Markdown</strong><a class="headerlink" href="#mostrar-codigo-fuente-en-markdown" title="Link to this heading"></a></h3>
@@ -1045,23 +1060,125 @@ El comando <code class="docutils literal notranslate"><span class="pre">print(&q
 </div>
 </section>
 </section>
-<section id="mostrar-salida-de-codigo-doctest">
-<h3><strong>6. Mostrar Salida de Código (Doctest)</strong><a class="headerlink" href="#mostrar-salida-de-codigo-doctest" title="Link to this heading"></a></h3>
-<p>Puedes mostrar la salida esperada de un bloque de código con la directiva <code class="docutils literal notranslate"><span class="pre">doctest</span></code>:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{doctest}
-&gt;&gt;&gt; 2 + 2
-4
-&gt;&gt;&gt; print(&quot;¡Hola, mundo!&quot;)
-¡Hola, mundo!```
+</section>
+<section id="cross-references">
+<h2>6. Cross-references<a class="headerlink" href="#cross-references" title="Link to this heading"></a></h2>
+<p>Las <strong>referencias cruzadas (cross-references)</strong> permiten enlazar diferentes secciones, encabezados, archivos, imágenes, tablas, funciones y otros elementos dentro de tu documentación. Esto facilita la navegación y mantiene la coherencia en documentos extensos.</p>
+<section id="referencias-cruzadas-a-secciones">
+<h3><strong>1. Referencias Cruzadas a Secciones</strong><a class="headerlink" href="#referencias-cruzadas-a-secciones" title="Link to this heading"></a></h3>
+<section id="id6">
+<h4><strong>1.1. Sintaxis Básica</strong><a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>En <strong>MyST-Parser</strong>, puedes referenciar encabezados usando etiquetas (<code class="docutils literal notranslate"><span class="pre">#</span></code>) y referencias directas:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(sec-mi-seccion)=
+<span class="gu">## 📍 Mi Sección Importante</span>
+
+Puedes referenciar esta sección usando:
+
+[<span class="nt">Enlace a la sección</span>](<span class="na">#sec-mi-seccion</span>)
 </pre></div>
 </div>
-<p><strong>Resultado:</strong></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="go">4</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">)</span>
-<span class="go">¡Hola, mundo!```</span>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(sec-mi-seccion)=</span></code>: Crea una etiqueta para la sección.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[Enlace</span> <span class="pre">a</span> <span class="pre">la</span> <span class="pre">sección](#sec-mi-seccion)</span></code>: Enlaza a la etiqueta.</p></li>
+</ul>
+</section>
+<section id="referencia-desde-otro-archivo">
+<h4><strong>1.2. Referencia desde otro archivo</strong><a class="headerlink" href="#referencia-desde-otro-archivo" title="Link to this heading"></a></h4>
+<p>Si la sección está en otro archivo, usa:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">Ir a Mi Sección</span>](<span class="na">otro_archivo.md#sec-mi-seccion</span>)
 </pre></div>
 </div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="referencias-cruzadas-a-archivos">
+<h3><strong>2. Referencias Cruzadas a Archivos</strong><a class="headerlink" href="#referencias-cruzadas-a-archivos" title="Link to this heading"></a></h3>
+<p>Puedes enlazar directamente a otros archivos Markdown:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">Ir a la Guía de Estilo</span>](<span class="na">guia_estilo.md</span>)
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="referencias-a-funciones-clases-y-metodos-autodoc">
+<h3><strong>3. Referencias a Funciones, Clases y Métodos (Autodoc)</strong><a class="headerlink" href="#referencias-a-funciones-clases-y-metodos-autodoc" title="Link to this heading"></a></h3>
+<p>Si estás documentando con <strong><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></strong>, puedes enlazar elementos de código automáticamente.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Consulte la función [<span class="sb">`suma`</span>](codigo.ejemplo_autodoc.suma) para más detalles.
+</pre></div>
+</div>
+<p>También puedes usar referencias automáticas:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>:func:`codigo.ejemplo_autodoc.suma`
+:class:`codigo.ejemplo_autodoc.Calculadora`
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="referencias-a-figuras-e-imagenes">
+<h3><strong>4. Referencias a Figuras e Imágenes</strong><a class="headerlink" href="#referencias-a-figuras-e-imagenes" title="Link to this heading"></a></h3>
+<p>Al agregar una imagen con una etiqueta, puedes referenciarla más adelante:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(fig-ejemplo)=
+![<span class="nt">Ejemplo de Imagen</span>](<span class="na">imagen.png</span>)
+
+Puedes ver la figura anterior aquí: [<span class="nt">Figura 1</span>](<span class="na">#fig-ejemplo</span>)
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="referencias-a-tablas">
+<h3><strong>5. Referencias a Tablas</strong><a class="headerlink" href="#referencias-a-tablas" title="Link to this heading"></a></h3>
+<p>De manera similar, puedes etiquetar tablas para referencias cruzadas:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(tab-ejemplo)=
+| Encabezado 1 | Encabezado 2 |
+|-------------|-------------|
+| Valor 1    | Valor 2    |
+
+Referencia a la tabla: [<span class="nt">Tabla 1</span>](<span class="na">#tab-ejemplo</span>)
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="referencias-con-la-directiva-ref">
+<h3><strong>6. Referencias con la Directiva <code class="docutils literal notranslate"><span class="pre">ref</span></code></strong><a class="headerlink" href="#referencias-con-la-directiva-ref" title="Link to this heading"></a></h3>
+<p>También puedes utilizar la directiva <code class="docutils literal notranslate"><span class="pre">ref</span></code> de Sphinx:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Consulte la sección :ref: <span class="sb">`sec-mi-seccion`</span> para más detalles.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:ref:</span></code> permite una referencia robusta y puede redirigir aunque cambie el nombre del archivo.</p></li>
+<li><p>Usa etiquetas únicas para evitar conflictos.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="referencias-a-admonitions">
+<h3><strong>7. Referencias a Admonitions</strong><a class="headerlink" href="#referencias-a-admonitions" title="Link to this heading"></a></h3>
+<p>Si usas etiquetas en admonitions, también puedes enlazarlas:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(adm-importante)=
+	```{admonition} Nota Importante
+	Este es un mensaje importante.```
+Puedes revisar la [<span class="nt">Nota Importante</span>](<span class="na">#adm-importante</span>).
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="buenas-practicas-para-referencias-cruzadas">
+<h3><strong>8. Buenas Prácticas para Referencias Cruzadas</strong><a class="headerlink" href="#buenas-practicas-para-referencias-cruzadas" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>🏷️ <strong>Etiqueta todo</strong>: Usa etiquetas únicas para secciones, imágenes, tablas y bloques importantes.</p></li>
+<li><p>🔗 <strong>Prefijos útiles</strong>: Usa prefijos claros, como <code class="docutils literal notranslate"><span class="pre">sec-</span></code>, <code class="docutils literal notranslate"><span class="pre">fig-</span></code>, <code class="docutils literal notranslate"><span class="pre">tab-</span></code>, <code class="docutils literal notranslate"><span class="pre">adm-</span></code>.</p></li>
+<li><p>📝 <strong>Evita enlaces rotos</strong>: Usa el comando <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code> para verificar enlaces en tu documentación.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="verificar-referencias-cruzadas">
+<h3><strong>9. Verificar Referencias Cruzadas</strong><a class="headerlink" href="#verificar-referencias-cruzadas" title="Link to this heading"></a></h3>
+<p>Al compilar tu documentación:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>clean
+make<span class="w"> </span>html
+make<span class="w"> </span>linkcheck
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code>: Verifica que todos los enlaces y referencias funcionen correctamente.</p></li>
+</ul>
 </section>
 </section>
 </section>
