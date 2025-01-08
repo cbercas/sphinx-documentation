@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Guía de uso MyST – Parser" href="013.guia_de_myst_parser.html" />
-    <link rel="prev" title="Instalación de dependencias del proyecto" href="002.instalacion_librerias.html" /> 
+    <link rel="next" title="Estructura inicial del proyecto" href="004.estructura_inicial_proyecto.html" />
+    <link rel="prev" title="Instalación de dependencias del proyecto**" href="002.instalacion_librerias.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,9 +45,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html">Instalación de dependencias del proyecto</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creación Inicial del Proyecto con Sphinx</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="001.env.html"><strong>Entorno Virtual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html"><strong>Instalación de dependencias del proyecto</strong>**</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Creación Inicial del Proyecto con Sphinx</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#instalacion-de-sphinx-y-myst-parser">1. Instalación de Sphinx y MyST-Parser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#crear-un-proyecto-con-sphinx">2. Crear un Proyecto con Sphinx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#opciones-importantes-en-el-proceso">Opciones Importantes en el Proceso:</a></li>
@@ -70,8 +70,14 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html">Guía de uso MyST – Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="009.Generar_PDF.html">Generación de PDF a partir de la documentación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html"><strong>Guía de uso MyST – Parser</strong>**</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_operations.html">math_operations module</a></li>
 </ul>
 
         </div>
@@ -88,7 +94,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Creación Inicial del Proyecto con Sphinx</li>
+      <li class="breadcrumb-item active"><strong>Creación Inicial del Proyecto con Sphinx</strong></li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/configuracion_inicial/003.Creacion_proyecto_Sphinx.md.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -99,11 +105,11 @@
            <div itemprop="articleBody">
              
   <section id="creacion-inicial-del-proyecto-con-sphinx">
-<h1>Creación Inicial del Proyecto con Sphinx<a class="headerlink" href="#creacion-inicial-del-proyecto-con-sphinx" title="Link to this heading"></a></h1>
+<h1><strong>Creación Inicial del Proyecto con Sphinx</strong><a class="headerlink" href="#creacion-inicial-del-proyecto-con-sphinx" title="Link to this heading"></a></h1>
 <p>A continuación, vamos a detallar todo el proceso para la creación inicial de un proyecto con Sphinx, explicando los comandos, las opciones necesarias y cómo configurarlo para usar <strong>Markdown</strong> con <strong>MyST-Parser</strong>.</p>
 <section id="instalacion-de-sphinx-y-myst-parser">
 <h2>1. Instalación de Sphinx y MyST-Parser<a class="headerlink" href="#instalacion-de-sphinx-y-myst-parser" title="Link to this heading"></a></h2>
-<p>Antes de empezar, hay que asegurarse de tener Sphinx y MyST-Parser instalados en el entorno. Se pueden instalar con <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<p>Con el entorno virtual activado, procedemos a instalar Sphinx, antes de empezar, hay que asegurarse de tener Sphinx y MyST-Parser instalados en el entorno. Se pueden instalar con <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx<span class="w"> </span>myst-parser
 </pre></div>
 </div>
@@ -115,7 +121,9 @@
 <hr class="docutils" />
 <section id="crear-un-proyecto-con-sphinx">
 <h2>2. Crear un Proyecto con Sphinx<a class="headerlink" href="#crear-un-proyecto-con-sphinx" title="Link to this heading"></a></h2>
-<p>Se ejecuta el comando para iniciar un nuevo proyecto de Sphinx:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> es la herramienta que utilizamos para inicializar un proyecto de documentación con Sphinx.
+Esta aplicación interactiva genera la estructura base del proyecto, incluyendo los directorios necesarios, el archivo de configuración (<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>) y un índice inicial (<code class="docutils literal notranslate"><span class="pre">index.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">index.md</span></code>).
+Se ejecuta el comando para iniciar un nuevo proyecto de Sphinx:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
 </pre></div>
 </div>
@@ -188,6 +196,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Con esta configuración, Sphinx será capaz de procesar tanto archivos <code class="docutils literal notranslate"><span class="pre">.rst</span></code> como <code class="docutils literal notranslate"><span class="pre">.md</span></code>, facilitando la integración de diferentes formatos de contenido.</p>
 </section>
 <section id="configuracion-del-idioma">
 <h3>4.2.2 Configuración del idioma<a class="headerlink" href="#configuracion-del-idioma" title="Link to this heading"></a></h3>
@@ -255,8 +264,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="002.instalacion_librerias.html" class="btn btn-neutral float-left" title="Instalación de dependencias del proyecto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="013.guia_de_myst_parser.html" class="btn btn-neutral float-right" title="Guía de uso MyST – Parser" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="002.instalacion_librerias.html" class="btn btn-neutral float-left" title="Instalación de dependencias del proyecto**" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="004.estructura_inicial_proyecto.html" class="btn btn-neutral float-right" title="Estructura inicial del proyecto" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,41 @@
+# **Generación de PDF a partir de la documentación**
+
+Indicar si se ha necesitado realizar alguna acción o proceso previo para que esto funcione.
+
+## 1. Pasos para la generación
+
+1. **Instalar LaTeX:**
+   Descarga e instala MiKTeX desde [https://miktex.org/download](https://miktex.org/download).
+
+2. **Configurar `conf.py`:**
+   Añade la siguiente línea para configurar el motor de LaTeX:
+   ```python
+   latex_engine = 'pdflatex'
+   ```
+
+3. **Generar los archivos LaTeX:**
+   Desde el directorio con `make.bat`, ejecuta:
+   ```bash
+   make.bat latex
+   ```
+
+   Esto creara lo siguiente:
+
+   ![Captura de demostración](../_static/images/imagePDF1.png)
+
+4. **Crear el PDF:**
+   Una vez generados los archivos `.tex`, muévete al directorio correspondiente y ejecuta:
+   ```bash
+   pdflatex <nombre del archivo con la extensión .tex>
+   ```
+   Aparecerá un diálogo donde debes desmarcar la opción "Always show this dialog". Luego:
+   - Selecciona la opción de servidor de mayor conveniencia (por ejemplo, España).
+   - Completa la instalación de los paquetes necesarios.
+
+   Y veras que se han creado todos los archivos.
+
+   ![Captura de demostración](../_static/images/imagePDF2.png)
+   
+
+5. **Revisar el PDF generado:**
+   El archivo PDF estará disponible en el directorio especificado.

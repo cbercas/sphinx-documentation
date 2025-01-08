@@ -45,9 +45,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="001.env.html">Entorno Virtual</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalación de dependencias del proyecto</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#instalar-las-dependencias-con-el-archivo-requirements-txt">1. Instalar las dependencias con el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="001.env.html"><strong>Entorno Virtual</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Instalación de dependencias del proyecto</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instalar-las-dependencias-con-el-archivo-requirements-txt">1. Instalar las dependencias con el archivo requirements.txt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#verificar-la-instalacion">2. Verificar la instalación</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#desactivar-el-entorno-virtual-opcional">3. Desactivar el entorno virtual (opcional)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#archivo-requirements-txt">Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
@@ -56,9 +56,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html">Creación Inicial del Proyecto con Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html">Guía de uso MyST – Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="009.Generar_PDF.html"><strong>Generación de PDF a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html"><strong>Guía de uso MyST – Parser</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_operations.html">math_operations module</a></li>
 </ul>
 
         </div>
@@ -75,7 +81,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Instalación de dependencias del proyecto</li>
+      <li class="breadcrumb-item active"><strong>Instalación de dependencias del proyecto</strong></li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/configuracion_inicial/002.instalacion_librerias.md.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -86,10 +92,10 @@
            <div itemprop="articleBody">
              
   <section id="instalacion-de-dependencias-del-proyecto">
-<h1>Instalación de dependencias del proyecto<a class="headerlink" href="#instalacion-de-dependencias-del-proyecto" title="Link to this heading"></a></h1>
+<h1><strong>Instalación de dependencias del proyecto</strong><a class="headerlink" href="#instalacion-de-dependencias-del-proyecto" title="Link to this heading"></a></h1>
 <p>Para ejecutar correctamente este proyecto de Python, es necesario instalar las dependencias especificadas en el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>. A continuación, se detallan los pasos necesarios para realizar esta instalación de manera efectiva.</p>
 <section id="instalar-las-dependencias-con-el-archivo-requirements-txt">
-<h2>1. Instalar las dependencias con el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#instalar-las-dependencias-con-el-archivo-requirements-txt" title="Link to this heading"></a></h2>
+<h2>1. Instalar las dependencias con el archivo requirements.txt<a class="headerlink" href="#instalar-las-dependencias-con-el-archivo-requirements-txt" title="Link to this heading"></a></h2>
 <p>Con el entorno virtual activado, instala las dependencias ejecutando:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w">  </span>install<span class="w">  </span>-r<span class="w">  </span>requirements.txt<span class="sb">`</span>
 </pre></div>
@@ -114,91 +120,48 @@
 <h3>Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#archivo-requirements-txt" title="Link to this heading"></a></h3>
 <p>Nuestro archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> se vería tal que así:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">alabaster</span><span class="o">==</span><span class="m">1</span>.0.0
-
 <span class="nv">babel</span><span class="o">==</span><span class="m">2</span>.16.0
-
 <span class="nv">certifi</span><span class="o">==</span><span class="m">2024</span>.8.30
-
 charset-normalizer<span class="o">==</span><span class="m">3</span>.4.0
-
 <span class="nv">colorama</span><span class="o">==</span><span class="m">0</span>.4.6
-
 <span class="nv">docutils</span><span class="o">==</span><span class="m">0</span>.21.2
-
 <span class="nv">idna</span><span class="o">==</span><span class="m">3</span>.10
-
 <span class="nv">imagesize</span><span class="o">==</span><span class="m">1</span>.4.1
-
 <span class="nv">Jinja2</span><span class="o">==</span><span class="m">3</span>.1.4
-
 markdown-it-py<span class="o">==</span><span class="m">3</span>.0.0
-
 <span class="nv">MarkupSafe</span><span class="o">==</span><span class="m">3</span>.0.2
-
 mdit-py-plugins<span class="o">==</span><span class="m">0</span>.4.2
-
 <span class="nv">mdurl</span><span class="o">==</span><span class="m">0</span>.1.2
-
 myst-parser<span class="o">==</span><span class="m">4</span>.0.0
-
 <span class="nv">packaging</span><span class="o">==</span><span class="m">24</span>.2
-
 <span class="nv">pandoc</span><span class="o">==</span><span class="m">2</span>.4
-
 <span class="nv">plumbum</span><span class="o">==</span><span class="m">1</span>.9.0
-
 <span class="nv">ply</span><span class="o">==</span><span class="m">3</span>.11
-
 <span class="nv">psycopg</span><span class="o">==</span><span class="m">3</span>.2.1
-
 psycopg-binary<span class="o">==</span><span class="m">3</span>.2.1
-
 psycopg-pool<span class="o">==</span><span class="m">3</span>.2.2
-
 <span class="nv">Pygments</span><span class="o">==</span><span class="m">2</span>.18.0
-
 <span class="nv">PySide6</span><span class="o">==</span><span class="m">6</span>.7.2
-
 <span class="nv">PySide6_Addons</span><span class="o">==</span><span class="m">6</span>.7.2
-
 <span class="nv">PySide6_Essentials</span><span class="o">==</span><span class="m">6</span>.7.2
-
 <span class="nv">pywin32</span><span class="o">==</span><span class="m">308</span>
-
 <span class="nv">PyYAML</span><span class="o">==</span><span class="m">6</span>.0.2
-
 <span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.32.3
-
 <span class="nv">setuptools</span><span class="o">==</span><span class="m">72</span>.1.0
-
 <span class="nv">shiboken6</span><span class="o">==</span><span class="m">6</span>.7.2
-
 <span class="nv">snowballstemmer</span><span class="o">==</span><span class="m">2</span>.2.0
-
 <span class="nv">Sphinx</span><span class="o">==</span><span class="m">8</span>.1.3
-
 sphinx-rtd-theme<span class="o">==</span><span class="m">3</span>.0.2
-
 sphinxcontrib-applehelp<span class="o">==</span><span class="m">2</span>.0.0
-
 sphinxcontrib-devhelp<span class="o">==</span><span class="m">2</span>.0.0
-
 sphinxcontrib-htmlhelp<span class="o">==</span><span class="m">2</span>.1.0
-
 sphinxcontrib-jquery<span class="o">==</span><span class="m">4</span>.1
-
 sphinxcontrib-jsmath<span class="o">==</span><span class="m">1</span>.0.1
-
 sphinxcontrib-qthelp<span class="o">==</span><span class="m">2</span>.0.0
-
 sphinxcontrib-serializinghtml<span class="o">==</span><span class="m">2</span>.0.0
-
 <span class="nv">typing_extensions</span><span class="o">==</span><span class="m">4</span>.12.2
-
 <span class="nv">tzdata</span><span class="o">==</span><span class="m">2024</span>.1
-
 <span class="nv">urllib3</span><span class="o">==</span><span class="m">2</span>.2.3
-
 <span class="nv">wheel</span><span class="o">==</span><span class="m">0</span>.44.0
 </pre></div>
 </div>
