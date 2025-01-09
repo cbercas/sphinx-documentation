@@ -52,13 +52,18 @@ source_suffix = {
     '.md': 'markdown',  # Archivos en formato Markdown
 }
 
+# Usar pdflatex como motor de compilación
 latex_engine = 'pdflatex'
 
+# Configurar opciones para el documento PDF
 latex_elements = {
-    'papersize': 'a4paper',
-    'pointsize': '10pt',
+    'papersize': 'a4paper',          # Tamaño del papel
+    'pointsize': '10pt',             # Tamaño de fuente principal
+    'preamble': r'\usepackage[utf8]{inputenc}',  # Codificación de entrada
+    'figure_align': 'htbp'           # Alineación de figuras
 }
 
+# Documentos PDF a generar
 latex_documents = [
     ('index', 'documento.tex', 'Título del Documento',
      'Autor del Documento', 'manual'),
