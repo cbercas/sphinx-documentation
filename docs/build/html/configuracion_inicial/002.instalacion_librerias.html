@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalación de dependencias del proyecto &mdash; documentación de Proyecto Equipo 05 | Tema 05  - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Creación Inicial del Proyecto con Sphinx" href="003.Creacion_proyecto_Sphinx.html" />
+    <link rel="prev" title="Entorno Virtual" href="001.env.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto Equipo 05 | Tema 05 
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html"><strong>Entorno Virtual</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Instalación de dependencias del proyecto</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instalar-las-dependencias-con-el-archivo-requirements-txt">Instalar las dependencias con el archivo requirements.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verificar-la-instalacion">Verificar la instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#desactivar-el-entorno-virtual-opcional">Desactivar el entorno virtual (opcional)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-requirements-txt">Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detalles-sobre-cada-una-de-las-dependencias">Detalles sobre cada una de las dependencias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="009.Generar_PDF.html"><strong>Generación de PDF a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html"><strong>Guía de uso MyST – Parser</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_operations.html">math_operations module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto Equipo 05 | Tema 05 </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Instalación de dependencias del proyecto</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/002.instalacion_librerias.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instalacion-de-dependencias-del-proyecto">
+<h1><strong>Instalación de dependencias del proyecto</strong><a class="headerlink" href="#instalacion-de-dependencias-del-proyecto" title="Link to this heading"></a></h1>
+<p>Para ejecutar correctamente este proyecto de Python, es necesario instalar las dependencias especificadas en el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>. A continuación, se detallan los pasos necesarios para realizar esta instalación de manera efectiva.</p>
+<section id="instalar-las-dependencias-con-el-archivo-requirements-txt">
+<h2>Instalar las dependencias con el archivo requirements.txt<a class="headerlink" href="#instalar-las-dependencias-con-el-archivo-requirements-txt" title="Link to this heading"></a></h2>
+<p>Con el entorno virtual activado, instala las dependencias ejecutando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w">  </span>install<span class="w">  </span>-r<span class="w">  </span>requirements.txt<span class="sb">`</span>
+</pre></div>
+</div>
+<p>Este comando utiliza <code class="docutils literal notranslate"><span class="pre">pip</span></code> para leer el archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> e instala todas las librerías listadas en él.</p>
+</section>
+<section id="verificar-la-instalacion">
+<h2>Verificar la instalación<a class="headerlink" href="#verificar-la-instalacion" title="Link to this heading"></a></h2>
+<p>Para asegurarte de que las dependencias se instalaron correctamente, puedes listar los paquetes instalados con:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w">  </span>list
+</pre></div>
+</div>
+<p>Esto mostrará una lista de todas las librerías instaladas en tu entorno virtual.</p>
+</section>
+<section id="desactivar-el-entorno-virtual-opcional">
+<h2>Desactivar el entorno virtual (opcional)<a class="headerlink" href="#desactivar-el-entorno-virtual-opcional" title="Link to this heading"></a></h2>
+<p>Cuando hayas terminado de trabajar en el proyecto, puedes desactivar si quieres el entorno virtual con:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+<section id="archivo-requirements-txt">
+<h3>Archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#archivo-requirements-txt" title="Link to this heading"></a></h3>
+<p>Nuestro archivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> se vería tal que así:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">alabaster</span><span class="o">==</span><span class="m">1</span>.0.0
+<span class="nv">babel</span><span class="o">==</span><span class="m">2</span>.16.0
+<span class="nv">certifi</span><span class="o">==</span><span class="m">2024</span>.8.30
+charset-normalizer<span class="o">==</span><span class="m">3</span>.4.0
+<span class="nv">colorama</span><span class="o">==</span><span class="m">0</span>.4.6
+<span class="nv">docutils</span><span class="o">==</span><span class="m">0</span>.21.2
+<span class="nv">idna</span><span class="o">==</span><span class="m">3</span>.10
+<span class="nv">imagesize</span><span class="o">==</span><span class="m">1</span>.4.1
+<span class="nv">Jinja2</span><span class="o">==</span><span class="m">3</span>.1.4
+markdown-it-py<span class="o">==</span><span class="m">3</span>.0.0
+<span class="nv">MarkupSafe</span><span class="o">==</span><span class="m">3</span>.0.2
+mdit-py-plugins<span class="o">==</span><span class="m">0</span>.4.2
+<span class="nv">mdurl</span><span class="o">==</span><span class="m">0</span>.1.2
+myst-parser<span class="o">==</span><span class="m">4</span>.0.0
+<span class="nv">packaging</span><span class="o">==</span><span class="m">24</span>.2
+<span class="nv">pandoc</span><span class="o">==</span><span class="m">2</span>.4
+<span class="nv">plumbum</span><span class="o">==</span><span class="m">1</span>.9.0
+<span class="nv">ply</span><span class="o">==</span><span class="m">3</span>.11
+<span class="nv">psycopg</span><span class="o">==</span><span class="m">3</span>.2.1
+psycopg-binary<span class="o">==</span><span class="m">3</span>.2.1
+psycopg-pool<span class="o">==</span><span class="m">3</span>.2.2
+<span class="nv">Pygments</span><span class="o">==</span><span class="m">2</span>.18.0
+<span class="nv">PySide6</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">PySide6_Addons</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">PySide6_Essentials</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">pywin32</span><span class="o">==</span><span class="m">308</span>
+<span class="nv">PyYAML</span><span class="o">==</span><span class="m">6</span>.0.2
+<span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.32.3
+<span class="nv">setuptools</span><span class="o">==</span><span class="m">72</span>.1.0
+<span class="nv">shiboken6</span><span class="o">==</span><span class="m">6</span>.7.2
+<span class="nv">snowballstemmer</span><span class="o">==</span><span class="m">2</span>.2.0
+<span class="nv">Sphinx</span><span class="o">==</span><span class="m">8</span>.1.3
+sphinx-rtd-theme<span class="o">==</span><span class="m">3</span>.0.2
+sphinxcontrib-applehelp<span class="o">==</span><span class="m">2</span>.0.0
+sphinxcontrib-devhelp<span class="o">==</span><span class="m">2</span>.0.0
+sphinxcontrib-htmlhelp<span class="o">==</span><span class="m">2</span>.1.0
+sphinxcontrib-jquery<span class="o">==</span><span class="m">4</span>.1
+sphinxcontrib-jsmath<span class="o">==</span><span class="m">1</span>.0.1
+sphinxcontrib-qthelp<span class="o">==</span><span class="m">2</span>.0.0
+sphinxcontrib-serializinghtml<span class="o">==</span><span class="m">2</span>.0.0
+<span class="nv">typing_extensions</span><span class="o">==</span><span class="m">4</span>.12.2
+<span class="nv">tzdata</span><span class="o">==</span><span class="m">2024</span>.1
+<span class="nv">urllib3</span><span class="o">==</span><span class="m">2</span>.2.3
+<span class="nv">wheel</span><span class="o">==</span><span class="m">0</span>.44.0
+</pre></div>
+</div>
+</section>
+<section id="detalles-sobre-cada-una-de-las-dependencias">
+<h3>Detalles sobre cada una de las dependencias<a class="headerlink" href="#detalles-sobre-cada-una-de-las-dependencias" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>alabaster==1.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Alabaster es un tema de apariencia para <strong>Sphinx</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Proporciona un diseño limpio y sencillo para la documentación generada con Sphinx. Es el tema por defecto de Sphinx.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p><strong>babel==2.16.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Babel es una librería para internacionalización y localización (<strong>i18n</strong>) de aplicaciones.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita la traducción de textos, así como el formateo de fechas, números y otros datos específicos de cada región.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p><strong>certifi==2024.8.30</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Certifi proporciona una lista de certificados de autoridades de certificación (<strong>CA</strong>) actualizados.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Garantiza solicitudes HTTPS seguras verificando la validez de los certificados SSL/TLS.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="4">
+<li><p><strong>charset-normalizer==3.4.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para detectar y manejar codificaciones de texto.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita decodificar correctamente textos con diversas codificaciones, especialmente en respuestas HTTP.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="5">
+<li><p><strong>colorama==0.4.6</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Proporciona soporte para imprimir texto con color en la consola de <strong>Windows</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite aplicaciones de consola con salida en color en sistemas Windows.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="6">
+<li><p><strong>docutils==0.21.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para procesar documentos en <strong>reStructuredText</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Fundamental para Sphinx en la generación de documentación en diferentes formatos.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="7">
+<li><p><strong>idna==3.10</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Implementa el estándar <strong>IDNA</strong> para nombres de dominio internacionalizados.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite trabajar con nombres de dominio que contienen caracteres no ASCII.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="8">
+<li><p><strong>imagesize==1.4.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para obtener dimensiones de imágenes sin cargarlas completamente.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Utilizada por Sphinx para determinar tamaños de imágenes en la documentación.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="9">
+<li><p><strong>Jinja2==3.1.4</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Motor de plantillas para Python inspirado en <strong>Django</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Utilizado por Sphinx para generar HTML dinámico a partir de plantillas.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="10">
+<li><p><strong>markdown-it-py==3.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Analizador de <strong>Markdown</strong> escrito en Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita convertir texto Markdown a HTML en aplicaciones de documentación.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="11">
+<li><p><strong>MarkupSafe==3.0.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para escapar cadenas y evitar inyecciones de código.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Utilizada por <strong>Jinja2</strong> para garantizar seguridad en plantillas.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="12">
+<li><p><strong>mdit-py-plugins==0.4.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Plugins adicionales para <strong>markdown-it-py</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Añade funcionalidades como tablas y matemáticas al procesador Markdown.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="13">
+<li><p><strong>mdurl==0.1.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para manejar URLs en documentos Markdown.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita el parseo y manipulación de enlaces en texto Markdown.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="14">
+<li><p><strong>myst-parser==4.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Parser de <strong>Markdown</strong> para Sphinx.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite escribir documentación en Markdown para proyectos Sphinx.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="15">
+<li><p><strong>packaging==24.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Herramienta para manejar metadatos de paquetes.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita trabajar con versiones y dependencias de paquetes Python.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="16">
+<li><p><strong>pandoc==2.4</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Herramienta universal de conversión de documentos.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Convierte documentos entre formatos como Markdown, HTML y LaTeX.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="17">
+<li><p><strong>plumbum==1.9.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para ejecutar comandos del sistema desde Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita la automatización y ejecución de comandos en scripts Python.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="18">
+<li><p><strong>ply==3.11</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Implementación de <strong>Lex</strong> y <strong>Yacc</strong> en Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Se usa para crear analizadores léxicos y sintácticos.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="19">
+<li><p><strong>psycopg==3.2.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Cliente para bases de datos <strong>PostgreSQL</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita ejecutar consultas SQL en bases de datos PostgreSQL.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="20">
+<li><p><strong>psycopg-binary==3.2.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Versión binaria de <strong>psycopg</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite instalar <code class="docutils literal notranslate"><span class="pre">psycopg</span></code> sin necesidad de compilación.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="21">
+<li><p><strong>psycopg-pool==3.2.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para <strong>pooling</strong> de conexiones PostgreSQL.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Mejora el rendimiento al reutilizar conexiones de base de datos.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="22">
+<li><p><strong>Pygments==2.18.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para resaltar sintaxis de código.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Usada por Sphinx para colorear bloques de código.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="23">
+<li><p><strong>PySide6==6.7.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Bindings de <strong>Qt6</strong> para Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite desarrollar interfaces gráficas con Qt6 en Python.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="24">
+<li><p><strong>pywin32==308</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensiones para trabajar con la API de Windows.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita automatización y manipulación de características del sistema Windows.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="25">
+<li><p><strong>PyYAML==6.0.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para leer y escribir archivos <strong>YAML</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita el manejo de configuraciones en YAML.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="26">
+<li><p><strong>requests==2.32.3</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para hacer solicitudes HTTP.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Simplifica consumir APIs y descargar recursos web.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="27">
+<li><p><strong>setuptools==72.1.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Herramienta para empaquetar proyectos Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita la distribución e instalación de paquetes.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="28">
+<li><p><strong>shiboken6==6.7.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Generador de bindings para <strong>PySide6</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Crea enlaces entre C++ y Python.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="29">
+<li><p><strong>snowballstemmer==2.2.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para <strong>stemming</strong> (reducción de palabras).</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Mejora la búsqueda en documentación.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="30">
+<li><p><strong>Sphinx==8.1.3</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Generador de documentación automática.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Crea documentación en HTML, PDF, etc.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="31">
+<li><p><strong>sphinx-rtd-theme==3.0.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Tema de Sphinx diseñado para <strong>Read the Docs</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Proporciona una apariencia moderna y fácil de navegar para documentación alojada en <strong>Read the Docs</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="32">
+<li><p><strong>sphinxcontrib-applehelp==2.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para generar documentación en formato <strong>Apple Help</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite crear archivos de ayuda compatibles con aplicaciones de <strong>macOS</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="33">
+<li><p><strong>sphinxcontrib-devhelp==2.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para generar documentación en formato <strong>Devhelp</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita crear archivos de ayuda compatibles con el visor <strong>Devhelp</strong> de GNOME.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="34">
+<li><p><strong>sphinxcontrib-htmlhelp==2.1.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para generar documentación en formato <strong>HTML Help</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite crear archivos <code class="docutils literal notranslate"><span class="pre">.chm</span></code> (HTML compilado) utilizados en sistemas <strong>Windows</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="35">
+<li><p><strong>sphinxcontrib-jquery==4.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión que incluye <strong>jQuery</strong> en la documentación generada por Sphinx.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Asegura la compatibilidad con scripts basados en jQuery en proyectos de documentación.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="36">
+<li><p><strong>sphinxcontrib-jsmath==1.0.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para renderizar fórmulas matemáticas usando <strong>jsMath</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite mostrar ecuaciones matemáticas en la documentación HTML sin necesidad de otras herramientas.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="37">
+<li><p><strong>sphinxcontrib-qthelp==2.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para generar documentación en formato <strong>Qt Help</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita crear archivos de ayuda compatibles con el visor <strong>Qt Assistant</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="38">
+<li><p><strong>sphinxcontrib-serializinghtml==2.0.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Extensión de Sphinx para generar documentación en formato <strong>HTML serializado</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite exportar la documentación a un formato adecuado para aplicaciones que requieren HTML serializado.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="39">
+<li><p><strong>typing_extensions==4.12.2</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Proporciona funcionalidades de anotaciones de tipo avanzadas para Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite usar nuevas características de tipado en versiones antiguas de Python.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="40">
+<li><p><strong>tzdata==2024.1</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Base de datos de zonas horarias globales.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Permite manejar fechas y horas con información actualizada de zonas horarias.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="41">
+<li><p><strong>urllib3==2.2.3</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Librería para manejar conexiones HTTP con funciones avanzadas.</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Facilita realizar solicitudes HTTP seguras y eficientes. Es una dependencia clave de <strong>requests</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="42">
+<li><p><strong>wheel==0.44.0</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Descripción:</strong></p>
+<ul>
+<li><p>Herramienta para construir y empaquetar distribuciones en formato <strong>Wheel</strong> (<code class="docutils literal notranslate"><span class="pre">.whl</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Propósito:</strong></p>
+<ul>
+<li><p>Mejora el proceso de instalación de paquetes Python al ofrecer un formato más rápido y eficiente.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="001.env.html" class="btn btn-neutral float-left" title="Entorno Virtual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="003.Creacion_proyecto_Sphinx.html" class="btn btn-neutral float-right" title="Creación Inicial del Proyecto con Sphinx" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo 05.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

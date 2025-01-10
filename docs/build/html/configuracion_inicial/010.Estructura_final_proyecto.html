@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructura Final del Proyecto &mdash; documentación de Proyecto Equipo 05 | Tema 05  - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Guía de uso MyST – Parser" href="013.guia_de_myst_parser.html" />
+    <link rel="prev" title="Generación de PDF a partir de la documentación" href="009.Generar_PDF.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto Equipo 05 | Tema 05 
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html"><strong>Entorno Virtual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html"><strong>Instalación de dependencias del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="009.Generar_PDF.html"><strong>Generación de PDF a partir de la documentación</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Estructura Final del Proyecto</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-del-proyecto">Estructura del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nuevos-archivos-y-carpetas">Nuevos Archivos y Carpetas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carpeta-src"><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">src/</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-modules-rst"><strong>Archivo <code class="docutils literal notranslate"><span class="pre">modules.rst</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-math-operations-rst"><strong>Archivo <code class="docutils literal notranslate"><span class="pre">math_operations.rst</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-index-md"><strong>Archivo <code class="docutils literal notranslate"><span class="pre">index.md</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modificaciones-en-conf-py"><strong>5. Modificaciones en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivos-generados-en-static"><strong>Archivos Generados en <code class="docutils literal notranslate"><span class="pre">_static/</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cambios-en-la-carpeta-build"><strong>Cambios en la Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html"><strong>Guía de uso MyST – Parser</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_operations.html">math_operations module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto Equipo 05 | Tema 05 </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Estructura Final del Proyecto</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/010.Estructura_final_proyecto.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="estructura-final-del-proyecto">
+<h1><strong>Estructura Final del Proyecto</strong><a class="headerlink" href="#estructura-final-del-proyecto" title="Link to this heading"></a></h1>
+<p>En esta sección se explica la estructura del proyecto <strong>finalizado</strong>, destacando los archivos y carpetas nuevos que no estaban en la estructura inicial. Además, se incluye información detallada sobre el propósito de cada elemento.</p>
+<hr class="docutils" />
+<section id="estructura-del-proyecto">
+<h2>Estructura del Proyecto<a class="headerlink" href="#estructura-del-proyecto" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs/
+├──<span class="w"> </span>build/
+├──<span class="w"> </span>source/
+│<span class="w">   </span>├──<span class="w"> </span>_static/
+│<span class="w">   </span>├──<span class="w"> </span>_templates/
+│<span class="w">   </span>├──<span class="w"> </span>modules.rst
+│<span class="w">   </span>├──<span class="w"> </span>math_operations.rst
+│<span class="w">   </span>├──<span class="w"> </span>index.md
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+├──<span class="w"> </span>src/
+│<span class="w">   </span>├──<span class="w"> </span>math_operations.py
+├──<span class="w"> </span>make.bat
+└──<span class="w"> </span>Makefile
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="nuevos-archivos-y-carpetas">
+<h2>Nuevos Archivos y Carpetas<a class="headerlink" href="#nuevos-archivos-y-carpetas" title="Link to this heading"></a></h2>
+<p>A continuación, se detallan los <strong>nuevos elementos</strong> que se han añadido o modificado respecto a la estructura inicial del proyecto:</p>
+<hr class="docutils" />
+<section id="carpeta-src">
+<h3><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">src/</span></code></strong><a class="headerlink" href="#carpeta-src" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Descripción</strong>:<br />
+Esta carpeta contiene el código fuente del proyecto, específicamente los módulos de Python que están siendo documentados mediante Sphinx. En este caso, la carpeta alberga el archivo <code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code>.</p></li>
+<li><p><strong>Contenido Principal</strong>:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code></strong>:</p>
+<ul>
+<li><p>Este archivo contiene las funciones principales del proyecto, como operaciones matemáticas básicas.</p></li>
+<li><p>Cada función incluye <strong>docstrings detallados</strong> que Sphinx utiliza para generar la documentación.</p></li>
+<li><p><strong>Ejemplo de una función documentada en este archivo</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add two numbers.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        a (float): The first number.</span>
+<span class="sd">        b (float): The second number.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The sum of the two numbers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Importancia</strong>: Es el archivo fuente clave del proyecto y un ejemplo claro de cómo estructurar y documentar funciones en Python.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivo-modules-rst">
+<h3><strong>Archivo <code class="docutils literal notranslate"><span class="pre">modules.rst</span></code></strong><a class="headerlink" href="#archivo-modules-rst" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Descripción</strong>:<br />
+Este archivo fue generado automáticamente por Sphinx y contiene una referencia a todos los módulos documentados en el proyecto.</p></li>
+<li><p><strong>Propósito</strong>:</p>
+<ul class="simple">
+<li><p>Sirve como una <strong>tabla de contenidos</strong> para listar y enlazar todos los módulos Python incluidos en la documentación.</p></li>
+<li><p>Esto permite a los usuarios navegar fácilmente entre los diferentes módulos y sus funciones.</p></li>
+</ul>
+</li>
+<li><p><strong>Contenido Principal</strong>:</p>
+<ul>
+<li><p>La referencia al módulo <code class="docutils literal notranslate"><span class="pre">math_operations</span></code> está incluida en este archivo:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">`math_operations module</span>
+<span class="gh">======================</span>
+
+<span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> math_operations
+   <span class="nc">:members:</span>
+   <span class="nc">:undoc-members:</span>
+   <span class="nc">:show-inheritance:</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivo-math-operations-rst">
+<h3><strong>Archivo <code class="docutils literal notranslate"><span class="pre">math_operations.rst</span></code></strong><a class="headerlink" href="#archivo-math-operations-rst" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Descripción</strong>:<br />
+Este archivo fue generado automáticamente por Sphinx y contiene la documentación específica para el módulo <code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code>.</p></li>
+<li><p><strong>Propósito</strong>:</p>
+<ul class="simple">
+<li><p>Proporciona una descripción detallada de todas las funciones incluidas en el archivo <code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code>.</p></li>
+<li><p>Sphinx utiliza los docstrings de las funciones para generar esta documentación.</p></li>
+</ul>
+</li>
+<li><p><strong>Contenido Principal</strong>:</p>
+<ul>
+<li><p>Cada función está listada con su descripción, parámetros y valor de retorno. Por ejemplo:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">add_numbers(a, b)</span>
+<span class="gh">-----------------</span>
+
+Add two numbers.
+
+<span class="gs">**Parameters**</span>:
+<span class="m">-</span> a (float): The first number.
+<span class="m">-</span> b (float): The second number.
+
+<span class="gs">**Returns**</span>:
+<span class="m">-</span> float: The sum of the two numbers.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Importancia</strong>: Este archivo facilita la lectura y comprensión del módulo al exponer todas sus funciones de manera estructurada.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivo-index-md">
+<h3><strong>Archivo <code class="docutils literal notranslate"><span class="pre">index.md</span></code></strong><a class="headerlink" href="#archivo-index-md" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Cambios Realizados</strong>:<br />
+Aunque este archivo ya existía en la estructura inicial, ahora incluye referencias adicionales para los nuevos archivos y módulos documentados.</p></li>
+<li><p><strong>Propósito Actualizado</strong>:</p>
+<ul class="simple">
+<li><p>Define el índice principal de la documentación e incluye enlaces a los archivos <code class="docutils literal notranslate"><span class="pre">.rst</span></code> generados.</p></li>
+<li><p>Utiliza la directiva <code class="docutils literal notranslate"><span class="pre">{toctree}</span></code> para estructurar los enlaces de navegación.</p></li>
+</ul>
+</li>
+<li><p><strong>Ejemplo de Contenido</strong>:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Índice de Documentación</span>
+
+{toctree}
+:maxdepth: 2
+:caption: Contenido:
+
+modules
+math_operations
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="modificaciones-en-conf-py">
+<h3><strong>5. Modificaciones en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong><a class="headerlink" href="#modificaciones-en-conf-py" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Cambios Realizados</strong>:</p>
+<ul class="simple">
+<li><p>El archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> se ha actualizado para incluir configuraciones adicionales específicas del proyecto.</p></li>
+<li><p>Se añadieron rutas al directorio <code class="docutils literal notranslate"><span class="pre">src</span></code> para garantizar que Sphinx pueda localizar los módulos Python.</p></li>
+</ul>
+</li>
+<li><p><strong>Configuraciones Importantes Añadidas</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../src&#39;</span><span class="p">))</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.napoleon&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx_rtd_theme&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;myst_parser&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Importancia</strong>: Estas modificaciones son críticas para que Sphinx pueda:</p>
+<ul class="simple">
+<li><p>Documentar automáticamente los módulos Python.</p></li>
+<li><p>Renderizar correctamente los archivos <code class="docutils literal notranslate"><span class="pre">.md</span></code> y <code class="docutils literal notranslate"><span class="pre">.rst</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="archivos-generados-en-static">
+<h3><strong>Archivos Generados en <code class="docutils literal notranslate"><span class="pre">_static/</span></code></strong><a class="headerlink" href="#archivos-generados-en-static" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Nuevos Elementos</strong>:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">custom.css</span></code></strong>: Este archivo contiene personalizaciones de estilo para la documentación.<br />
+Por ejemplo, puedes haber añadido estilos específicos para encabezados o tablas.</p></li>
+<li><p><strong>Subcarpeta <code class="docutils literal notranslate"><span class="pre">images/</span></code></strong>:</p>
+<ul>
+<li><p>Contiene imágenes utilizadas en la documentación (si las has añadido).</p></li>
+<li><p>Estas imágenes se pueden referenciar en los archivos Markdown o <code class="docutils literal notranslate"><span class="pre">.rst</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="cambios-en-la-carpeta-build">
+<h3><strong>Cambios en la Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong><a class="headerlink" href="#cambios-en-la-carpeta-build" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Descripción</strong>:<br />
+Esta carpeta ha crecido al incluir los resultados generados en diferentes formatos (HTML, PDF, etc.) tras compilar la documentación.</p></li>
+<li><p><strong>Contenido Importante</strong>:</p>
+<ul>
+<li><p><strong>Subcarpeta <code class="docutils literal notranslate"><span class="pre">html/</span></code></strong>: Contiene la documentación final en formato HTML, lista para ser publicada o visualizada en un navegador.</p></li>
+<li><p><strong>Subcarpeta <code class="docutils literal notranslate"><span class="pre">latex/</span></code></strong>: Si se habilitó la salida LaTeX, aquí se almacenan los archivos relacionados para generar un PDF.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="009.Generar_PDF.html" class="btn btn-neutral float-left" title="Generación de PDF a partir de la documentación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="013.guia_de_myst_parser.html" class="btn btn-neutral float-right" title="Guía de uso MyST – Parser" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo 05.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

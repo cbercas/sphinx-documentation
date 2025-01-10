@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generación de PDF a partir de la documentación &mdash; documentación de Proyecto Equipo 05 | Tema 05  - 1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e65616fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=92345faf"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="010.Estructura_final_proyecto.html" />
+    <link rel="prev" title="Generación de HTML a partir de la documentación" href="008.Generar_HTML.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto Equipo 05 | Tema 05 
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="001.env.html"><strong>Entorno Virtual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html"><strong>Instalación de dependencias del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Generación de PDF a partir de la documentación</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requisitos-previos">Requisitos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configurar-el-archivo-conf-py">Configurar el archivo conf.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explicacion-de-las-opciones-clave">Explicación de las opciones clave:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generar-archivos-latex">Generar archivos LaTeX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resultado-esperado">Resultado esperado:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compilar-el-archivo-tex-a-pdf">Compilar el archivo .tex a PDF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Resultado esperado:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verificar-y-revisar-el-pdf">Verificar y revisar el PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solucion-de-problemas-comunes">Solución de problemas comunes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#error-paquete-latex-faltante">Error: Paquete LaTeX faltante</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-de-codificacion-utf-8">Error de codificación UTF-8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-de-compilacion-en-tablas-o-figuras">Error de compilación en tablas o figuras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="013.guia_de_myst_parser.html"><strong>Guía de uso MyST – Parser</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos_mas_usados/comandos.html">Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_operations.html">math_operations module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto Equipo 05 | Tema 05 </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Generación de PDF a partir de la documentación</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/configuracion_inicial/009.Generar_PDF.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generacion-de-pdf-a-partir-de-la-documentacion">
+<h1><strong>Generación de PDF a partir de la documentación</strong><a class="headerlink" href="#generacion-de-pdf-a-partir-de-la-documentacion" title="Link to this heading"></a></h1>
+<p>Generar un documento PDF a partir de tu documentación es una funcionalidad poderosa que ofrece <strong>Sphinx</strong> gracias a su integración con <strong>LaTeX</strong>. Sin embargo, este proceso requiere una configuración adecuada y algunas dependencias instaladas previamente.</p>
+<hr class="docutils" />
+<section id="requisitos-previos">
+<h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading"></a></h2>
+<p>Antes de generar archivos PDF, asegúrate de cumplir con los siguientes requisitos:</p>
+<ol class="arabic">
+<li><p><strong>Instalar LaTeX:</strong></p>
+<ul>
+<li><p>En <strong>Windows:</strong> Descarga e instala <strong>MiKTeX</strong> desde <a class="reference external" href="https://miktex.org/download">https://miktex.org/download</a>.</p></li>
+<li><p>En <strong>Linux:</strong> Instala <code class="docutils literal notranslate"><span class="pre">TeX</span> <span class="pre">Live</span></code> con:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>texlive-latex-base<span class="w"> </span>texlive-fonts-recommended<span class="w"> </span>texlive-latex-extra
+</pre></div>
+</div>
+</li>
+<li><p>En <strong>macOS:</strong> Instala <strong>MacTeX</strong> desde https://tug.org/mactex/.</p></li>
+</ul>
+</li>
+<li><p><strong>Verificar la instalación:</strong><br />
+Abre una terminal y verifica que <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> está disponible:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdflatex<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>Deberías ver información sobre la versión instalada.</p>
+</li>
+<li><p><strong>Paquetes adicionales de LaTeX:</strong><br />
+Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manualmente o permitir que MiKTeX los descargue automáticamente cuando sea necesario.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="configurar-el-archivo-conf-py">
+<h2>Configurar el archivo conf.py<a class="headerlink" href="#configurar-el-archivo-conf-py" title="Link to this heading"></a></h2>
+<p>Abre el archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> y asegúrate de tener la siguiente configuración para LaTeX:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usar pdflatex como motor de compilación</span>
+<span class="n">latex_engine</span> <span class="o">=</span> <span class="s1">&#39;pdflatex&#39;</span>
+
+<span class="c1"># Configurar opciones para el documento PDF</span>
+<span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;papersize&#39;</span><span class="p">:</span> <span class="s1">&#39;a4paper&#39;</span><span class="p">,</span>          <span class="c1"># Tamaño del papel</span>
+    <span class="s1">&#39;pointsize&#39;</span><span class="p">:</span> <span class="s1">&#39;10pt&#39;</span><span class="p">,</span>             <span class="c1"># Tamaño de fuente principal</span>
+    <span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;\usepackage[utf8]</span><span class="si">{inputenc}</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># Codificación de entrada</span>
+    <span class="s1">&#39;figure_align&#39;</span><span class="p">:</span> <span class="s1">&#39;htbp&#39;</span>           <span class="c1"># Alineación de figuras</span>
+<span class="p">}</span>
+
+<span class="c1"># Documentos PDF a generar</span>
+<span class="n">latex_documents</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;documento.tex&#39;</span><span class="p">,</span> <span class="s1">&#39;Título del Documento&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;Autor del Documento&#39;</span><span class="p">,</span> <span class="s1">&#39;manual&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<section id="explicacion-de-las-opciones-clave">
+<h3>Explicación de las opciones clave:<a class="headerlink" href="#explicacion-de-las-opciones-clave" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">papersize</span></code>: Define el tamaño de la página (<code class="docutils literal notranslate"><span class="pre">a4paper</span></code> o <code class="docutils literal notranslate"><span class="pre">letterpaper</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pointsize</span></code>: Tamaño de la fuente en puntos (<code class="docutils literal notranslate"><span class="pre">10pt</span></code>, <code class="docutils literal notranslate"><span class="pre">11pt</span></code>, <code class="docutils literal notranslate"><span class="pre">12pt</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preamble</span></code>: Permite agregar configuraciones adicionales de LaTeX.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure_align</span></code>: Controla la alineación de las figuras.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="generar-archivos-latex">
+<h2>Generar archivos LaTeX<a class="headerlink" href="#generar-archivos-latex" title="Link to this heading"></a></h2>
+<p>En la terminal, dirígete a la carpeta raíz donde se encuentra el archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> (en Windows) o <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> (en Linux/macOS).</p>
+<ul>
+<li><p><strong>Windows:</strong></p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>make.bat latex
+</pre></div>
+</div>
+</li>
+<li><p><strong>Linux/macOS:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>latex
+</pre></div>
+</div>
+</li>
+</ul>
+<section id="resultado-esperado">
+<h3>Resultado esperado:<a class="headerlink" href="#resultado-esperado" title="Link to this heading"></a></h3>
+<p>Esto generará una carpeta <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> con varios archivos, incluyendo un archivo <code class="docutils literal notranslate"><span class="pre">.tex</span></code>.</p>
+<p>📸 <strong>Ejemplo de resultado:</strong></p>
+<p><img alt="Carpeta LaTeX generada" src="../_images/imagePDF1.png" /></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="compilar-el-archivo-tex-a-pdf">
+<h2>Compilar el archivo .tex a PDF<a class="headerlink" href="#compilar-el-archivo-tex-a-pdf" title="Link to this heading"></a></h2>
+<p>Dirígete a la carpeta <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> y compila el archivo <code class="docutils literal notranslate"><span class="pre">.tex</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdflatex<span class="w"> </span>documento.tex
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si aparece un diálogo de instalación de paquetes (en MiKTeX), selecciona un servidor local (por ejemplo, España) y permite la instalación de los paquetes requeridos.</p></li>
+<li><p>Es posible que necesites ejecutar el comando varias veces para generar correctamente el índice y las referencias cruzadas.</p></li>
+</ul>
+<section id="id1">
+<h3>Resultado esperado:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Al finalizar, verás un archivo <code class="docutils literal notranslate"><span class="pre">documento.pdf</span></code> en la misma carpeta.</p>
+<p><strong>Ejemplo de resultado final:</strong></p>
+<p><img alt="Archivo PDF generado" src="../_images/imagePDF2.png" /></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="verificar-y-revisar-el-pdf">
+<h2>Verificar y revisar el PDF<a class="headerlink" href="#verificar-y-revisar-el-pdf" title="Link to this heading"></a></h2>
+<p>Abre el archivo PDF con tu lector de PDF preferido y verifica que:</p>
+<ul class="simple">
+<li><p>La tabla de contenidos esté correctamente generada.</p></li>
+<li><p>Las imágenes y tablas estén alineadas adecuadamente.</p></li>
+<li><p>Las referencias cruzadas y enlaces funcionen correctamente.</p></li>
+</ul>
+</section>
+<section id="solucion-de-problemas-comunes">
+<h2>Solución de problemas comunes<a class="headerlink" href="#solucion-de-problemas-comunes" title="Link to this heading"></a></h2>
+<section id="error-paquete-latex-faltante">
+<h3>Error: Paquete LaTeX faltante<a class="headerlink" href="#error-paquete-latex-faltante" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Si ves mensajes de error sobre paquetes faltantes, instala los paquetes manualmente o permite que MiKTeX los descargue automáticamente.</p></li>
+</ul>
+</section>
+<section id="error-de-codificacion-utf-8">
+<h3>Error de codificación UTF-8<a class="headerlink" href="#error-de-codificacion-utf-8" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Agrega esta línea en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> dentro de <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;\usepackage[utf8]</span><span class="si">{inputenc}</span><span class="s1">&#39;</span> 
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="error-de-compilacion-en-tablas-o-figuras">
+<h3>Error de compilación en tablas o figuras<a class="headerlink" href="#error-de-compilacion-en-tablas-o-figuras" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Asegúrate de que las tablas y figuras estén bien formateadas y no excedan los márgenes de la página.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="008.Generar_HTML.html" class="btn btn-neutral float-left" title="Generación de HTML a partir de la documentación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="010.Estructura_final_proyecto.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo 05.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
