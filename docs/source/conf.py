@@ -12,9 +12,7 @@ import sphinx_rtd_theme
 
 # Configurar la ruta al directorio raíz del proyecto
 sys.path.insert(0, os.path.abspath('../../source'))
-print("sys.path:", sys.path)
-sys.path.insert(0, os.path.abspath('../src'))
-print("sys.path:", sys.path)
+sys.path.insert(1, os.path.abspath('../../src'))
 
 project = 'Proyecto Equipo 05 | Tema 05 '
 copyright = '2024, Equipo 05'
@@ -52,13 +50,18 @@ source_suffix = {
     '.md': 'markdown',  # Archivos en formato Markdown
 }
 
+# Usar pdflatex como motor de compilación
 latex_engine = 'pdflatex'
 
+# Configurar opciones para el documento PDF
 latex_elements = {
-    'papersize': 'a4paper',
-    'pointsize': '10pt',
+    'papersize': 'a4paper',          # Tamaño del papel
+    'pointsize': '10pt',             # Tamaño de fuente principal
+    'preamble': r'\usepackage[utf8]{inputenc}',  # Codificación de entrada
+    'figure_align': 'htbp'           # Alineación de figuras
 }
 
+# Documentos PDF a generar
 latex_documents = [
     ('index', 'documento.tex', 'Título del Documento',
      'Autor del Documento', 'manual'),

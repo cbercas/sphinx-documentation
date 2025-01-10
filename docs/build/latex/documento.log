@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.19)  9 JAN 2025 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.19)  9 JAN 2025 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -736,7 +736,7 @@ Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
 
 
 Writing index file documento.idx
-LaTeX Font Info:    Trying to load font information for T1+qtm on input line 74
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 77
 .
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
@@ -746,30 +746,32 @@ ex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count331
 \l__pdf_internal_box=\box121
+) (documento.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
 )
-No file documento.aux.
 \openout1 = `documento.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
 
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
@@ -828,7 +830,7 @@ Couldn't patch \ttl@straight@ii
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
@@ -850,28 +852,30 @@ Couldn't patch \ttl@straight@ii
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 77.
+(documento.out) (documento.out)
 \@outlinefile=\write5
 \openout5 = `documento.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 82.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 82
+Package hyperref Info: Option `pageanchor' set `false' on input line 85.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 85
 .
+
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 
 
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
 
 
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -882,154 +886,137 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/Noah/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Noah/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}]
-
-[2
-
-
-]
-No file documento.toc.
-\tf@toc=\write6
-\openout6 = `documento.toc'.
-
-
-
-[1
-
-{C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.e
-nc}]
-
-[2
-
-]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
-06.
-LaTeX Font Info:    No file T1txtt.fd. on input line 106.
+09.
+LaTeX Font Info:    No file T1txtt.fd. on input line 109.
 
 LaTeX Font Warning: Font shape `T1/txtt/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 106.
+(Font)              using `T1/cmr/m/n' instead on input line 109.
 
 
 LaTeX Font Warning: Font shape `T1/txtt/b/n' undefined
-(Font)              using `T1/txtt/m/n' instead on input line 124.
+(Font)              using `T1/txtt/m/n' instead on input line 127.
 
 
 
 [1
 
+
+
 ]
 LaTeX Font Info:    Trying to load font information for TS1+txtt on input line 
-155.
-LaTeX Font Info:    No file TS1txtt.fd. on input line 155.
+158.
+LaTeX Font Info:    No file TS1txtt.fd. on input line 158.
 
 
 LaTeX Font Warning: Font shape `TS1/txtt/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textasciigrave' on input line 155.
+(Font)              for symbol `textasciigrave' on input line 158.
 
 
 
-LaTeX Info: Redefining \. on input line 235.
-LaTeX Info: Redefining \% on input line 235.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
 [2]
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 2
-51.
+54.
  (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 )
 
-LaTeX Info: Redefining \. on input line 357.
-LaTeX Info: Redefining \% on input line 357.
+LaTeX Info: Redefining \. on input line 360.
+LaTeX Info: Redefining \% on input line 360.
 [3{C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.e
 nc}]
 
-LaTeX Info: Redefining \. on input line 577.
-LaTeX Info: Redefining \% on input line 577.
+LaTeX Info: Redefining \. on input line 580.
+LaTeX Info: Redefining \% on input line 580.
 [4]
 
-LaTeX Info: Redefining \. on input line 799.
-LaTeX Info: Redefining \% on input line 799.
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
 [5]
 
-LaTeX Info: Redefining \. on input line 1009.
-LaTeX Info: Redefining \% on input line 1009.
+LaTeX Info: Redefining \. on input line 1012.
+LaTeX Info: Redefining \% on input line 1012.
 [6]
 
-LaTeX Info: Redefining \. on input line 1227.
-LaTeX Info: Redefining \% on input line 1227.
+LaTeX Info: Redefining \. on input line 1230.
+LaTeX Info: Redefining \% on input line 1230.
 [7]
 
-LaTeX Info: Redefining \. on input line 1445.
-LaTeX Info: Redefining \% on input line 1445.
+LaTeX Info: Redefining \. on input line 1448.
+LaTeX Info: Redefining \% on input line 1448.
 [8]
 
-LaTeX Info: Redefining \. on input line 1649.
-LaTeX Info: Redefining \% on input line 1649.
+LaTeX Info: Redefining \. on input line 1652.
+LaTeX Info: Redefining \% on input line 1652.
 [9]
 
-LaTeX Info: Redefining \. on input line 1763.
-LaTeX Info: Redefining \% on input line 1763.
+LaTeX Info: Redefining \. on input line 1766.
+LaTeX Info: Redefining \% on input line 1766.
 [10]
 
 LaTeX Font Warning: Font shape `T1/txtt/m/it' undefined
-(Font)              using `T1/txtt/m/n' instead on input line 1807.
+(Font)              using `T1/txtt/m/n' instead on input line 1810.
 
 
 
-LaTeX Info: Redefining \. on input line 1834.
-LaTeX Info: Redefining \% on input line 1834.
+LaTeX Info: Redefining \. on input line 1837.
+LaTeX Info: Redefining \% on input line 1837.
 [11]
 
-LaTeX Info: Redefining \. on input line 1937.
-LaTeX Info: Redefining \% on input line 1937.
+LaTeX Info: Redefining \. on input line 1940.
+LaTeX Info: Redefining \% on input line 1940.
 [12]
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 1982.
+nput line 1985.
 
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
 efree1.fd)
 
-LaTeX Info: Redefining \. on input line 2038.
-LaTeX Info: Redefining \% on input line 2038.
+LaTeX Info: Redefining \. on input line 2041.
+LaTeX Info: Redefining \% on input line 2041.
 [13{C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa
 5free1.enc}]
 
-LaTeX Info: Redefining \. on input line 2138.
-LaTeX Info: Redefining \% on input line 2138.
+LaTeX Info: Redefining \. on input line 2141.
+LaTeX Info: Redefining \% on input line 2141.
 [14]
 
 LaTeX Font Warning: Font shape `TS1/txtt/m/it' undefined
 (Font)              using `TS1/txtt/m/n' instead
-(Font)              for symbol `textasciigrave' on input line 2151.
+(Font)              for symbol `textasciigrave' on input line 2154.
 
 
 
-LaTeX Info: Redefining \. on input line 2284.
-LaTeX Info: Redefining \% on input line 2284.
+LaTeX Info: Redefining \. on input line 2287.
+LaTeX Info: Redefining \% on input line 2287.
 [15]
 
-LaTeX Info: Redefining \. on input line 2434.
-LaTeX Info: Redefining \% on input line 2434.
+LaTeX Info: Redefining \. on input line 2437.
+LaTeX Info: Redefining \% on input line 2437.
 [16]
 
-LaTeX Info: Redefining \. on input line 2451.
-LaTeX Info: Redefining \% on input line 2451.
+LaTeX Info: Redefining \. on input line 2454.
+LaTeX Info: Redefining \% on input line 2454.
 [17]
 
-LaTeX Info: Redefining \. on input line 2557.
-LaTeX Info: Redefining \% on input line 2557.
+LaTeX Info: Redefining \. on input line 2560.
+LaTeX Info: Redefining \% on input line 2560.
 [18]
 
-LaTeX Info: Redefining \. on input line 2644.
-LaTeX Info: Redefining \% on input line 2644.
+LaTeX Info: Redefining \. on input line 2647.
+LaTeX Info: Redefining \% on input line 2647.
 [19]
 
-LaTeX Info: Redefining \. on input line 2711.
-LaTeX Info: Redefining \% on input line 2711.
+LaTeX Info: Redefining \. on input line 2714.
+LaTeX Info: Redefining \% on input line 2714.
 [20]
 
-LaTeX Info: Redefining \. on input line 2807.
-LaTeX Info: Redefining \% on input line 2807.
+LaTeX Info: Redefining \. on input line 2810.
+LaTeX Info: Redefining \% on input line 2810.
 [21]
 
 ! LaTeX Error: Unicode character ⚠ (U+26A0)
@@ -1039,27 +1026,482 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2842 ⚠
+l.2845 ⚠
           ️ \sphinxstylestrong{Importante:} En caso de usar Markdown, aseg...
 
-? h
-You may provide a definition with
-\DeclareUnicodeCharacter 
 ? 
-! Emergency stop.
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2842 ⚠
-          ️ \sphinxstylestrong{Importante:} En caso de usar Markdown, aseg...
-End of file on the terminal!
+l.2845 ⚠️
+              \sphinxstylestrong{Importante:} En caso de usar Markdown, aseg...
 
- 
+? 
+
+
+LaTeX Info: Redefining \. on input line 2875.
+LaTeX Info: Redefining \% on input line 2875.
+[22]
+<imageHTML.png, id=884, 178.41656pt x 289.83281pt>
+File: imageHTML.png Graphic file (type png)
+<use imageHTML.png>
+Package pdftex.def Info: imageHTML.png  used on input line 2952.
+(pdftex.def)             Requested size: 178.4161pt x 289.83209pt.
+
+
+LaTeX Info: Redefining \. on input line 2957.
+LaTeX Info: Redefining \% on input line 2957.
+[23]
+
+LaTeX Info: Redefining \. on input line 3016.
+LaTeX Info: Redefining \% on input line 3016.
+[24 <./imageHTML.png (PNG copy)>]
+
+! LaTeX Error: Unicode character 📸 (U+1F4F8)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3099 📸
+            \sphinxstylestrong{Ejemplo de resultado:}
+? 
+<imagePDF1.png, id=898, 185.94469pt x 626.34pt>
+File: imagePDF1.png Graphic file (type png)
+<use imagePDF1.png>
+Package pdftex.def Info: imagePDF1.png  used on input line 3102.
+(pdftex.def)             Requested size: 185.94421pt x 626.33846pt.
+
+
+LaTeX Info: Redefining \. on input line 3106.
+LaTeX Info: Redefining \% on input line 3106.
+[25]
+
+LaTeX Info: Redefining \. on input line 3109.
+LaTeX Info: Redefining \% on input line 3109.
+[26 <./imagePDF1.png>]
+<imagePDF2.png, id=909, 182.93344pt x 613.54219pt>
+File: imagePDF2.png Graphic file (type png)
+<use imagePDF2.png>
+Package pdftex.def Info: imagePDF2.png  used on input line 3138.
+(pdftex.def)             Requested size: 182.93298pt x 613.5407pt.
+
+
+LaTeX Info: Redefining \. on input line 3142.
+LaTeX Info: Redefining \% on input line 3142.
+[27]
+
+LaTeX Info: Redefining \. on input line 3145.
+LaTeX Info: Redefining \% on input line 3145.
+[28 <./imagePDF2.png>]
+
+LaTeX Info: Redefining \. on input line 3246.
+LaTeX Info: Redefining \% on input line 3246.
+[29]
+
+LaTeX Info: Redefining \. on input line 3347.
+LaTeX Info: Redefining \% on input line 3347.
+[30]
+
+! LaTeX Error: Unicode character ❤ (U+2764)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3353 Corazón: ❤️ o \PYGZam{}\PYGZsh{}x2764;
+                                                  
+? 
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3353 Corazón: ❤️ o \PYGZam{}\PYGZsh{}x2764;
+                                                  
+? 
+
+! LaTeX Error: Unicode character ❤ (U+2764)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3357 Resultado: Corazón: ❤
+                               ️ o ❤
+? 
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3357 Resultado: Corazón: ❤️
+                                   o ❤
+? 
+
+! LaTeX Error: Unicode character ❤ (U+2764)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3357 Resultado: Corazón: ❤️ o ❤
+                                        
+? 
+
+
+LaTeX Info: Redefining \. on input line 3441.
+LaTeX Info: Redefining \% on input line 3441.
+[31]
+
+LaTeX Info: Redefining \. on input line 3541.
+LaTeX Info: Redefining \% on input line 3541.
+[32]
+
+LaTeX Info: Redefining \. on input line 3626.
+LaTeX Info: Redefining \% on input line 3626.
+[33]
+
+LaTeX Info: Redefining \. on input line 3714.
+LaTeX Info: Redefining \% on input line 3714.
+[34]
+Overfull \vbox (1.5387pt too high) detected at line 3791
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 3791.
+LaTeX Info: Redefining \% on input line 3791.
+[35]
+
+LaTeX Info: Redefining \. on input line 3855.
+LaTeX Info: Redefining \% on input line 3855.
+[36]
+<logo.png, id=960, 178.41656pt x 160.34906pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 3916.
+(pdftex.def)             Requested size: 178.4161pt x 160.34866pt.
+
+
+LaTeX Info: Redefining \. on input line 3938.
+LaTeX Info: Redefining \% on input line 3938.
+[37 <./logo.png>]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 3947.
+(pdftex.def)             Requested size: 150.56152pt x 135.32109pt.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 3993.
+(pdftex.def)             Requested size: 178.4161pt x 160.34866pt.
+
+
+LaTeX Info: Redefining \. on input line 3995.
+LaTeX Info: Redefining \% on input line 3995.
+[38]
+
+LaTeX Info: Redefining \. on input line 4066.
+LaTeX Info: Redefining \% on input line 4066.
+[39]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2.
+(pdftex.def)             Requested size: 178.4161pt x 160.34866pt.
+
+
+! LaTeX Error: Unicode character 🛠 (U+1F6E0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4101 ...��️ \sphinxstylestrong{Explicación:}}
+                                                  
+? 
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4101 ...��️ \sphinxstylestrong{Explicación:}}
+                                                  
+? 
+
+
+LaTeX Info: Redefining \. on input line 4167.
+LaTeX Info: Redefining \% on input line 4167.
+[40]
+
+! LaTeX Error: Unicode character 📌 (U+1F4CC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4170 .... Alinear el Contenido de las Columnas}}
+                                                  
+? 
+
+! LaTeX Error: Unicode character 🛠 (U+1F6E0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4183 ...��️ \sphinxstylestrong{Explicación:}}
+                                                  
+? 
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4183 ...��️ \sphinxstylestrong{Explicación:}}
+                                                  
+? 
+
+! LaTeX Error: Unicode character 📌 (U+1F4CC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4252 ...{3.1. Crear Tablas con MyST Directivas}}
+                                                  
+? 
+
+
+LaTeX Info: Redefining \. on input line 4278.
+LaTeX Info: Redefining \% on input line 4278.
+[41]
+
+LaTeX Info: Redefining \. on input line 4410.
+LaTeX Info: Redefining \% on input line 4410.
+[42]
+
+LaTeX Info: Redefining \. on input line 4502.
+LaTeX Info: Redefining \% on input line 4502.
+[43]
+
+LaTeX Font Warning: Font shape `TS1/txtt/b/n' undefined
+(Font)              using `TS1/txtt/m/n' instead
+(Font)              for symbol `textasciigrave' on input line 4588.
+
+
+
+LaTeX Info: Redefining \. on input line 4606.
+LaTeX Info: Redefining \% on input line 4606.
+[44]
+
+! LaTeX Error: Unicode character 📍 (U+1F4CD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4646 ...{}\PYGZsh{} 📍 Mi Sección Importante}
+                                                  
+? 
+
+
+LaTeX Info: Redefining \. on input line 4692.
+LaTeX Info: Redefining \% on input line 4692.
+[45]
+
+LaTeX Info: Redefining \. on input line 4791.
+LaTeX Info: Redefining \% on input line 4791.
+[46]
+
+! LaTeX Error: Unicode character 🏷 (U+1F3F7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4795 🏷
+           ️ \sphinxstylestrong{Etiqueta todo}: Usa etiquetas únicas para...
+
+? 
+
+! LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4795 🏷️
+               \sphinxstylestrong{Etiqueta todo}: Usa etiquetas únicas para...
+
+? 
+
+! LaTeX Error: Unicode character 🔗 (U+1F517)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4799 🔗
+            \sphinxstylestrong{Prefijos útiles}: Usa prefijos claros, como ...
+
+? 
+
+! LaTeX Error: Unicode character 📝 (U+1F4DD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4803 📝
+            \sphinxstylestrong{Evita enlaces rotos}: Usa el comando \sphinxc...
+
+? 
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:t
+ipografia.md:encabezados' on page 47 undefined on input line 4842.
+
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:s
+yntax/attributes/block' on page 47 undefined on input line 4881.
+
+
+
+LaTeX Info: Redefining \. on input line 4893.
+LaTeX Info: Redefining \% on input line 4893.
+[47]
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:s
+yntax/frontmatter' on page 48 undefined on input line 4899.
+
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 4925.
+
+(C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
+efree2.fd)
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:s
+yntax/literalinclude' on page 48 undefined on input line 4928.
+
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:s
+yntax/directives/parsing' on page 48 undefined on input line 4984.
+
+
+LaTeX Warning: Hyper reference `configuracion_inicial/013.guia_de_myst_parser:s
+yntax/directives/parsing' on page 48 undefined on input line 4985.
+
+
+
+LaTeX Info: Redefining \. on input line 4999.
+LaTeX Info: Redefining \% on input line 4999.
+[48{C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa
+5free2.enc}]
+
+LaTeX Info: Redefining \. on input line 5094.
+LaTeX Info: Redefining \% on input line 5094.
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 5230--5232
+[]\T1/qtm/m/n/10 Op-cio-nes adi-cio-na-les per-mi-ten con-tro-lar c�-mo se ana-
+li-za el con-te-ni-do de las ma-te-m�-ti-cas, co-mo
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 5234.
+LaTeX Info: Redefining \% on input line 5234.
+[50]
+
+LaTeX Info: Redefining \. on input line 5309.
+LaTeX Info: Redefining \% on input line 5309.
+[51]
+
+LaTeX Info: Redefining \. on input line 5396.
+LaTeX Info: Redefining \% on input line 5396.
+[52]
+
+LaTeX Info: Redefining \. on input line 5491.
+LaTeX Info: Redefining \% on input line 5491.
+[53]
+No file documento.ind.
+
+
+LaTeX Info: Redefining \. on input line 5561.
+LaTeX Info: Redefining \% on input line 5561.
+[54] (documento.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+)
+ ***********
+LaTeX2e <2024-11-01> patch level 1
+L3 programming layer <2024-11-02>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `documento.out' has not changed.
+(rerunfilecheck)             Checksum: 56F48D25C378C8551380E1C48F940364;42449.
+ ) 
 Here is how much of TeX's memory you used:
- 20520 strings out of 473650
- 368391 string characters out of 5718416
- 806515 words of memory out of 5000000
- 43098 multiletter control sequences out of 15000+600000
- 618738 words of font info for 79 fonts, out of 8000000 for 9000
+ 21192 strings out of 473650
+ 391286 string characters out of 5718416
+ 820033 words of memory out of 5000000
+ 43581 multiletter control sequences out of 15000+600000
+ 624349 words of font info for 83 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 72i,11n,83p,1140b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 72i,12n,83p,1140b,872s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
+000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+ecrm1000.pk><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/fon
+tawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Noah/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Noah/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/User
+s/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y5.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
+/qhvb.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-g
+yre/qhvbi.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/t
+ex-gyre/qhvr.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/tex-gyre/qtmb.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/tex-gyre/qtmbi.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/tex-gyre/qtmr.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/tex-gyre/qtmri.pfb>
+Output written on documento.pdf (55 pages, 576780 bytes).
+PDF statistics:
+ 1282 PDF objects out of 1440 (max. 8388607)
+ 310 named destinations out of 1000 (max. 500000)
+ 1465 words of extra memory for PDF output out of 10000 (max. 10000000)
+

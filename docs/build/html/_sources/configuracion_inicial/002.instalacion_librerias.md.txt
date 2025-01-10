@@ -3,7 +3,11 @@
 
 Para ejecutar correctamente este proyecto de Python, es necesario instalar las dependencias especificadas en el archivo `requirements.txt`. A continuación, se detallan los pasos necesarios para realizar esta instalación de manera efectiva.
 
+<<<<<<< HEAD
 ##  Instalar las dependencias con el archivo requirements.txt
+=======
+##  1. Instalar las dependencias con el archivo requirements.txt
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Con el entorno virtual activado, instala las dependencias ejecutando:
 
@@ -13,7 +17,11 @@ pip  install  -r  requirements.txt`
 
 Este comando utiliza `pip` para leer el archivo `requirements.txt` e instala todas las librerías listadas en él.
 
+<<<<<<< HEAD
 ##  Verificar la instalación
+=======
+##  2. Verificar la instalación
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Para asegurarte de que las dependencias se instalaron correctamente, puedes listar los paquetes instalados con:
 
@@ -23,7 +31,11 @@ pip  list
 
 Esto mostrará una lista de todas las librerías instaladas en tu entorno virtual.
 
+<<<<<<< HEAD
 ##  Desactivar el entorno virtual (opcional)
+=======
+##  3. Desactivar el entorno virtual (opcional)
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Cuando hayas terminado de trabajar en el proyecto, puedes desactivar si quieres el entorno virtual con:
 

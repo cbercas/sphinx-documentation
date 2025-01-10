@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="004.estructura_inicial_proyecto.html"><strong>Estructura inicial del proyecto</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Creación de ficheros de código y generación automática de documentación</strong></a><ul>
+<<<<<<< HEAD
 <li class="toctree-l2"><a class="reference internal" href="#creacion-del-fichero-de-codigo-python">Creación del fichero de código Python</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pasos-para-generar-la-documentacion-automaticamente">Pasos para generar la documentación automáticamente</a></li>
 </ul>
@@ -72,6 +73,30 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#conclusiones">Conclusiones</a></li>
+=======
+<li class="toctree-l2"><a class="reference internal" href="#creacion-del-fichero-de-codigo-python">1. Creación del fichero de código Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pasos-para-generar-la-documentacion-automaticamente">1.2. Pasos para generar la documentación automáticamente</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resultados-obtenidos">2. Resultados obtenidos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-de-archivos-generada">2.1. <strong>Estructura de Archivos Generada</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-index-rst-o-index-md">a. <strong><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">index.md</span></code></strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-archivos-rst-o-md-para-cada-modulo-python">b. <strong>Archivos <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">.md</span></code> para cada módulo Python</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-modules-rst-o-modules-md">c. <strong><code class="docutils literal notranslate"><span class="pre">modules.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">modules.md</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#contenido-de-los-archivos-generados">2.2. <strong>Contenido de los Archivos Generados</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-documentacion-generada-automaticamente-desde-el-codigo">a. <strong>Documentación Generada Automáticamente desde el Código</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-incluir-todo-el-codigo-del-proyecto">b. <strong>Incluir Todo el Código del Proyecto</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-dependencias-de-modulos">c. <strong>Dependencias de Módulos</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#uso-de-los-archivos-generados">2.3. <strong>Uso de los Archivos Generados</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personalizacion-de-la-documentacion-generada">2.4. <strong>Personalización de la Documentación Generada</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusiones">3. Conclusiones</a></li>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
@@ -109,7 +134,11 @@
   <section id="creacion-de-ficheros-de-codigo-y-generacion-automatica-de-documentacion">
 <h1><strong>Creación de ficheros de código y generación automática de documentación</strong><a class="headerlink" href="#creacion-de-ficheros-de-codigo-y-generacion-automatica-de-documentacion" title="Link to this heading"></a></h1>
 <section id="creacion-del-fichero-de-codigo-python">
+<<<<<<< HEAD
 <h2>Creación del fichero de código Python<a class="headerlink" href="#creacion-del-fichero-de-codigo-python" title="Link to this heading"></a></h2>
+=======
+<h2>1. Creación del fichero de código Python<a class="headerlink" href="#creacion-del-fichero-de-codigo-python" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Se crea un fichero de código Python con <strong>docstring en formato Google Style</strong>. Este formato facilita la generación automática de documentación, ya que utiliza una estructura clara y legible tanto para humanos como para herramientas de generación de documentación.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="linenos"> 2</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Add two numbers.</span>
@@ -176,7 +205,11 @@
 <li><p>Raises(opcional): Especifica las excepciones que la función podría lanzar.</p></li>
 </ul>
 <section id="pasos-para-generar-la-documentacion-automaticamente">
+<<<<<<< HEAD
 <h3>Pasos para generar la documentación automáticamente<a class="headerlink" href="#pasos-para-generar-la-documentacion-automaticamente" title="Link to this heading"></a></h3>
+=======
+<h3>1.2. Pasos para generar la documentación automáticamente<a class="headerlink" href="#pasos-para-generar-la-documentacion-automaticamente" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ol class="arabic">
 <li><p><strong>Instalación de Sphinx</strong>:<br />
 Hay que asegurarse de tener Sphinx instalado en el entorno de trabajo. Si no, hay que instalarlo con:</p>
@@ -224,10 +257,17 @@ Una vez se tengan los archivos generados, hay que compilar la documentación usa
 </section>
 <hr class="docutils" />
 <section id="resultados-obtenidos">
+<<<<<<< HEAD
 <h2>Resultados obtenidos<a class="headerlink" href="#resultados-obtenidos" title="Link to this heading"></a></h2>
 <p>Cuando ejecutas el comando <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code>, se generan una serie de archivos en el directorio <code class="docutils literal notranslate"><span class="pre">docs/source</span></code> que contienen la estructura básica de la documentación para el proyecto. Este comando facilita la generación automática de documentación a partir del código fuente, especialmente de los docstrings de los módulos y clases Python.</p>
 <section id="estructura-de-archivos-generada">
 <h3><strong>Estructura de Archivos Generada</strong><a class="headerlink" href="#estructura-de-archivos-generada" title="Link to this heading"></a></h3>
+=======
+<h2>2. Resultados obtenidos<a class="headerlink" href="#resultados-obtenidos" title="Link to this heading"></a></h2>
+<p>Cuando ejecutas el comando <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code>, se generan una serie de archivos en el directorio <code class="docutils literal notranslate"><span class="pre">docs/source</span></code> que contienen la estructura básica de la documentación para el proyecto. Este comando facilita la generación automática de documentación a partir del código fuente, especialmente de los docstrings de los módulos y clases Python.</p>
+<section id="estructura-de-archivos-generada">
+<h3>2.1. <strong>Estructura de Archivos Generada</strong><a class="headerlink" href="#estructura-de-archivos-generada" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Al ejecutar <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span> <span class="pre">-o</span> <span class="pre">docs/source</span> <span class="pre">src/</span></code>, se creará una serie de archivos en la carpeta <code class="docutils literal notranslate"><span class="pre">docs/source</span></code>:</p>
 <section id="a-index-rst-o-index-md">
 <h4>a. <strong><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">index.md</span></code></strong><a class="headerlink" href="#a-index-rst-o-index-md" title="Link to this heading"></a></h4>
@@ -251,8 +291,13 @@ comandos_mas_usados/*
 <li><p>Una sección de índice que lista los módulos o archivos que se incluyen en la documentación generada.</p></li>
 </ul>
 </section>
+<<<<<<< HEAD
 <section id="archivos-rst-o-md-para-cada-modulo-python">
 <h4><strong>Archivos <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">.md</span></code> para cada módulo Python</strong><a class="headerlink" href="#archivos-rst-o-md-para-cada-modulo-python" title="Link to this heading"></a></h4>
+=======
+<section id="b-archivos-rst-o-md-para-cada-modulo-python">
+<h4>b. <strong>Archivos <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">.md</span></code> para cada módulo Python</strong><a class="headerlink" href="#b-archivos-rst-o-md-para-cada-modulo-python" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Cada módulo de Python dentro de la carpeta <code class="docutils literal notranslate"><span class="pre">src/</span></code> tendrá un archivo generado. Nuestro proyecto tiene el módulo
 <code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code>, se genera el archivo:</p>
 <ul class="simple">
@@ -279,8 +324,13 @@ comandos_mas_usados/*
 </ul>
 <p>Este es el formato que Sphinx usa para incluir la documentación del código fuente, asegurándose de que los cambios en los archivos de código fuente se reflejen automáticamente en la documentación.</p>
 </section>
+<<<<<<< HEAD
 <section id="modules-rst-o-modules-md">
 <h4><strong><code class="docutils literal notranslate"><span class="pre">modules.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">modules.md</span></code></strong><a class="headerlink" href="#modules-rst-o-modules-md" title="Link to this heading"></a></h4>
+=======
+<section id="c-modules-rst-o-modules-md">
+<h4>c. <strong><code class="docutils literal notranslate"><span class="pre">modules.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">modules.md</span></code></strong><a class="headerlink" href="#c-modules-rst-o-modules-md" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Este archivo lista todos los módulos generados, lo cual es útil si hay muchos módulos en el proyecto. Por ejemplo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">src</span>
 <span class="o">===</span>
@@ -297,9 +347,15 @@ comandos_mas_usados/*
 </section>
 </section>
 <section id="contenido-de-los-archivos-generados">
+<<<<<<< HEAD
 <h3><strong>Contenido de los Archivos Generados</strong><a class="headerlink" href="#contenido-de-los-archivos-generados" title="Link to this heading"></a></h3>
 <section id="documentacion-generada-automaticamente-desde-el-codigo">
 <h4><strong>Documentación Generada Automáticamente desde el Código</strong><a class="headerlink" href="#documentacion-generada-automaticamente-desde-el-codigo" title="Link to this heading"></a></h4>
+=======
+<h3>2.2. <strong>Contenido de los Archivos Generados</strong><a class="headerlink" href="#contenido-de-los-archivos-generados" title="Link to this heading"></a></h3>
+<section id="a-documentacion-generada-automaticamente-desde-el-codigo">
+<h4>a. <strong>Documentación Generada Automáticamente desde el Código</strong><a class="headerlink" href="#a-documentacion-generada-automaticamente-desde-el-codigo" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>El objetivo principal de <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> es generar documentación automáticamente a partir de los docstrings en el código Python. Para cada archivo <code class="docutils literal notranslate"><span class="pre">.py</span></code> que contiene docstrings, se generará una representación en reStructuredText o Markdown.</p>
 <p>Por ejemplo, nuestro archivo <code class="docutils literal notranslate"><span class="pre">math_operations.py</span></code> con el siguiente código:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -325,17 +381,30 @@ Suma dos números.
 </div>
 <p>La directiva <code class="docutils literal notranslate"><span class="pre">automodule</span></code> incluye el módulo completo, y las funciones o clases del módulo se detallan debajo con sus respectivas descripciones.</p>
 </section>
+<<<<<<< HEAD
 <section id="incluir-todo-el-codigo-del-proyecto">
 <h4><strong>Incluir Todo el Código del Proyecto</strong><a class="headerlink" href="#incluir-todo-el-codigo-del-proyecto" title="Link to this heading"></a></h4>
 <p>Los archivos generados también incluyen código fuente si usamos la extensión <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> en el archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> de Sphinx. Esto agrega enlaces al código fuente y puede incluir la visualización completa del código si se activa la opción correspondiente.</p>
 </section>
 <section id="dependencias-de-modulos">
 <h4><strong>Dependencias de Módulos</strong><a class="headerlink" href="#dependencias-de-modulos" title="Link to this heading"></a></h4>
+=======
+<section id="b-incluir-todo-el-codigo-del-proyecto">
+<h4>b. <strong>Incluir Todo el Código del Proyecto</strong><a class="headerlink" href="#b-incluir-todo-el-codigo-del-proyecto" title="Link to this heading"></a></h4>
+<p>Los archivos generados también incluyen código fuente si usamos la extensión <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> en el archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> de Sphinx. Esto agrega enlaces al código fuente y puede incluir la visualización completa del código si se activa la opción correspondiente.</p>
+</section>
+<section id="c-dependencias-de-modulos">
+<h4>c. <strong>Dependencias de Módulos</strong><a class="headerlink" href="#c-dependencias-de-modulos" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Si el proyecto tiene dependencias de otros módulos dentro de <code class="docutils literal notranslate"><span class="pre">src/</span></code>, el sistema de documentación puede generar automáticamente enlaces a esos módulos y sus funciones.</p>
 </section>
 </section>
 <section id="uso-de-los-archivos-generados">
+<<<<<<< HEAD
 <h3><strong>Uso de los Archivos Generados</strong><a class="headerlink" href="#uso-de-los-archivos-generados" title="Link to this heading"></a></h3>
+=======
+<h3>2.3. <strong>Uso de los Archivos Generados</strong><a class="headerlink" href="#uso-de-los-archivos-generados" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Una vez que <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> ha generado estos archivos, puedes:</p>
 <ul class="simple">
 <li><p><strong>Editar manualmente</strong> el archivo <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> o <code class="docutils literal notranslate"><span class="pre">index.md</span></code> para personalizar la estructura de la documentación.</p></li>
@@ -349,7 +418,11 @@ Suma dos números.
 <p>Esto generará una carpeta <code class="docutils literal notranslate"><span class="pre">build</span></code> que contendrá la documentación final en formato HTML. Se pueden abrir estos archivos en el navegador para visualizar la documentación generada.</p>
 </section>
 <section id="personalizacion-de-la-documentacion-generada">
+<<<<<<< HEAD
 <h3><strong>Personalización de la Documentación Generada</strong><a class="headerlink" href="#personalizacion-de-la-documentacion-generada" title="Link to this heading"></a></h3>
+=======
+<h3>2.4. <strong>Personalización de la Documentación Generada</strong><a class="headerlink" href="#personalizacion-de-la-documentacion-generada" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Aunque los archivos generados por <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> contienen una buena base de documentación, se pueden personalizar aún más, por ejemplo:</p>
 <ul class="simple">
 <li><p><strong>Agregar enlaces y referencias</strong>: Se puede usar <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> y <code class="docutils literal notranslate"><span class="pre">:doc:</span></code> para vincular otros documentos generados por Sphinx.</p></li>
@@ -358,7 +431,11 @@ Suma dos números.
 </section>
 </section>
 <section id="conclusiones">
+<<<<<<< HEAD
 <h2>Conclusiones<a class="headerlink" href="#conclusiones" title="Link to this heading"></a></h2>
+=======
+<h2>3. Conclusiones<a class="headerlink" href="#conclusiones" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p><strong>Automatización</strong>: El uso de <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> simplifica la generación de documentación a partir de código Python, ahorrando tiempo y esfuerzo.</p></li>
 <li><p><strong>Legibilidad</strong>: El uso de docstring en formato Google Style mejora la claridad y consistencia de la documentación.</p></li>

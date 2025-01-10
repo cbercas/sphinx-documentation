@@ -2,7 +2,11 @@
 
 A continuación, vamos a detallar todo el proceso para la creación inicial de un proyecto con Sphinx, explicando los comandos, las opciones necesarias y cómo configurarlo para usar **Markdown** con **MyST-Parser**.
 
+<<<<<<< HEAD
 ## Instalación de Sphinx y MyST-Parser
+=======
+## 1. Instalación de Sphinx y MyST-Parser
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Con el entorno virtual activado, procedemos a instalar Sphinx, antes de empezar, hay que asegurarse de tener Sphinx y MyST-Parser instalados en el entorno. Se pueden instalar con `pip`:
 
@@ -15,7 +19,11 @@ pip install sphinx myst-parser
 
 ----------
 
+<<<<<<< HEAD
 ## Crear un Proyecto con Sphinx
+=======
+## 2. Crear un Proyecto con Sphinx
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 `sphinx-quickstart` es la herramienta que utilizamos para inicializar un proyecto de documentación con Sphinx. 
 Esta aplicación interactiva genera la estructura base del proyecto, incluyendo los directorios necesarios, el archivo de configuración (`conf.py`) y un índice inicial (`index.rst` o `index.md`).
@@ -45,7 +53,11 @@ Al ejecutar `sphinx-quickstart`, se deben responder algunas preguntas:
 5.  **Idioma**:  Para trabajar en español se escribe `es`.
 ----------
 
+<<<<<<< HEAD
 ## Estructura del Proyecto
+=======
+## 3. Estructura del Proyecto
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Tras ejecutar `sphinx-quickstart`, se creara una estructura básica como esta:
 
@@ -63,11 +75,19 @@ docs/
 
 ----------
 
+<<<<<<< HEAD
 ## Configuración para Usar Markdown con MyST-Parser
 
 Para habilitar **Markdown** en lugar de `reStructuredText`, se realizan los siguientes cambios:
 
 ### Instalación de MyST-Parser
+=======
+## 4. Configuración para Usar Markdown con MyST-Parser
+
+Para habilitar **Markdown** en lugar de `reStructuredText`, se realizan los siguientes cambios:
+
+### 4.1. Instalación de MyST-Parser
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Hay que asegurarse de que `myst-parser` está instalado:
 
@@ -75,7 +95,11 @@ Hay que asegurarse de que `myst-parser` está instalado:
 pip install myst-parser
 ``` 
 
+<<<<<<< HEAD
 ### Modificación del Archivo `conf.py`
+=======
+### 4.2. Modificación del Archivo `conf.py`
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Se edita el archivo `docs/source/conf.py` y se añaden estas configuraciones:
 
@@ -86,7 +110,11 @@ extensions = [
 ]
 ```
 
+<<<<<<< HEAD
 ### Especificación de las extensiones de archivo fuente
+=======
+### 4.2.1 Especificación de las extensiones de archivo fuente
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 ```
 source_suffix = {
     '.rst': 'restructuredtext',  # Opcional, si se usan archivos .rst
@@ -95,24 +123,40 @@ source_suffix = {
 ```
 Con esta configuración, Sphinx será capaz de procesar tanto archivos `.rst` como `.md`, facilitando la integración de diferentes formatos de contenido.
 
+<<<<<<< HEAD
 ### Configuración del idioma
+=======
+### 4.2.2 Configuración del idioma
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 ```
 language = 'es'  # Idioma seleccionado
 ```
 
+<<<<<<< HEAD
 ### Configuración para archivos estáticos (CSS e imágenes)
+=======
+### 4.2.3 Configuración para archivos estáticos (CSS e imágenes)
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 ```
 html_static_path = ['_static']` 
 ```
 ----------
 
+<<<<<<< HEAD
 ## Creación de la Documentación en Markdown
+=======
+## 5. Creación de la Documentación en Markdown
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Se sustituye el archivo `index.rst` por un archivo `index.md`. 
 
 ----------
 
+<<<<<<< HEAD
 ## Compilación de la Documentación
+=======
+## 6. Compilación de la Documentación
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Para generar los archivos HTML, utiliza el comando:
 ```
@@ -126,9 +170,15 @@ start .\build\html\index.html
 
 ----------
 
+<<<<<<< HEAD
 ## Personalización Adicional
 
 ### Estilo del Código
+=======
+## 7. Personalización Adicional
+
+### 7.1. Estilo del Código
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Se puede personalizar el estilo de resaltado de sintaxis con CSS en la carpeta `_static/`:
 

@@ -52,6 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="008.Generar_HTML.html"><strong>Generación de HTML a partir de la documentación</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Generación de PDF a partir de la documentación</strong></a><ul>
+<<<<<<< HEAD
 <li class="toctree-l2"><a class="reference internal" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configurar-el-archivo-conf-py">Configurar el archivo conf.py</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#explicacion-de-las-opciones-clave">Explicación de las opciones clave:</a></li>
@@ -70,6 +71,26 @@
 <li class="toctree-l3"><a class="reference internal" href="#error-paquete-latex-faltante">Error: Paquete LaTeX faltante</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#error-de-codificacion-utf-8">Error de codificación UTF-8</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#error-de-compilacion-en-tablas-o-figuras">Error de compilación en tablas o figuras</a></li>
+=======
+<li class="toctree-l2"><a class="reference internal" href="#requisitos-previos">1. Requisitos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configurar-el-archivo-conf-py">2. Configurar el archivo conf.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explicacion-de-las-opciones-clave">2.1 Explicación de las opciones clave:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generar-archivos-latex">3. Generar archivos LaTeX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resultado-esperado">3.1. Resultado esperado:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compilar-el-archivo-tex-a-pdf">4. Compilar el archivo .tex a PDF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.1. Resultado esperado:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verificar-y-revisar-el-pdf">5. Verificar y revisar el PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solucion-de-problemas-comunes">6. Solución de problemas comunes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#error-paquete-latex-faltante">6.1. Error: Paquete LaTeX faltante</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-de-codificacion-utf-8">6.2. Error de codificación UTF-8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-de-compilacion-en-tablas-o-figuras">6.3. Error de compilación en tablas o figuras</a></li>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 </ul>
 </li>
 </ul>
@@ -109,7 +130,11 @@
 <p>Generar un documento PDF a partir de tu documentación es una funcionalidad poderosa que ofrece <strong>Sphinx</strong> gracias a su integración con <strong>LaTeX</strong>. Sin embargo, este proceso requiere una configuración adecuada y algunas dependencias instaladas previamente.</p>
 <hr class="docutils" />
 <section id="requisitos-previos">
+<<<<<<< HEAD
 <h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading"></a></h2>
+=======
+<h2>1. Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Antes de generar archivos PDF, asegúrate de cumplir con los siguientes requisitos:</p>
 <ol class="arabic">
 <li><p><strong>Instalar LaTeX:</strong></p>
@@ -136,7 +161,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </section>
 <hr class="docutils" />
 <section id="configurar-el-archivo-conf-py">
+<<<<<<< HEAD
 <h2>Configurar el archivo conf.py<a class="headerlink" href="#configurar-el-archivo-conf-py" title="Link to this heading"></a></h2>
+=======
+<h2>2. Configurar el archivo conf.py<a class="headerlink" href="#configurar-el-archivo-conf-py" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Abre el archivo <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> y asegúrate de tener la siguiente configuración para LaTeX:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usar pdflatex como motor de compilación</span>
 <span class="n">latex_engine</span> <span class="o">=</span> <span class="s1">&#39;pdflatex&#39;</span>
@@ -157,7 +186,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </pre></div>
 </div>
 <section id="explicacion-de-las-opciones-clave">
+<<<<<<< HEAD
 <h3>Explicación de las opciones clave:<a class="headerlink" href="#explicacion-de-las-opciones-clave" title="Link to this heading"></a></h3>
+=======
+<h3>2.1 Explicación de las opciones clave:<a class="headerlink" href="#explicacion-de-las-opciones-clave" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">papersize</span></code>: Define el tamaño de la página (<code class="docutils literal notranslate"><span class="pre">a4paper</span></code> o <code class="docutils literal notranslate"><span class="pre">letterpaper</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pointsize</span></code>: Tamaño de la fuente en puntos (<code class="docutils literal notranslate"><span class="pre">10pt</span></code>, <code class="docutils literal notranslate"><span class="pre">11pt</span></code>, <code class="docutils literal notranslate"><span class="pre">12pt</span></code>).</p></li>
@@ -168,7 +201,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </section>
 <hr class="docutils" />
 <section id="generar-archivos-latex">
+<<<<<<< HEAD
 <h2>Generar archivos LaTeX<a class="headerlink" href="#generar-archivos-latex" title="Link to this heading"></a></h2>
+=======
+<h2>3. Generar archivos LaTeX<a class="headerlink" href="#generar-archivos-latex" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>En la terminal, dirígete a la carpeta raíz donde se encuentra el archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> (en Windows) o <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> (en Linux/macOS).</p>
 <ul>
 <li><p><strong>Windows:</strong></p>
@@ -183,7 +220,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </li>
 </ul>
 <section id="resultado-esperado">
+<<<<<<< HEAD
 <h3>Resultado esperado:<a class="headerlink" href="#resultado-esperado" title="Link to this heading"></a></h3>
+=======
+<h3>3.1. Resultado esperado:<a class="headerlink" href="#resultado-esperado" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Esto generará una carpeta <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> con varios archivos, incluyendo un archivo <code class="docutils literal notranslate"><span class="pre">.tex</span></code>.</p>
 <p>📸 <strong>Ejemplo de resultado:</strong></p>
 <p><img alt="Carpeta LaTeX generada" src="../_images/imagePDF1.png" /></p>
@@ -191,7 +232,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </section>
 <hr class="docutils" />
 <section id="compilar-el-archivo-tex-a-pdf">
+<<<<<<< HEAD
 <h2>Compilar el archivo .tex a PDF<a class="headerlink" href="#compilar-el-archivo-tex-a-pdf" title="Link to this heading"></a></h2>
+=======
+<h2>4. Compilar el archivo .tex a PDF<a class="headerlink" href="#compilar-el-archivo-tex-a-pdf" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Dirígete a la carpeta <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> y compila el archivo <code class="docutils literal notranslate"><span class="pre">.tex</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdflatex<span class="w"> </span>documento.tex
 </pre></div>
@@ -201,7 +246,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 <li><p>Es posible que necesites ejecutar el comando varias veces para generar correctamente el índice y las referencias cruzadas.</p></li>
 </ul>
 <section id="id1">
+<<<<<<< HEAD
 <h3>Resultado esperado:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+=======
+<h3>4.1. Resultado esperado:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Al finalizar, verás un archivo <code class="docutils literal notranslate"><span class="pre">documento.pdf</span></code> en la misma carpeta.</p>
 <p><strong>Ejemplo de resultado final:</strong></p>
 <p><img alt="Archivo PDF generado" src="../_images/imagePDF2.png" /></p>
@@ -209,7 +258,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </section>
 <hr class="docutils" />
 <section id="verificar-y-revisar-el-pdf">
+<<<<<<< HEAD
 <h2>Verificar y revisar el PDF<a class="headerlink" href="#verificar-y-revisar-el-pdf" title="Link to this heading"></a></h2>
+=======
+<h2>5. Verificar y revisar el PDF<a class="headerlink" href="#verificar-y-revisar-el-pdf" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <p>Abre el archivo PDF con tu lector de PDF preferido y verifica que:</p>
 <ul class="simple">
 <li><p>La tabla de contenidos esté correctamente generada.</p></li>
@@ -218,15 +271,25 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </ul>
 </section>
 <section id="solucion-de-problemas-comunes">
+<<<<<<< HEAD
 <h2>Solución de problemas comunes<a class="headerlink" href="#solucion-de-problemas-comunes" title="Link to this heading"></a></h2>
 <section id="error-paquete-latex-faltante">
 <h3>Error: Paquete LaTeX faltante<a class="headerlink" href="#error-paquete-latex-faltante" title="Link to this heading"></a></h3>
+=======
+<h2>6. Solución de problemas comunes<a class="headerlink" href="#solucion-de-problemas-comunes" title="Link to this heading"></a></h2>
+<section id="error-paquete-latex-faltante">
+<h3>6.1. Error: Paquete LaTeX faltante<a class="headerlink" href="#error-paquete-latex-faltante" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p>Si ves mensajes de error sobre paquetes faltantes, instala los paquetes manualmente o permite que MiKTeX los descargue automáticamente.</p></li>
 </ul>
 </section>
 <section id="error-de-codificacion-utf-8">
+<<<<<<< HEAD
 <h3>Error de codificación UTF-8<a class="headerlink" href="#error-de-codificacion-utf-8" title="Link to this heading"></a></h3>
+=======
+<h3>6.2. Error de codificación UTF-8<a class="headerlink" href="#error-de-codificacion-utf-8" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul>
 <li><p>Agrega esta línea en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> dentro de <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;\usepackage[utf8]</span><span class="si">{inputenc}</span><span class="s1">&#39;</span> 
@@ -236,7 +299,11 @@ Es posible que necesites algunos paquetes adicionales. Puedes instalarlos manual
 </ul>
 </section>
 <section id="error-de-compilacion-en-tablas-o-figuras">
+<<<<<<< HEAD
 <h3>Error de compilación en tablas o figuras<a class="headerlink" href="#error-de-compilacion-en-tablas-o-figuras" title="Link to this heading"></a></h3>
+=======
+<h3>6.3. Error de compilación en tablas o figuras<a class="headerlink" href="#error-de-compilacion-en-tablas-o-figuras" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p>Asegúrate de que las tablas y figuras estén bien formateadas y no excedan los márgenes de la página.</p></li>
 </ul>

@@ -4,7 +4,11 @@ Cuando creas un proyecto Sphinx utilizando `sphinx-quickstart`, se generan varia
 
 ----------
 
+<<<<<<< HEAD
 ## Estructura Generada
+=======
+## 1. Estructura Generada
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 ```
 docs/
@@ -20,7 +24,11 @@ docs/
 
 ----------
 
+<<<<<<< HEAD
 ### **Carpeta `build/`**
+=======
+### 1.1. **Carpeta `build/`**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   Carpeta donde se almacenan los archivos generados por Sphinx en los distintos formatos de salida, como HTML, PDF o LaTeX, después de ejecutar el proceso de construcción (make html, make pdf, etc.).
 -   **Subcarpetas**:
@@ -34,11 +42,19 @@ Esta carpeta se regenera cada vez que se ejecuta el comando `make html`.
 ```
 ----------
 
+<<<<<<< HEAD
 ### **Carpeta `source/`**
 
 Carpeta principal que contiene los archivos fuente de la documentación. Aquí se encuentran los archivos que definimos y editamos, como los documentos en formato reStructuredText (`.rst`) y las configuraciones adicionales.
 
 #### **Subcarpetas Importantes**
+=======
+### 1.2. **Carpeta `source/`**
+
+Carpeta principal que contiene los archivos fuente de la documentación. Aquí se encuentran los archivos que definimos y editamos, como los documentos en formato reStructuredText (`.rst`) y las configuraciones adicionales.
+
+#### **1.2.1. Subcarpetas Importantes**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   **`_static/`**:
     
@@ -58,7 +74,11 @@ Carpeta principal que contiene los archivos fuente de la documentación. Aquí s
 
 ----------
 
+<<<<<<< HEAD
 #### **Archivos Importantes en `source/`**
+=======
+#### **1.2.2. Archivos Importantes en `source/`**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   **`conf.py`**:
     
@@ -140,7 +160,11 @@ Carpeta principal que contiene los archivos fuente de la documentación. Aquí s
 
 ----------
 
+<<<<<<< HEAD
 ### **Archivo `Makefile`**
+=======
+### 1.3. **Archivo `Makefile`**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   **Propósito**: Contiene comandos para construir la documentación en diferentes formatos.
 -   **Uso**:
@@ -153,7 +177,11 @@ Carpeta principal que contiene los archivos fuente de la documentación. Aquí s
 
 ----------
 
+<<<<<<< HEAD
 ### **Archivo `make.bat`**
+=======
+### 1.4. **Archivo `make.bat`**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   **Propósito**: Archivo equivalente al `Makefile` para sistemas Windows.
 -   **Uso**: 
@@ -161,7 +189,11 @@ Carpeta principal que contiene los archivos fuente de la documentación. Aquí s
     -   Sistema operativo: Es un archivo diseñado para el sistema **Windows**.
 ----------
 
+<<<<<<< HEAD
 ## Flujo de Trabajo con MyST-Parser
+=======
+## 2. Flujo de Trabajo con MyST-Parser
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 1.  **Configuración de MyST-Parser en `conf.py`**: Asegúrate de que `myst-parser` esté habilitado:
     

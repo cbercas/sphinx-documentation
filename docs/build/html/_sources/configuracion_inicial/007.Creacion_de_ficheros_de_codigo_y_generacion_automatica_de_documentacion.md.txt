@@ -1,6 +1,10 @@
 # **Creación de ficheros de código y generación automática de documentación**
 
+<<<<<<< HEAD
 ## Creación del fichero de código Python
+=======
+## 1. Creación del fichero de código Python
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Se crea un fichero de código Python con **docstring en formato Google Style**. Este formato facilita la generación automática de documentación, ya que utiliza una estructura clara y legible tanto para humanos como para herramientas de generación de documentación.  
 
@@ -14,7 +18,11 @@ Explicación del formato Google Style:
 - Returns: Describe lo que devuelve la función, incluyendo el tipo de dato.
 - Raises(opcional): Especifica las excepciones que la función podría lanzar.
 
+<<<<<<< HEAD
 ### Pasos para generar la documentación automáticamente
+=======
+### 1.2. Pasos para generar la documentación automáticamente
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 1.  **Instalación de Sphinx**:  
     Hay que asegurarse de tener Sphinx instalado en el entorno de trabajo. Si no, hay que instalarlo con:
@@ -66,11 +74,19 @@ Explicación del formato Google Style:
     
 ----------
 
+<<<<<<< HEAD
 ## Resultados obtenidos
 
 Cuando ejecutas el comando `sphinx-apidoc`, se generan una serie de archivos en el directorio `docs/source` que contienen la estructura básica de la documentación para el proyecto. Este comando facilita la generación automática de documentación a partir del código fuente, especialmente de los docstrings de los módulos y clases Python.
 
 ### **Estructura de Archivos Generada**
+=======
+## 2. Resultados obtenidos
+
+Cuando ejecutas el comando `sphinx-apidoc`, se generan una serie de archivos en el directorio `docs/source` que contienen la estructura básica de la documentación para el proyecto. Este comando facilita la generación automática de documentación a partir del código fuente, especialmente de los docstrings de los módulos y clases Python.
+
+### 2.1. **Estructura de Archivos Generada**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Al ejecutar `sphinx-apidoc -o docs/source src/`, se creará una serie de archivos en la carpeta `docs/source`:
 
@@ -99,7 +115,11 @@ Este archivo contiene:
 -   Un título de la documentación.
 -   Una sección de índice que lista los módulos o archivos que se incluyen en la documentación generada.
 
+<<<<<<< HEAD
 #### **Archivos `.rst` o `.md` para cada módulo Python**
+=======
+#### b. **Archivos `.rst` o `.md` para cada módulo Python**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Cada módulo de Python dentro de la carpeta `src/` tendrá un archivo generado. Nuestro proyecto tiene el módulo 
  `math_operations.py`, se genera el archivo:
@@ -129,7 +149,11 @@ Este archivo generado tiene varias secciones importantes:
 
 Este es el formato que Sphinx usa para incluir la documentación del código fuente, asegurándose de que los cambios en los archivos de código fuente se reflejen automáticamente en la documentación.
 
+<<<<<<< HEAD
 #### **`modules.rst` o `modules.md`**
+=======
+#### c. **`modules.rst` o `modules.md`**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Este archivo lista todos los módulos generados, lo cual es útil si hay muchos módulos en el proyecto. Por ejemplo:
 
@@ -147,9 +171,15 @@ src
 
 Este archivo crea un índice de módulos que Sphinx incluirá en la documentación final.
 
+<<<<<<< HEAD
 ### **Contenido de los Archivos Generados**
 
 #### **Documentación Generada Automáticamente desde el Código**
+=======
+### 2.2. **Contenido de los Archivos Generados**
+
+#### a. **Documentación Generada Automáticamente desde el Código**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 El objetivo principal de `sphinx-apidoc` es generar documentación automáticamente a partir de los docstrings en el código Python. Para cada archivo `.py` que contiene docstrings, se generará una representación en reStructuredText o Markdown.
 
@@ -182,6 +212,7 @@ Suma dos números.
 
 La directiva `automodule` incluye el módulo completo, y las funciones o clases del módulo se detallan debajo con sus respectivas descripciones.
 
+<<<<<<< HEAD
 #### **Incluir Todo el Código del Proyecto**
 
 Los archivos generados también incluyen código fuente si usamos la extensión `viewcode` en el archivo `conf.py` de Sphinx. Esto agrega enlaces al código fuente y puede incluir la visualización completa del código si se activa la opción correspondiente.
@@ -191,6 +222,17 @@ Los archivos generados también incluyen código fuente si usamos la extensión 
 Si el proyecto tiene dependencias de otros módulos dentro de `src/`, el sistema de documentación puede generar automáticamente enlaces a esos módulos y sus funciones.
 
 ### **Uso de los Archivos Generados**
+=======
+#### b. **Incluir Todo el Código del Proyecto**
+
+Los archivos generados también incluyen código fuente si usamos la extensión `viewcode` en el archivo `conf.py` de Sphinx. Esto agrega enlaces al código fuente y puede incluir la visualización completa del código si se activa la opción correspondiente.
+
+#### c. **Dependencias de Módulos**
+
+Si el proyecto tiene dependencias de otros módulos dentro de `src/`, el sistema de documentación puede generar automáticamente enlaces a esos módulos y sus funciones.
+
+### 2.3. **Uso de los Archivos Generados**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Una vez que `sphinx-apidoc` ha generado estos archivos, puedes:
 
@@ -207,14 +249,22 @@ sphinx-build -b html source build
 
 Esto generará una carpeta `build` que contendrá la documentación final en formato HTML. Se pueden abrir estos archivos en el navegador para visualizar la documentación generada.
 
+<<<<<<< HEAD
 ### **Personalización de la Documentación Generada**
+=======
+### 2.4. **Personalización de la Documentación Generada**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 Aunque los archivos generados por `sphinx-apidoc` contienen una buena base de documentación, se pueden personalizar aún más, por ejemplo:
 
 -   **Agregar enlaces y referencias**: Se puede usar `:ref:` y `:doc:` para vincular otros documentos generados por Sphinx.
 -   **Agregar secciones adicionales**: Se puede agregar más texto explicativo o personalizar la apariencia con archivos CSS o HTML.
 
+<<<<<<< HEAD
 ## Conclusiones
+=======
+## 3. Conclusiones
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 -   **Automatización**: El uso de `sphinx-apidoc` simplifica la generación de documentación a partir de código Python, ahorrando tiempo y esfuerzo.
 -   **Legibilidad**: El uso de docstring en formato Google Style mejora la claridad y consistencia de la documentación.

@@ -1,16 +1,28 @@
 ## Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx
 
+<<<<<<< HEAD
 ### Crear un entorno virtual
+=======
+### **1. Crear un entorno virtual**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 ```
 python -m venv venv
 ```
 
+<<<<<<< HEAD
 ### Activar el entorno virtual
+=======
+### **2. Activar el entorno virtual**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 ```
 venv\Scripts\activate
 ```
 
+<<<<<<< HEAD
 ### Configuración inicial del proyecto Sphinx
+=======
+### **3. Configuración inicial del proyecto Sphinx**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 #### **Comando para iniciar un proyecto Sphinx**
 
@@ -29,7 +41,11 @@ pip install -U sphinx
 1.  **`pip install`**: Instala un paquete de Python (en este caso, `sphinx`) desde el repositorio de PyPI (Python Package Index).
 2.  **`-U` o `--upgrade`**: Actualiza el paquete a la versión más reciente disponible en PyPI.
 
+<<<<<<< HEAD
 ### Instalación de dependencias necesarias
+=======
+### **4. Instalación de dependencias necesarias**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 #### **Instalar Sphinx**
 
@@ -55,7 +71,11 @@ pip install sphinx_rtd_theme
 
 ----------
 
+<<<<<<< HEAD
 ### Generación de documentación
+=======
+### **4. Generación de documentación**
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 
 #### **Para generar documentación en formato HTML**
 

@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="002.instalacion_librerias.html"><strong>Instalación de dependencias del proyecto</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="003.Creacion_proyecto_Sphinx.html"><strong>Creación Inicial del Proyecto con Sphinx</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Estructura inicial del proyecto</strong></a><ul>
+<<<<<<< HEAD
 <li class="toctree-l2"><a class="reference internal" href="#estructura-generada">Estructura Generada</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#carpeta-build"><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#carpeta-source"><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a><ul>
@@ -61,6 +62,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#flujo-de-trabajo-con-myst-parser">Flujo de Trabajo con MyST-Parser</a></li>
+=======
+<li class="toctree-l2"><a class="reference internal" href="#estructura-generada">1. Estructura Generada</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carpeta-build">1.1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carpeta-source">1.2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subcarpetas-importantes"><strong>1.2.1. Subcarpetas Importantes</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#archivos-importantes-en-source"><strong>1.2.2. Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-makefile">1.3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archivo-make-bat">1.4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#flujo-de-trabajo-con-myst-parser">2. Flujo de Trabajo con MyST-Parser</a></li>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="007.Creacion_de_ficheros_de_codigo_y_generacion_automatica_de_documentacion.html"><strong>Creación de ficheros de código y generación automática de documentación</strong></a></li>
@@ -101,7 +116,11 @@
 <p>Cuando creas un proyecto Sphinx utilizando <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, se generan varias carpetas y archivos para estructurar tu documentación. Si se trabajan con <strong>MyST-Parser</strong> para usar Markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) en lugar de ReStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>), estas carpetas seguirán siendo útiles, pero la estructura se adaptara ligeramente. A continuación se muestra una descripción detallada del propósito de cada carpeta y archivo:</p>
 <hr class="docutils" />
 <section id="estructura-generada">
+<<<<<<< HEAD
 <h2>Estructura Generada<a class="headerlink" href="#estructura-generada" title="Link to this heading"></a></h2>
+=======
+<h2>1. Estructura Generada<a class="headerlink" href="#estructura-generada" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docs/
 ├── build/
 ├── source/
@@ -115,7 +134,11 @@
 </div>
 <hr class="docutils" />
 <section id="carpeta-build">
+<<<<<<< HEAD
 <h3><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong><a class="headerlink" href="#carpeta-build" title="Link to this heading"></a></h3>
+=======
+<h3>1.1. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">build/</span></code></strong><a class="headerlink" href="#carpeta-build" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p>Carpeta donde se almacenan los archivos generados por Sphinx en los distintos formatos de salida, como HTML, PDF o LaTeX, después de ejecutar el proceso de construcción (make html, make pdf, etc.).</p></li>
 <li><p><strong>Subcarpetas</strong>:</p>
@@ -133,10 +156,17 @@
 </section>
 <hr class="docutils" />
 <section id="carpeta-source">
+<<<<<<< HEAD
 <h3><strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#carpeta-source" title="Link to this heading"></a></h3>
 <p>Carpeta principal que contiene los archivos fuente de la documentación. Aquí se encuentran los archivos que definimos y editamos, como los documentos en formato reStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>) y las configuraciones adicionales.</p>
 <section id="subcarpetas-importantes">
 <h4><strong>Subcarpetas Importantes</strong><a class="headerlink" href="#subcarpetas-importantes" title="Link to this heading"></a></h4>
+=======
+<h3>1.2. <strong>Carpeta <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#carpeta-source" title="Link to this heading"></a></h3>
+<p>Carpeta principal que contiene los archivos fuente de la documentación. Aquí se encuentran los archivos que definimos y editamos, como los documentos en formato reStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>) y las configuraciones adicionales.</p>
+<section id="subcarpetas-importantes">
+<h4><strong>1.2.1. Subcarpetas Importantes</strong><a class="headerlink" href="#subcarpetas-importantes" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/</span></code></strong>:</p>
 <ul>
@@ -162,7 +192,11 @@
 </section>
 <hr class="docutils" />
 <section id="archivos-importantes-en-source">
+<<<<<<< HEAD
 <h4><strong>Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#archivos-importantes-en-source" title="Link to this heading"></a></h4>
+=======
+<h4><strong>1.2.2. Archivos Importantes en <code class="docutils literal notranslate"><span class="pre">source/</span></code></strong><a class="headerlink" href="#archivos-importantes-en-source" title="Link to this heading"></a></h4>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong>:</p>
 <ul>
@@ -254,7 +288,11 @@ Sphinx incluirá cada archivo de forma automática en el índice generado.</p>
 </section>
 <hr class="docutils" />
 <section id="archivo-makefile">
+<<<<<<< HEAD
 <h3><strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong><a class="headerlink" href="#archivo-makefile" title="Link to this heading"></a></h3>
+=======
+<h3>1.3. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></strong><a class="headerlink" href="#archivo-makefile" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p><strong>Propósito</strong>: Contiene comandos para construir la documentación en diferentes formatos.</p></li>
 <li><p><strong>Uso</strong>:</p>
@@ -274,7 +312,11 @@ Sphinx incluirá cada archivo de forma automática en el índice generado.</p>
 </section>
 <hr class="docutils" />
 <section id="archivo-make-bat">
+<<<<<<< HEAD
 <h3><strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong><a class="headerlink" href="#archivo-make-bat" title="Link to this heading"></a></h3>
+=======
+<h3>1.4. <strong>Archivo <code class="docutils literal notranslate"><span class="pre">make.bat</span></code></strong><a class="headerlink" href="#archivo-make-bat" title="Link to this heading"></a></h3>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ul class="simple">
 <li><p><strong>Propósito</strong>: Archivo equivalente al <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> para sistemas Windows.</p></li>
 <li><p><strong>Uso</strong>:</p>
@@ -288,7 +330,11 @@ Sphinx incluirá cada archivo de forma automática en el índice generado.</p>
 </section>
 <hr class="docutils" />
 <section id="flujo-de-trabajo-con-myst-parser">
+<<<<<<< HEAD
 <h2>Flujo de Trabajo con MyST-Parser<a class="headerlink" href="#flujo-de-trabajo-con-myst-parser" title="Link to this heading"></a></h2>
+=======
+<h2>2. Flujo de Trabajo con MyST-Parser<a class="headerlink" href="#flujo-de-trabajo-con-myst-parser" title="Link to this heading"></a></h2>
+>>>>>>> aa02314c8e2e5a7fc225a1581507551da9cd1cf0
 <ol class="arabic">
 <li><p><strong>Configuración de MyST-Parser en <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></strong>: Asegúrate de que <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> esté habilitado:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
