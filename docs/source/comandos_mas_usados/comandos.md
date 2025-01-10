@@ -1,18 +1,18 @@
-## Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx
+## **Comandos utilizados al trabajar con Markdown, MyST-Parser, Sphinx**
 
-### **1. Crear un entorno virtual**
+### 1. Crear un entorno virtual
 ```
 python -m venv venv
 ```
 
-### **2. Activar el entorno virtual**
+### 2. Activar el entorno virtual
 ```
-venv\Scripts\activate
+env\Scripts\activate
 ```
 
-### **3. Configuración inicial del proyecto Sphinx**
+### 3. Configuración inicial del proyecto Sphinx
 
-#### **Comando para iniciar un proyecto Sphinx**
+#### Comando para iniciar un proyecto Sphinx
 
 ```
 sphinx-quickstart
@@ -22,22 +22,22 @@ sphinx-quickstart
 
 ----------
 
-#### **Comando para actualizar la versión de Sphinx**
+#### Comando para actualizar la versión de Sphinx
 ```
 pip install -U sphinx
 ``` 
 1.  **`pip install`**: Instala un paquete de Python (en este caso, `sphinx`) desde el repositorio de PyPI (Python Package Index).
 2.  **`-U` o `--upgrade`**: Actualiza el paquete a la versión más reciente disponible en PyPI.
 
-### **4. Instalación de dependencias necesarias**
+### 4. Instalación de dependencias necesarias
 
-#### **Instalar Sphinx**
+#### Instalar Sphinx
 
 ```
 pip install sphinx
 ```
 
-#### **Instalar MyST-Parser**
+#### Instalar MyST-Parser
 
 ```
 pip install myst-parser
@@ -45,7 +45,7 @@ pip install myst-parser
 
 -   Habilita el soporte para archivos Markdown en Sphinx.
 
-#### **Instalar un tema**
+#### Instalar un tema
 
 ```
 pip install sphinx_rtd_theme
@@ -55,9 +55,18 @@ pip install sphinx_rtd_theme
 
 ----------
 
-### **4. Generación de documentación**
+### 5. Generación de documentación
 
-#### **Para generar documentación en formato HTML**
+#### Para documentación automáticamente desde código
+
+```
+sphinx-apidoc -o ./docs/source ../src --separate --suffix .md
+``` 
+
+- Crea automáticamente archivos de documentación desde el código fuente, (La opción --separate genera archivos independientes por cada módulo).
+
+
+#### Para generar documentación en formato HTML
 
 ```
 make html
@@ -65,7 +74,7 @@ make html
 
 -   Genera la documentación en HTML. El resultado se encuentra en la carpeta `docs/build/html`.
 
-#### **Para limpiar los archivos generados**
+#### Para limpiar los archivos generados
 
 ```
 make clean
@@ -74,10 +83,29 @@ make clean
 -   Elimina todos los archivos generados previamente (HTML, PDF, etc.).
 
 ----------
-#### **Actualizar dependencias**
+#### Actualizar dependencias
 
 ```
 pip install --upgrade sphinx myst-parser
 ``` 
 ----------
 
+#### Generar HTML
+
+``` 
+start .\build\html\index.html
+``` 
+
+- Esto crea la salida HTML en `docs/build/html`. Se abre `index.html` en el navegador para ver el resultado.
+
+#### Generar PDF
+
+``` 
+make.bat latex
+``` 
+- Genera los archivos fuente de LaTeX a partir de la documentación escrita en Sphinx.
+
+``` 
+pdflatex documento.tex
+``` 
+- Compila el archivo .tex generado por LaTeX para producir un archivo PDF final.
