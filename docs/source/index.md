@@ -2,8 +2,6 @@
 
 ## Bienvenido a la documentación del proyecto T05. A continuación, se presenta el índice de los contenidos disponibles.
 
-
-
 ```{toctree}
 :maxdepth: 2
 :caption: Indice:

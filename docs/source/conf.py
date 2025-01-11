@@ -28,7 +28,7 @@ extensions = [
     'sphinx.ext.napoleon', # Interpreta docstring en formatos google y nunpy
     'sphinx.ext.viewcode', # Agrega enlaces al código fuente desde la documentación
     'sphinx_rtd_theme', # Tema visual basado en read the docs
-    'sphinx.ext.doctest',
+    'sphinx.ext.doctest', # Permite ejecutar y probar fragmentos de código incluidos en la documentación.
     'myst_parser', # Habilita soporte para archivos Markdown
 ]
 
@@ -58,13 +58,14 @@ latex_elements = {
     'papersize': 'a4paper',          # Tamaño del papel
     'pointsize': '10pt',             # Tamaño de fuente principal
     'preamble': r'\usepackage[utf8]{inputenc}',  # Codificación de entrada
-    'figure_align': 'htbp'           # Alineación de figuras
+    'figure_align': 'htbp',      # Alineación de figuras
+    'classoptions': ',oneside'
 }
 
 # Documentos PDF a generar
 latex_documents = [
-    ('index', 'documento.tex', 'Título del Documento',
-     'Autor del Documento', 'manual'),
+    ('index', 'documento.tex', 'Equipo 05',
+     'Cristina, Pedro, Noah', 'manual'),
 ]
 
 # -- Options for HTML output -------------------------------------------------
